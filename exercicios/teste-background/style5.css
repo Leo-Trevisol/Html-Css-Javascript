@@ -1,0 +1,16 @@
+main{
+    width: 400px;
+    background-color: #fff;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    }
+
+body{
+    background-color: black;
+    background-image: url(imagens/wallpaper002.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
