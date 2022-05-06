@@ -1,0 +1,7 @@
+body{
+    border: 1px dashed black;
+    height: 98vh;
+    background-image: url('imagens/robi2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}

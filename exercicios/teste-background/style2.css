@@ -1,0 +1,8 @@
+body{
+    height: 1000px;
+    width: auto;
+    background: 
+    url('imagens/luffy.png') bottom left no-repeat,
+    url('imagens/chopper.png') bottom right no-repeat;
+
+}   

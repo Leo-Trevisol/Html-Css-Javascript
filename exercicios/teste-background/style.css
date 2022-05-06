@@ -1,0 +1,97 @@
+/* SHORTHAND BACKGROUND ==
+
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  background: #fff url() no-repeat right top;
+
+  */
+
+h1{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+body{
+    background-image: url('imagens/garden.jpg');
+    background-size: 500px 500px;
+    background-repeat:repeat;
+    background-color: #cccccc;
+}
+
+.quadrado{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#q{
+    background-image: url('imagens/equino.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: zoom-in;
+}
+
+#qq{
+    background-image: url('imagens/coral.jpg');
+    background-size: cover;
+
+}
+
+#qqq{
+    background-image: url('imagens/areia.jpg');
+    background-size: 300px 300px;
+    cursor: zoom-out;
+}
+
+#qqqq{
+    background-image: radial-gradient(rgb(218, 113, 113) 10%,rgb(149, 194, 149) 50%);
+}
+#qqqq:hover{
+    background-image: radial-gradient(rgb(149, 194, 149) 10%, rgb(218, 113, 113) 50%);
+}
+#q5{
+    background-image: conic-gradient(rgb(212, 212, 85), rgb(107, 107, 235));
+}
+
+#q6{
+    background-image: repeating-linear-gradient(yellow 10%, blue 20%);
+}
+#q6:hover{
+    background-image: repeating-linear-gradient(blue 10%, yellow 20% );
+}
+#q7{
+    background-image: repeating-radial-gradient(rgb(93, 177, 211),rgb(207, 34, 170) 10%, rgb(236, 236, 75) 15%);   
+}
+#q7:hover{
+    background-image: repeating-radial-gradient( rgb(207, 34, 170), rgb(138, 138, 221) 10%, rgb(236, 236, 75) 15%);
+    transition: 2s;
+}
+
+#q8{
+    background-image: url('imagens/anime.jpg');
+    background-size: cover;
+    cursor: not-allowed;  
+}
+#q9{
+    background-image: url('imagens/minion.gif');
+    background-size: 300px 300px;
+    cursor: grab;
+}
+
+#q10{
+    background-image: url('imagens/tr.jpg');
+    background-size: cover;
+    cursor: crosshair;
+}
+
+#q11{
+    
+}
