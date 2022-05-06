@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kaushan+Script&family=Rubik+Moonrocks&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face{
+    font-family: 'faroeste';
+    src: url(fonts/faroeste.ttf) format('truetype');
+}
+    @font-face {
+        font-family: 'water';
+    src: url(fonts/water.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    
+    /* FONTES EXPORTADAS DE UM SITE EXTERNO - Dafont:
+      @font-face
+    TIPOS DE Format(): 
+    -opentype (otf)
+    -truetype(ttf)
+    -embedded- opentype
+    -truetype-att(apple)
+    -svg */
+
+main{
+    width: 600px;
+    margin: auto;
+    background-color: #CDBAFF;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+
+    /*usar sempre EM e PX
+       1em = 16px */
+    font-size: 1em;
+    /*lighter normal bold bolder - grossura da letra
+    font-weight: lighter;
+    font-style: italic;
+    text-decoration: underline; */
+}
+
+body{
+    background-image: linear-gradient(to right,#D284FA, #C23B91 );
+}
+
+/*SHORTHAND:   
+UMA COMBINACAO PRE-PRONTA DE FORMATACOES = 
+TIPO / TAMANHO FONTE  */ 
+
+h1{
+    font: italic 3em  'Fredericka the Great';
+    font-size: 3em;
+}
+
+h2{
+    font: bolder 2em 'water' ;
+
+}
+
+p{
+    font-family: 'faroeste';
+}
+
+.pe{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 1em;
+}
+
+.dois{
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 2em;
+
+}
+.linke{
+    font-family:'water';
+    font-size: 1em;
+}
+
+.agaum{
+    text-align: center;   /* TEXT-ALIGN ALINHA O TEXTO */
+}
+.agadois{
+    text-align: right;
+}
+.pepe{
+   text-align: justify;  /* JUSTIFY VAI DEIXAR O TEXTO AJUSTADINHO */
+   text-indent: 30px;   /* TEXT-INDENT DEIXA O TEXTO COM ESPACO DE PARAGRAFO*/
+}

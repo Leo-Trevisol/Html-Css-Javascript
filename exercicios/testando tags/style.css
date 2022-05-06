@@ -1,0 +1,49 @@
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 20px ;
+    background-color: #fff;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(242, 151, 151),transparent);
+}
+body{
+    background-color: rgb(208, 201, 201);
+}
+
+h1{
+    background-image: linear-gradient(to right, rgb(242, 151, 151),transparent);
+    border-radius: 20px 0px 0px 0px;
+    margin-bottom: 0px;
+}
+
+p{
+    text-align: justify;
+}
+
+h2{
+    margin: 0px;
+    background-image: linear-gradient(to right, rgb(160, 233, 160),transparent);
+}
+
+h2 a{
+    text-decoration: none;
+}
+
+.video{
+    background-color: var(--color5);
+    margin: 10px;
+   position: relative;
+   padding-bottom: 50%;
+   border-radius: 10px;
+   box-shadow: 3px 3px 8px black;
+   
+}
+
+.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}

@@ -1,0 +1,58 @@
+body{
+    background-color:black
+}
+h1{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0;
+   
+}
+
+.videos1{
+    
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    padding: 10px;
+    margin: 10px;
+}
+.video1, .video2, .video3, .video4{
+    padding: 10px;
+    margin: 10px;
+}
+
+.videos2{
+    
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    padding: 10px;
+    margin: 10;
+}
+
+
+.onepiece1,.onepiece2,.onepiece3, .onepiece4{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    padding: 30px;
+    margin:50x;
+}
+
+a{
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+   
+}

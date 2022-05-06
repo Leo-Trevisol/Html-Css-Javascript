@@ -1,0 +1,55 @@
+h1{  /*BOX-LEVEL */
+    background-color: lightgray;
+    height: 300px;
+    width: 300px;
+
+     /* SHORTHAND BORDER:
+    border: 10px solid black; */
+    border-width: 10px;
+    border-style: solid ;
+    border-color: black;
+
+
+   /* SHORTHAND PADDING:
+    direcao horaria-
+    10px 10px 10px 10px
+    se todas as paddings forem iguais- botar
+    10px so uma vez.
+    se botar 2 valores de padding, o primeiro sera 
+    o de cima e o de baixo, e o segundo vai ser da 
+    direita e da esquerda. */
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    
+    /* SHORTHAND MARGING:
+    20px 20px 40px 20px 
+    centralizar margem da direita e da esquerda-
+    20px auto 40px auto; */
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 40x;
+    margin-left: 20px;
+
+
+     /* SHORTHAND outline:
+     widht / style / color:
+     5px dashed coral; */
+    outline-width: 5px;
+    outline-style: dashed;
+    outline-color: coral;
+}
+
+
+a{ /*INLINE-LEVEL */
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+    
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}

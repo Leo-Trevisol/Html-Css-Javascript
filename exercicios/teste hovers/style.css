@@ -1,0 +1,116 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tudoum, #tudodois{
+    
+    display: flex;
+    flex-direction: row;
+    align-content:center ;
+  
+}
+
+#aga{
+    width: 200px;
+    height: auto;
+    border: 2px solid black;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#aga:hover{
+    background-color: rgb(131, 14, 76);
+}
+
+#aga > p{
+    display: none;
+}
+
+#aga:hover >h1{
+    display: none;
+}
+#aga:hover >p{
+    display: block;
+   font-size: 2em;
+   font-weight: bolder;
+   color: #fff;
+
+}
+
+body{
+    background-color: darkgray;
+    text-align: center;
+}
+
+#ai{
+    width: 200px;
+    height: auto;
+    border: 2px solid black;
+    align-items: center;
+    margin: auto;
+}
+
+#ai:hover{
+    background-color: rgb(129, 20, 20);
+    color: #fff;
+}
+
+#ai > .pe{
+    display: none;
+}
+
+#ai:hover > .pe{
+    display: block;
+}
+#ai:hover>p{
+    display: none;
+}
+.oi, .ei, .um,.dois{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.oi:hover{
+    background-color: rgb(53, 92, 14);
+    color: #fff;
+}
+
+.ei:hover{
+    background-color: rgb(146, 127, 22);
+    color: #fff;
+}
+.oi > p {
+    display: none;
+}
+
+.ei, .oi> p {
+    display: block;
+}
+
+.ei> .leozin {
+    display: none;
+}
+
+.oi> .leozin {
+    display: none;
+}
+
+.ei:hover> .leozin {
+    display: block;
+}
+
+.oi:hover> .leozin {
+    display: block;
+}
+.ei:hover> p {
+    display: none;
+}
+
+.oi:hover> p {
+    display: none;
+}

@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'droid';
+    src: url(fonts/android_7.ttf) format('truetype');
+}
+body{
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-family: arial,vcer;
+    background-color: rgb(186, 234, 186);
+    
+}
+header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to bottom, rgb(70, 213, 70),  rgb(12, 76, 12));
+    margin:0px;
+    color: #fff;
+    text-align: center;
+    margin-left: 0px;
+    background-color: #fff;
+}
+.ag{
+    padding: 20px;   
+}
+section > h1 {
+   font-size: 2.5em;
+}
+section>p{
+    font-size: 1.2em;
+}
+
+nav{
+    margin-left: -20px;
+    text-align: left;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+nav>a{
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px;
+    text-decoration: none;
+}
+
+main{
+    width: 1000px;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    background-color: #fff;
+    text-align: justify;
+    
+}
+a{
+    text-decoration:none ;
+    color: rgb(23, 159, 23);
+}
+#historia > h1{
+    color: rgb(11, 123, 11);
+    font-family: 'droid';
+    font-size: 2em;
+    margin-top: 0px;
+}
+h2{
+    font-family: 'droid';
+    color: rgb(11, 123, 11);
+    background-color: rgb(195, 242, 195);
+}
+.bug{
+    max-width: 350px;
+   display: block;
+   margin: auto;
+   
+}
+footer{
+    text-align: center;
+    width: 1000px;
+    background-color: rgb(8, 48, 8);
+    color: #fff;
+    margin: auto;
+    padding: 5px 10px 5px 10px ;
+
+}
+
+h3{
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    padding-left: 10px;
+    margin-left: 0px;
+}
+aside{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
+    background-color:rgb(16, 139, 16);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(3, 3, 3, 0.28);
+    margin: 10px;
+    }
+aside>h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(128, 197, 128);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside>ul{
+    columns: 2;
+}
+#video > iframe{
+    width: 1000px;
+    height: 450px;
+    margin: auto;
+    padding-bottom: 20px;
+   
+}
