@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#tit{
+margin-left:7%;
+}
+
+#subtit{
+    margin-left: 10%;
+}
+
+body{
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+#botao{
+    transform: translate(-50%, -50%);
+}
