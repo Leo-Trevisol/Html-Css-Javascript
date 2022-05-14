@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    
+    background-color: black;
+    text-align: center;
+    color: #fff;
+    font-variant: small-caps;
+    
+   
+}
+
+header h1{
+    padding-top:30px;
+    font-size: 2.5em;
+}
+
+header p{
+    padding-bottom: 20px;
+    font-size: 1em;
+}
+
+main{
+    width: 1000px;
+    background-color: #fff;
+    margin: auto;
+}
+
+body{
+    background-color: darkgrey;
+}
+
+#comeco{
+ 
+   
+}
+#comeco > p{
+    text-align: justify;
+    
+}

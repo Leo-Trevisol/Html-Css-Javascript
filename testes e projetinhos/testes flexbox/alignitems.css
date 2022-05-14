@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: darkgrey;
+}
+
+main{
+    height: 98vh;
+}
+
+/*ALIGN-ITEMS- Define o alinhamento dos conteudos do container -
+center/flex-start/flex-end/baseline/stretch*/
+
+#container{
+    display: flex;
+    flex-direction: row;
+   /*  flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */ 
+    justify-content: center;
+    /* justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between; */
+    align-items: center;
+    /* align-items: flex-end; 
+    align-items: flex-start;
+    align-items: baseline;
+    align-items: stretch;*/
+    
+}
+
+.bloco{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center; 
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+#um{
+    background-color: rgba(236, 11, 11, 0.222);
+}
+#dois{
+    background-color: rgba(0, 128, 0, 0.223);
+}
+#tres{
+    background-color: rgba(255, 255, 0, 0.225);
+}

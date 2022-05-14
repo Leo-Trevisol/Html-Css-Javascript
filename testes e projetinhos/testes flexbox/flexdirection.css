@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: darkgrey;
+}
+
+/* JUSTIFY-CONTENTE = FUNCIONA COM ROW E ROW REVERSE (NA HORIZONTAL) -
+Define onde os itens do contanier vao estar na tela (comeco, fim, meio, espacamento)*/
+
+#container{
+    display: flex;
+    flex-direction: row;
+   /*  flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */ 
+    justify-content: flex-start;
+    /* justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between; */
+
+
+
+}
+
+.bloco{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center; 
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+#um{
+    background-color: rgba(236, 11, 11, 0.222);
+}
+#dois{
+    background-color: rgba(0, 128, 0, 0.223);
+}
+#tres{
+    background-color: rgba(255, 255, 0, 0.225);
+}

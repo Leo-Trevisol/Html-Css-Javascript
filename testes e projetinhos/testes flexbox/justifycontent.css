@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: darkgrey;
+}
+
+/* FLEX-DIRECTION: Row/Row-reverse/Column/Column-reverse
+Define a direcao dos itens do container nessas posicoes (vertical e horizontal) */ 
+
+#container{
+    display: flex;
+    flex-direction: row;
+  /*  flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */ 
+
+}
+
+.bloco{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center; 
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+#um{
+    background-color: rgba(236, 11, 11, 0.222);
+}
+#dois{
+    background-color: rgba(0, 128, 0, 0.223);
+}
+#tres{
+    background-color: rgba(255, 255, 0, 0.225);
+}

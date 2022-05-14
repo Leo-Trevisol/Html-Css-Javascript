@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: darkgrey;
+}
+
+main{
+    height: 98vh;
+}
+
+/* ALIGN-CONTENT: Funciona para alinhar o conteudo quando ele eh quebrado pelo wrap
+
+GAP- Define a distancia dos elementos entre linhas e colunas = 
+Gap-column/Gap-row
+gap:10px 30px*/
+
+#container{
+    display: flex;
+    flex-direction: row;
+   /*  flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */ 
+    justify-content: center;
+    /* justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between; */
+    align-items: center;
+    /* align-items: flex-end; 
+    align-items: flex-start;
+    align-items: baseline;
+    align-items: stretch;*/
+    flex-wrap: wrap;
+    /*flex-wrap: wrap;
+     flex-wrap: wrap-reverse;*/
+     align-content:center;
+     /*align-content: flex-end;
+     align-content: flex-start;
+     align-content: space-around
+     align-content: space-between;;*/
+     gap: 10px 30px;
+     
+}
+
+.bloco{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center; 
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+#um{
+    background-color: rgba(236, 11, 11, 0.222);
+}
+#dois{
+    background-color: rgba(0, 128, 0, 0.223);
+}
+#tres{
+    background-color: rgba(255, 255, 0, 0.225);
+}
+#quatro{
+    background-color: rgba(0, 0, 255, 0.115);
+}
+#cinco{
+    background-color: rgba(255, 192, 245, 0.336);
+}
+#seis{
+    background-color: rgba(210, 105, 30, 0.271);
+}
+#sete{
+    background-color: rgba(128, 0, 128, 0.262);
+}
+#oito{
+    background-color: rgba(128, 128, 128, 0.466);
+}
+#nove{
+    background-color: rgba(64, 224, 208, 0.358);
+}
