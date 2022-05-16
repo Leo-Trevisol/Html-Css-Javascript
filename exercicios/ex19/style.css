@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    font-size: 3em;
+    font-variant: small-caps;
+}
+
+table{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-collapse: collapse;
+
+
+}
+
+td{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    vertical-align: bottom;
+    padding: 7px;
+    border: 2px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.linha1{
+    background-color: rgba(137, 43, 226, 0.355);
+}
+
+.linha2{
+    background-color: rgba(255, 127, 80, 0.551);
+}
+
+.linha3{
+    background-color: rgba(0, 0, 139, 0.49);
+}
+
+.linha4{
+    background-color: rgba(128, 255, 0, 0.492);
+}
+
+.linha5{
+
+    background-color: rgba(139, 0, 0, 0.399);
+}

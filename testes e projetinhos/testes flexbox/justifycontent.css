@@ -7,15 +7,22 @@ body{
     background-color: darkgrey;
 }
 
-/* FLEX-DIRECTION: Row/Row-reverse/Column/Column-reverse
-Define a direcao dos itens do container nessas posicoes (vertical e horizontal) */ 
+/* JUSTIFY-CONTENTE = FUNCIONA COM ROW E ROW REVERSE (NA HORIZONTAL) -
+Define onde os itens do contanier vao estar na tela (comeco, fim, meio, espacamento)*/
 
 #container{
     display: flex;
     flex-direction: row;
-  /*  flex-direction: row-reverse;
+   /*  flex-direction: row-reverse;
     flex-direction: column;
     flex-direction: column-reverse; */ 
+    justify-content: flex-start;
+    /* justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between; */
+
+
 
 }
 
