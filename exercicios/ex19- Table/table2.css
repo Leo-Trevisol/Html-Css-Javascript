@@ -5,7 +5,17 @@
     padding: 0;
 }
 
+main{
+    min-width: 300px;
+    padding: 10px;
+    padding-bottom: 20px;
+    background-image: url('39033.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 h1{
+    margin: auto;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -17,17 +27,42 @@ h1{
     text-shadow: 1px 1px 1px  white;
 }
 
-table{
+caption{
+    margin-left: 200px;
+    width: 200px;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    background-color: darkgray;
+    font-family: 'Passion One', cursive;
+    padding: 5px;
     margin: auto;
-    margin-top: 20px;   
-    border-collapse: collapse;
+    margin-bottom: 5px;
+    border-radius: 10px;
+
 }
 
-th{
+table{
+    margin: auto;
+    margin-top: 0px; 
+    border-collapse: collapse;
+    position: relative;
+}
+
+thead{
     font-variant: small-caps;
     background-color: darkgray;
     color: #fff;
     font-size: large;
+}
+
+thead >tr>th{
+    position: sticky;
+    top: -1px;
+    background-color: darkgray;
+    padding: 10px;
+    border: 2.5px solid black;
+   
+
 }
 
 td, th{
@@ -37,14 +72,34 @@ td, th{
     
 }
 
+
+
 td{
     font-family: 'Sriracha';
+}
+
+tbody >tr:nth-child(even){
+    background-color: rgba(128, 128, 128, 0.781);
+    color: white;
+}
+
+tbody >tr:nth-child(odd){
+    background-color: #fff;
+    color: black
+    
 }
 
 a{
     text-decoration: none;
     color: black;
 }
+
+
+
+.name{
+    color: #fff;
+}
+
 a:hover{
     color: red;
 }

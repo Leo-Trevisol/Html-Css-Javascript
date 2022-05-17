@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(128, 128, 128, 0.305);
+}
+ h1{
+     background-color: rgba(255, 0, 0, 0.619);
+     color: #fff;
+     padding: 10px;
+     font-variant: small-caps;
+     text-align: center;
+     font-size: 3em;
+ }
+
+ table{
+    
+     margin-top: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-collapse: collapse;
+ }
+
+ td{
+     text-align: center;
+     background-color: #fff;
+     padding: 10px;
+     width: 50px;
+     border: 2px solid black;
+ }
+
+ .mes{
+     background-color: rgba(0, 0, 255, 0.362);
+ }
+
+ .mas{
+     background-color: rgba(0, 128, 0, 0.442);
+ }
