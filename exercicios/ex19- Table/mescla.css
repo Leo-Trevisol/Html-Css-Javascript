@@ -22,9 +22,10 @@ body{
      align-items: center;
      justify-content: center;
      border-collapse: collapse;
+     padding: 10px;
  }
 
- td{
+ td, th{
      text-align: center;
      background-color: #fff;
      padding: 10px;
@@ -38,4 +39,16 @@ body{
 
  .mas{
      background-color: rgba(0, 128, 0, 0.442);
+ }
+
+ .gp{
+     background-color: rgba(255, 0, 0, 0.326);
+ }
+
+ .nm{
+     background-color: pink;
+ }
+
+ .fm{
+     background-color: rgba(137, 43, 226, 0.405);
  }
