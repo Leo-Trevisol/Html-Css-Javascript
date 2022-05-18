@@ -11,6 +11,7 @@ main{
     padding-bottom: 20px;
     background-image: url('39033.jpeg');
     background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
 }
 
@@ -92,6 +93,12 @@ tbody >tr:nth-child(odd){
 a{
     text-decoration: none;
     color: black;
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+
+a::after{
+    content: '\266B';
 }
 
 
