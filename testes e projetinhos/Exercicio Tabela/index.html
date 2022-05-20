@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabela de notas</title>
+</head>
+<body>
+
+    <h1>Tabela de notas</h1>
+
+    <table>
+
+       <colgroup>
+        <col class="um">
+        <col class="dois">
+        <col class="tres">
+        <col class="quatro">
+       </colgroup>
+        <tr>
+            <th rowspan="2" scope="row">Área</th>
+            <th rowspan="2" scope="row">Disciplinas</th>
+            <th colspan="2" scope="rowgroup">Notas</th>
+            <th rowspan="2" scope="row">Média</th>
+        </tr>
+        <tr>
+            <td class="nt">Nota 1</td>
+            <td class="nt">Nota 2</td>
+        </tr>
+        <tr>
+            <th rowspan="3" class="ext" scope="colgroup">Exatas</th>
+            <td class="aula">Matematica</td>
+            <td>10.00</td>
+            <td>8.00</td>
+            <td>9.00</td>
+        </tr>
+        <tr>
+            <td class="aula">Fisica</td>
+            <td>9.00</td>
+            <td>7.00</td>
+            <td>8.00</td>
+        </tr>
+        <tr>
+            <td class="aula">Quimica</td>
+            <td>3.00</td>
+            <td>4.00</td>
+            <td>3.50</td>
+        </tr>
+        <tr>
+            <th colspan="4" class="media" scope="col">Média Exatas</th>
+            <td class="final">7.60</td>
+        </tr>
+        <tr>
+            <th rowspan="3" class="hum" scope="colgroup">Humanas</th>
+            <td class="aula">História</td>
+            <td>8.00</td>
+            <td>7.00</td>
+            <td>8.00</td>
+        </tr>
+        <tr>
+            <td class="aula">Biologia</td>
+            <td>10.00</td>
+            <td>10.00</td>
+            <td>10.00</td>
+        </tr>
+        <tr>
+            <td class="aula">Geografia</td>
+            <td>6.00</td>
+            <td>5.00</td>
+            <td>8.00</td>
+        </tr>
+        <tr>
+            <th colspan="4" class="media" scope="col">Média Humanas</th>
+            <td class="final">8.00</td>
+        </tr>
+    </table>
+    
+</body>
+</html> 

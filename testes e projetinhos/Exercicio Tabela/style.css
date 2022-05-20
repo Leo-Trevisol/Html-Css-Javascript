@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: gray
+}
+
+h1{
+    background-image: linear-gradient(to right, black 10%, white  );
+    color: white;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+    padding: 15px;
+    font-size: 2.5em;
+}
+
+table{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse ;
+}
+
+th,td{
+    padding: 8px;
+    border: 2px solid black;
+    font-variant: small-caps;
+}
+
+td{
+    text-align: center;
+    background-color: #fff  ;
+}
+
+th{
+    background-color: rgb(179, 28, 28);
+    color: #fff;
+}
+
+.nt{
+    background-color: rgb(190, 190, 22);
+    color: #fff;
+}
+.media{
+    background-color: rgba(195, 54, 54, 0.26);
+    color: #fff;
+    font-variant: small-caps;
+}
+
+.final{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+
+.ext{
+    background-color: rgba(85, 191, 233, 0.741);
+    color: #fff;
+}
+.hum{
+    background-color: rgba(0, 128, 0, 0.522);
+    color: #fff;
+}
+
+.aula{
+    background-color: gray;
+    color: #fff;
+}
