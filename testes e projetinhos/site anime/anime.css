@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --fonth1: 'Bebas Neue', cursive;
+    --fontpadrao: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    background-color: darkslateblue;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-family: var(--fonth1);
+    font-variant: small-caps;
+
+}
+
+header p{
+    color: white;
+    text-align: center;
+    font-family: var(--fontpadrao);
+    padding: 5px;
+    font-variant: small-caps;
+}
+nav{
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.632)
+}
+
+nav a{
+    padding: 5px;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-decoration: none;
+    color: white;
+    font-variant: small-caps;
+}
+
+nav a:hover{
+    border: solid black 1px;
+    border-radius: 10px;
+    color: black;
+    transition: 1s;
+}
+
+nav > .home:hover{
+margin-right: 20%;
+
+
+}
+
+#videos1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2%;
+    gap: 20px 10px;
+}
+
+.anime{
+   width: 300px;
+   height: 200px;
+   border: solid black 1px;
+   border-radius: 20px;
+   cursor: grab;
+
+}
+
+#videos1 > #naruto{
+    background: url(img/naruto.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+
+#videos1 > #naruto:hover{
+    background: url(img/naruto1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
+#videos1 > #onepiece{
+    background: url(img/onepiece.jpeg) center center no-repeat;
+    background-size: cover;
+}
+#videos1 > #onepiece:hover{
+    background: url(img/onepiece1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #dbz{
+    background: url(img/dbz.jpeg) center center no-repeat;
+    background-size: cover;
+}
+#videos1 > #dbz:hover{
+    background: url(img/dbz1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #jojo{
+    background: url(img/jojo.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #jojo:hover{
+    background: url(img/jojo1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #aot{
+    background: url(img/aot.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #aot:hover{
+    background: url(img/aot1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #deathnote{
+    background: url(img/deathnote.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #deathnote:hover{
+    background: url(img/deathnote1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #hxh{
+    background: url(img/hxh.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #hxh:hover{
+    background: url(img/hxh1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #fullmetal{
+    background: url(img/fullmetal.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #fullmetal:hover{
+    background: url(img/fullmetal1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
+
+
+
