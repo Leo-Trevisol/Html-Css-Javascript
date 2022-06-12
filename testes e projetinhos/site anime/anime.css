@@ -1,65 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-:root{
-    --fonth1: 'Bebas Neue', cursive;
-    --fontpadrao: Arial, Helvetica, sans-serif;
-}
-
-body{
-    background-color: black;
-}
-
-header{
-    background-color: darkslateblue;
-}
-
-header h1{
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    font-family: var(--fonth1);
-    font-variant: small-caps;
-
-}
-
-header p{
-    color: white;
-    text-align: center;
-    font-family: var(--fontpadrao);
-    padding: 5px;
-    font-variant: small-caps;
-}
-nav{
-    padding: 10px;
-    background-color: rgba(255, 0, 0, 0.632)
-}
-
-nav a{
-    padding: 5px;
-    margin-right: 5%;
-    margin-left: 5%;
-    text-decoration: none;
-    color: white;
-    font-variant: small-caps;
-}
-
-nav a:hover{
-    border: solid black 1px;
-    border-radius: 10px;
-    color: black;
-    transition: 1s;
-}
-
-nav > .home:hover{
-margin-right: 20%;
-
-
-}
 
 #videos1{
     display: flex;
@@ -159,6 +98,88 @@ margin-right: 20%;
     background-size: cover;
     transition: 2s;
 }
+#videos1 > #jujutsu{
+    background: url(img/jujutsu.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #jujutsu:hover{
+    background: url(img/jujutsu1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #kimetsu{
+    background: url(img/kimetsu.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #kimetsu:hover{
+    background: url(img/kimetsu1.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #yuyuhakusho{
+    background: url(img/yuyuhakusho.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #yuyuhakusho:hover{
+    background: url(img/yuyuhakusho.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
+#videos1 > #onepunch{
+    background: url(img/onepunch.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #onepunch:hover{
+    background: url(img/onepunch.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #haikyuu{
+    background: url(img/haikyuu.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #haikyuu:hover{
+    background: url(img/haikyuu.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #bokunohero{
+    background: url(img/bokunohero.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #bokunohero:hover{
+    background: url(img/bokunohero.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #drstone{
+    background: url(img/drstone.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #drstone:hover{
+    background: url(img/drstone.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+#videos1 > #thepromised{
+    background: url(img/thepromised.jpeg) center center no-repeat;
+    background-size: cover;
+
+}
+#videos1 > #thepromised:hover{
+    background: url(img/thepromised.gif) center center no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
 
 
 

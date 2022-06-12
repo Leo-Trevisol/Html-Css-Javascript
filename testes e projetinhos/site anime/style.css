@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --fonth1: 'Bebas Neue', cursive;
+    --fontpadrao: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    background-color: darkslateblue;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-family: var(--fonth1);
+    font-variant: small-caps;
+
+}
+
+header p{
+    color: white;
+    text-align: center;
+    font-family: var(--fontpadrao);
+    padding: 5px;
+    font-variant: small-caps;
+}
+nav{
+    padding: 10px;
+   background-image: linear-gradient(to right, rgba(255, 0, 0, 0.662),darkslateblue);
+}
+
+nav a{
+    padding: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-decoration: none;
+    color: white;
+    font-variant: small-caps;
+}
+
+nav a:hover{
+    background-color: rgba(255, 255, 255, 0.411);
+    border-radius: 10px;
+    color: black;
+    transition: 1s;
+}
