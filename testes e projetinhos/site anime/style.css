@@ -12,10 +12,14 @@
 
 body{
     background-color: black;
+    height: 100vw;
+    min-width: 500px;
+    
 }
 
 header{
     background-color: darkslateblue;
+    min-width: 150px;
 }
 
 header h1{
@@ -24,6 +28,7 @@ header h1{
     padding-top: 5px;
     font-family: var(--fonth1);
     font-variant: small-caps;
+    font-size: 2vw;
 
 }
 
@@ -36,7 +41,8 @@ header p{
 }
 nav{
     padding: 10px;
-   background-image: linear-gradient(to right, rgba(255, 0, 0, 0.662),darkslateblue);
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.662),darkslateblue);
+    width: 100vw;
 }
 
 nav a{
@@ -53,4 +59,31 @@ nav a:hover{
     border-radius: 10px;
     color: black;
     transition: 1s;
+}
+
+.img{
+    width: 100px;
+    height: 50px; 
+    cursor: grab;
+}
+
+.pei{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.pei > .img {
+    background-image: url(imgcapa/naruto.png);
+    background-size: cover;
+    margin-left: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.paragrafo{
+    margin-left: 25%;
+    max-width: 800px;
+    min-width: 300px;
 }

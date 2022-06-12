@@ -56,6 +56,7 @@ body{
 nav{
     background-color: var(--color5);
     padding: 10px;
+    width: 100vw;
 }
 nav a {
     text-decoration: none;

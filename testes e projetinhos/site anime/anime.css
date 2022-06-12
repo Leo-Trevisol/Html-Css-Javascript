@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 #videos1{
     display: flex;
@@ -7,14 +7,22 @@
     justify-content: space-around;
     padding: 2%;
     gap: 20px 10px;
+    align-items: center;
 }
 
 .anime{
+   min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    width: 300px;
    height: 200px;
    border: solid black 1px;
    border-radius: 20px;
    cursor: grab;
+   top: 50%;
+   left: 50%;
+
 
 }
 
