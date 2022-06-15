@@ -9,10 +9,10 @@ var cash = prompt('Enter your cash:')
   alert(test)
  document.write(`the student ${name} with ${age} years old and grade: ${grade} <br>`)
  document.write(`${name}, your name in uppercase: ${name.toUpperCase()} <br> `)
- cash.Number(toFixed(2))
- cash.Number(toFixed(2).replace('.', ','))
- cash.toLocateString('pt-br',{style:'currency', currency: 'BRL'})
- document.write(`your cash it's: ${cash}`)
+ document.write(`${name}, your name have: ${(name.lenght)} <br> `)
+
+ 
+
 
 
 
