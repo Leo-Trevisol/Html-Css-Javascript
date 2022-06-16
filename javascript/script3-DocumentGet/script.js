@@ -13,5 +13,11 @@ teg.style.background = 'white'
 //PEGANDO O ELEMENTO PELA CLASSE === 
 
 var para = document.getElementsByClassName('pe')[1]
-para.style.background = 'black'
+para.style.background = 'blue'
+document.write(para.innerHTML)
+
+//PEGANDO ELEMENTO PELO QUERYSELECTOR css === 
+
+var j = document.querySelector('.pei')
+j.style.background = 'white'
 

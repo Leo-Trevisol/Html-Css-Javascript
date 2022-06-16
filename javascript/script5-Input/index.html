@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Document by ID</title>
+    <title>Input</title>
     <style>
         body{
             background-color: skyblue;
         }
+        #soma{
+            margin-top: 10px;
+        }  
     </style>
 </head>
 <body>
 
-    <h1 id="aga">Pegando id</h1>
-    <p class="pe">Teste</p>
-    <p class="pei">Teste de id</p>
-    <p class="pe">Document</p>
+    <h1>Somando valores</h1>
+    <input type="number" name="num1" id="num1"> +
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="Somar" id="bt" onclick="somar()">
+    <div id="soma"></div>
 
     <script src="script.js"></script>
     
