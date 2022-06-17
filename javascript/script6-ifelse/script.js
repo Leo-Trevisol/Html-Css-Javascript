@@ -1,25 +1,67 @@
-var ok = document.querySelector('.bt')
 
-ok.addEventListener('click', clicou)
+//PEGANDO O ID DOS BOTOES DE OK ===
+var calcula = document.querySelector('#btcalcula')
 
+
+//ADICIONANDO EVENTOS NOS BOTOES ===
+calcula.addEventListener('click', clicou)
+
+
+
+//FUNCAO DE CLICAR ===
 function clicou(){
+
+//BOTAO OK DO NOME ===
+
     var name = document.getElementById('name')
     var nam1 = (name.value)
-    if(nam1 !== ""){
     var txtname = document.getElementById('nome')
+    if(nam1 !== ""){
     txtname.innerHTML = `O seu nome: ${nam1}.`
     }else{
-        var txtname = document.getElementById('nome')
-        txtname.innerHTML = `DIGITE SEU NOME .`
+        txtname.innerHTML = `DIGITE SEU NOME!`
     }
-    var no1 = document.getElementById('nota1')
-    var notaum = Number(no1.value)
-    if(notaum !== ""){
+
+//BOTAO OK DA NOTA 1 ===
+
+    var nota1 = document.getElementById('nota1')
+    var no1 = Number(nota1.value)
     var txtn1 = document.getElementById('n1')
-    txtn1.innerHTML = `Primeira nota: ${notaum}.`
+    if(no1 !== 0){
+        txtn1.innerHTML = `Primeira nota: ${no1}`
     }else{
-        var txtname = document.getElementById('n1')
-        txtname.innerHTML = `DIGITE SUA NOTA .`
+        txtn1.innerHTML = `DIGITE A PRIMEIRA NOTA!`
     }
+
+    //BOTAO DA NOTA 2 ===
+
+    var nota2= document.getElementById('nota2')
+    var no2 = Number(nota2.value)
+    var txtn2 = document.getElementById('n2')
+    if(no2 !== 0){
+        txtn2.innerHTML = `Segunda nota: ${no2}`
+    }else{
+        txtn2.innerHTML = `DIGITE A SEGUNDA NOTA!`
+    }
+
+    //BOTAO DA NOTA 3 ===
+
+    var nota3 = document.getElementById('nota3')
+    var no3 = Number(nota3.value)
+    var txtn3 = document.getElementById('n3')
+    if(no3 != 0){
+        txtn3.innerHTML = `Terceira nota: ${no3}`
+    }else{
+        txtn3.innerHTML = `DIGITE A TERCEIRA NOTA!`
+    }
+
+    
+
+
+
+
+
+  
+    
 
 }
