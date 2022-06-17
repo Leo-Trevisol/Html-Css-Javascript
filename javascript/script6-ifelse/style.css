@@ -24,7 +24,7 @@ p{
 
 }
 
-#btcalcula{
+#btcalcula, #btlimpar{
     border: 1px solid black;
     border-radius: 20px;
     cursor: grab;
@@ -32,7 +32,7 @@ p{
     font-size: 14px;
     
 }
-#btcalcula:hover{
+#btcalcula:hover, #btlimpar:hover{
     background-color: bisque;
 }
 

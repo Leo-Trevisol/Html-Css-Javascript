@@ -1,10 +1,12 @@
 
 //PEGANDO O ID DOS BOTOES DE OK ===
 var calcula = document.querySelector('#btcalcula')
+var limpa = document.querySelector('#btlimpar')
 
 
 //ADICIONANDO EVENTOS NOS BOTOES ===
 calcula.addEventListener('click', clicou)
+limpa.addEventListener('click', limpar)
 
 
 
@@ -60,7 +62,7 @@ function clicou(){
     if(no1 !== 0 && no2 !==0 && no3 !== 0){
 
         var m = (no1 + no2 + no3)/3
-        document.getElementById('media').value = ` ${m}`
+        document.getElementById('media').value = ` ${m.toFixed(2)}`
 
     }
 
@@ -71,11 +73,16 @@ function clicou(){
 
     if(no1 !== 0 && no2 !==0 && no3 !== 0){
 
-    if(m>mediaescola){
+    if(m>=mediaescola){
 
         resultado.value = `APROVADO!!`
     }else{
         resultado.value = `REPROVADO!!`
     }
 }
+
+}
+
+function limpar(){
+    location.reload();
 }
