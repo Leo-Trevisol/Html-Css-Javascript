@@ -45,8 +45,9 @@ p{
     text-align: center;
 }
 
-#nome, #n1, #n2, #n3{
+#nome, #n1, #n2, #n3, #media, #result{
     margin-top: 7px;
+    text-align: center;
 }
 
 

@@ -55,13 +55,27 @@ function clicou(){
         txtn3.innerHTML = `DIGITE A TERCEIRA NOTA!`
     }
 
-    
+    //CAIXA DA MEDIA ===
 
+    if(no1 !== 0 && no2 !==0 && no3 !== 0){
 
+        var m = (no1 + no2 + no3)/3
+        document.getElementById('media').value = ` ${m}`
 
+    }
 
+    //APROVADO OU REPROVADO ===
 
-  
-    
+    var mediaescola = 7
+    var resultado = document.getElementById('result')
 
+    if(no1 !== 0 && no2 !==0 && no3 !== 0){
+
+    if(m>mediaescola){
+
+        resultado.value = `APROVADO!!`
+    }else{
+        resultado.value = `REPROVADO!!`
+    }
+}
 }
