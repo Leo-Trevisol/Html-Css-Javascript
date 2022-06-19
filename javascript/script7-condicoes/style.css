@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,23 +6,44 @@
 }
 
 body{
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.638), black);
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.638), black);
     font-variant: small-caps;
 }
 
 h1{
 }
 
+#bthora{
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+}
+#bthora:hover{
+    cursor: grab;
+    border: 1px solid white;
+    color: white;
+    background-color: rgba(166, 32, 32, 0.599);
+    transition: 2s;
+}
+
+
+#tempo{
+    font: small-caps normal 24px 'Passion One', cursive;
+}
+
 .container{
-   
-    background-color: rgba(192, 192, 192, 0.611);
+    background-color: rgba(255, 255, 255, 0.611);
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    width: 600px;
-    margin: auto;
-    height: 100vh;
+    max-width: 600px;
+    min-width: 150px;
+    max-height: 500px;
+    margin: auto;  
     gap: 20px;
+    margin-top:6%;
+    border-radius: 20px;
+    padding: 10px;
 
 }

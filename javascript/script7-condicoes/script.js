@@ -14,20 +14,23 @@ var hora = agora.getHours()
 var min = agora.getMinutes()
 var sec = agora.getSeconds()
 var diasemana = agora.getDay()
-var horamundial = agora.getUTCDate()
 
 //EVENTOS DO BOTAO ===
 
 bt.addEventListener('click', definirmes)
 bt.addEventListener('click', definirhora)
+bt.addEventListener('click', diadasemana)
+bt.addEventListener('click', diasfinais)
+
 bt.addEventListener('click', clicar)
+
 
 //FUNCAO QUE ESCREVE O TEXTO ===
 
 function clicar(){
     
-    time.innerHTML = `Voce esta no ano ${ano}, no mes ${mes}, no dia ${dia} <br>
-     e agora sao ${hora}, ${min} minutos e ${sec} segundos.`
+    time.innerHTML = `Agora são ${hora}, exatos ${min} minutos e ${sec} segundos de ${diasemana}. <br>
+    Hoje e dia ${dia} de ${mes} de ${ano}.`
 
 }
 
@@ -76,10 +79,12 @@ function definirmes(){
     }
 }
 
+//FUNCAO QUE CONVERTE A HORA ===
+
 function definirhora(){
 
     if(hora <= 11){
-    for(var i=0; i==hora; i++ ){
+    for(var i=0; i<=11; i++ ){
 
         if(hora == 0){
             hora = `Meia noite`
@@ -122,7 +127,7 @@ function definirhora(){
 }
 
     if(hora >= 12){
-        for(var i=0; i==hora; i++ ){
+        for(var i=0; i>=12; i++ ){
 
             if(hora == 0){
                 hora = `Meio dia`
@@ -163,6 +168,55 @@ function definirhora(){
 
     }
     }
+}
+
+//FUNCAO QUE CONVERTE O NUMERO DA SEMANA PELO NOME DO DIA DA SEMANA  ===
+
+function diadasemana(){
+    switch(diasemana){
+
+        case 0:
+            diasemana = `um domingo`
+            break
+            case 1:
+                diasemana = `uma segunda-feira`
+                break
+                case 2:
+                diasemana = `uma terca-feira`
+                break
+                case 3:
+                diasemana = `uma quarta-feira`
+                break
+                case 4:
+                diasemana = `uma quinta-feira`
+                break
+                case 5:
+                diasemana = `uma sexta-feira`
+                break
+                case 1:
+                diasemana = `um sabado`
+                break
+
+
+
+    }
+}
+
+function diasfinais(){
+
+    var diastotais = 30
+    var diasparaacabar = 0
+    var i = 0
+
+    while(i==13){
+        diasparaacabar += diastotais
+        i++
+
+    }
+    
+
+    console.log(diasparaacabar)
+ 
 }
 
 
