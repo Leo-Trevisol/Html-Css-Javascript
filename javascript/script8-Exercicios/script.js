@@ -1,43 +1,39 @@
 var time = new Date()
-
 var hora = time.getHours()
+var img = document.getElementById('im')
+var msg = document.getElementById('hora')
+var cont = document.getElementById('container')
 horario()
 
 function horario(){
 
     if(hora>= 6 && hora<=11){
+        img.src = 'dias/manha.jpg'
+        msg.innerHTML = `BOM DIA!<br> São ${hora} horas da manhã.`
+        cont.style.background = 'rgba(255, 255, 0, 0.503)'
 
-        var img = document.getElementById('manha')
-        img.style.display = block
-
-    }
+        
 
     if(hora>= 12 && hora<=17){
-
-        var img = document.getElementById('tarde')
-        img.style.display = block
-
-
-
+        img.src = 'dias/tarde.jpg'
+        msg.innerHTM = `BOA TARDE!<br> São ${hora} horas da tarde.`
+        cont.style.background = 'rgba(135, 207, 235, 0.614)'
     }
 
     if(hora==18){
-
-        var img = document.getElementById('escurecendo')
-        img.style.display = block
-
-
+        img.src = 'dias/escurecendo.jpg'
+        msg.innerHTML = `ATENCAO!<br> São ${hora} horas da tarde.`
+        cont.style.background = 'rgba(167, 64, 12, 0.515)'
     }
 
     if(hora>18 && hora<6) {
-
-        var img = document.getElementById('noite')
-        img.style.display = block
+        img.src = 'dias/noite.jpg'
+        msg.innerHTML = `BOA NOITE!<br> São ${hora} horas da noite.`
 
 
     }
+}
+}
 
-    console.log(hora)
     
 
-}

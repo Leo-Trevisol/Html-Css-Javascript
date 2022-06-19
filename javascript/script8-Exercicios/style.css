@@ -1,21 +1,34 @@
 *{
     margin: 0;
     padding: 0;
+    font-variant: small-caps;
 }
 
 h1{
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px white;
+    width: 500px;
+    color: white;
+    background-color: black;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
 }
 
 body{
-    background-color: rgba(128, 0, 128, 0.563);
+    background-color: lightgrey;
 }
 
-.imagem{
-    display: none;
+#im{
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    box-shadow: 5px 5px 5px black;
+}
+
+#hora{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    text-shadow:  1px 1px white;
 }
 
 #container{
@@ -29,4 +42,13 @@ body{
     margin-top: 5%;
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
+    gap: 3px;
+}
+
+footer{
+    width: 500px;
+    color: white;
+    background-color: black;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
 }
