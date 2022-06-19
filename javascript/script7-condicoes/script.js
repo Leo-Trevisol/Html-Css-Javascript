@@ -2,7 +2,7 @@
 
 var bt = document.getElementById('bthora') // ID BOTAO
 var time = document.getElementById('tempo')
-var timeutc = document.getElementById('utc')
+var timefim = document.getElementById('fim')
 
 //DEFININDO VARIAVEIS PARA TRABALHAR COM AS DATAS ===
 
@@ -15,13 +15,15 @@ var min = agora.getMinutes()
 var sec = agora.getSeconds()
 var diasemana = agora.getDay()
 
+var somames = 0
+var dias = 0
+
 //EVENTOS DO BOTAO ===
 
 bt.addEventListener('click', definirmes)
 bt.addEventListener('click', definirhora)
 bt.addEventListener('click', diadasemana)
 bt.addEventListener('click', diasfinais)
-
 bt.addEventListener('click', clicar)
 
 
@@ -30,7 +32,7 @@ bt.addEventListener('click', clicar)
 function clicar(){
     
     time.innerHTML = `Agora são ${hora}, exatos ${min} minutos e ${sec} segundos de ${diasemana}. <br>
-    Hoje e dia ${dia} de ${mes} de ${ano}.`
+    Hoje é dia ${dia} de ${mes} de ${ano}.`
 
 }
 
@@ -42,39 +44,63 @@ function definirmes(){
     switch (mes){
         case 0: 
         mes = `Janeiro`
+        somames = 31
+        dias = 31
         break
         case 1: 
         mes = `Fevereiro`
+        somames = 59
+        dias = 28
         break
         case 2: 
         mes.value = `Marco`
+        somames = 90
+        dias = 31
         break
         case 3: 
         mes = `Abril`
+        somames = 120
+        dias = 30
         break
         case 4: 
         mes = `Maio`
+        somames = 151
+        dias = 31
         break
         case 5: 
         mes = `Junho`
+        somames = 181
+        dias = 30
         break
         case 6: 
         mes = `Julho`
+        somames = 212
+        dias = 31
         break
         case 7: 
         mes = `Agosto`
+        somames = 243
+        dias = 31
         break
         case 8: 
         mes = `Setembro`
+        somames = 273
+        dias = 30
         break
         case 9: 
         mes = `Outubro`
+        somames = 304   
+        dias = 31
         break
         case 10: 
         mes = `Novembro`
+        somames = 334
+        dias = 30
         break
         case 11: 
         mes = `Dezembro`
+        somames = 365
+        dias = 31
         break
     }
 }
@@ -202,20 +228,15 @@ function diadasemana(){
     }
 }
 
+//FUNCAO QUE CALCULA QUANTOS DIAS FALTAM ===
+
 function diasfinais(){
 
-    var diastotais = 30
-    var diasparaacabar = 0
-    var i = 0
+    var diasparaacabar = (365 - somames)
+    var diasmes = (dias -dia)
+    var diascertos = (diasparaacabar + diasmes)
 
-    while(i==13){
-        diasparaacabar += diastotais
-        i++
-
-    }
-    
-
-    console.log(diasparaacabar)
+    timefim.innerHTML =  `Faltam ${diascertos} dias para acabar o ano.`
  
 }
 
