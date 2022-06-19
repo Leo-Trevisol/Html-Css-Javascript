@@ -81,6 +81,10 @@ border-radius: 10px;
     margin-top: 4px;
 }
 
+#text{
+    font-size: 20px;
+}
+
 footer{
     width: 500px;
     color: white;
