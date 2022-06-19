@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     font-variant: small-caps;
-    min-width: 150px;
+    font-weight: bold;
+    
 
 }
 
@@ -16,7 +17,7 @@ h1{
 }
 
 body{
-    background-color: lightgrey;
+    background-color: skyblue;
     width: 100vw;
     height: 80vh;
 }
@@ -46,7 +47,38 @@ body{
     margin-top: 10vh;
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
+    gap: 8px;
+}
+
+#idade{
+    display: flex;
+    width: 350px;
+    justify-content: left;
     gap: 3px;
+}
+
+#sexo{
+    width: 350px;
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+}
+
+#bt{
+padding: 3px;
+border: 1px solid black;
+border-radius: 10px;  
+}
+
+#bt:hover{
+    cursor: grab;
+    background-color: wheat;
+    transition: 1s;
+
+}
+
+#masc, #fem, #out{
+    margin-top: 4px;
 }
 
 footer{
@@ -56,3 +88,4 @@ footer{
     border-radius: 0px 0px 10px 10px;
     text-align: center;
 }
+
