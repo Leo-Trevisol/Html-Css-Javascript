@@ -14,13 +14,13 @@ var text = document.getElementById('view')
 
 for(var i = value1; i<value2; i++){
 
-    var j = i
+    var j = (i)
 
-    text.innerHTML = `${j}`
+    text.innerHTML = `${j},${value2}`
 
 }
 
-text.innerHTML = `${value1},${value2}`
+
 
 
 
