@@ -12,11 +12,18 @@ var num3 = document.getElementById('passo')
 var value3 = (num3.value)
 var text = document.getElementById('view')
 
-for(var i = value1; i>value2; i++){
+for(var i = value1; i<value2; i++){
 
-    text.innerHTML = Number(i)
+    var j = i
+
+    text.innerHTML = `${j}`
 
 }
+
+text.innerHTML = `${value1},${value2}`
+
+
+
 
 
 
