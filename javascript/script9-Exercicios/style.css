@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps ;
+    text-shadow:  1px 1px white;
+    font-weight: bold;
+
+}
+
+body{
+
+    background-color: skyblue;
+}
+
+h1{
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+#container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px black solid;
+    width: max-content;
+    height: max-content;
+    border-radius: 10px 10px 0px 0px;
+    background-color: wheat;
+    padding: 10px;
+    box-shadow: 5px 5px 5px black;
+    
+   
+
+
+}
+
+.cabeca{
+
+    background-color: white;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+   
+}
+
+p{
+    width: 40px;
+}
+
+#itens1{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 10px;
+    gap: 10px;
+   
+
+}
+
+#itens2{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 10px;
+    gap: 10px;
+
+}
+
+#itens3{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 10px;
+    gap: 10px;
+
+}
+
+#itens4{
+    margin: auto;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: grab;
+
+  
+
+}
+
+input{
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    text-align: center;
+}
