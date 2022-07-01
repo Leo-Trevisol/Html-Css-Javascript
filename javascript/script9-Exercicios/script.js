@@ -4,19 +4,33 @@ bt.addEventListener('click',verifica)
 
 function verifica(){
 
+   
+
 var num1 = document.getElementById('inicio')
-var value1 = (num1.value)
+var value1 = Number(num1.value)
 var num2 = document.getElementById('fim')
-var value2 = (num2.value)
+var value2 = Number(num2.value)
 var num3 = document.getElementById('passo')
-var value3 = (num3.value)
+var value3 = Number(num3.value)
 var text = document.getElementById('view')
 
 var value4 = text.value
 
-for(var i = value1; i<value2; i++){
+text.innerHTML = ''
 
-    text.innerHTML = `${value4} `
+if(value1 != '' || value2 != '' || value3 != ''){
+
+for(var i = value1; i<=value2; i+= value3){
+
+ 
+        text.innerHTML += ` -> ${(i)}, ${value1}, ${value2}, ${value3}`
+
+}
+
+}else{
+
+    text.innerHTML = `Digite em todos os tempos`
+
 }
 
 }
