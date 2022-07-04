@@ -23,7 +23,7 @@ if(value1 != '' || value2 != '' || value3 != ''){
 for(var i = value1; i<=value2; i+= value3){
 
  
-        text.innerHTML += ` -> ${(i)}, ${value1}, ${value2}, ${value3}`
+        text.innerHTML += ` -> ${(i)}`
 
 }
 
