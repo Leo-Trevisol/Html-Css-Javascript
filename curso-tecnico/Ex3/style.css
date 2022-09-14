@@ -1,0 +1,23 @@
+#oi{
+    margin-top: 10px ;
+}
+
+.mrs{
+    color: red;
+}
+
+#tudo > .ima{
+    display: none;
+}
+
+
+
+#tudo > .ima{
+    display: none;
+}
+#tudo:hover > .ima{
+    display: block;
+    color: crimson;
+    
+}
+
