@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Passion+One&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Comic Neue', cursive;
+
+}
+
+body{
+    background-color: rgb(227, 222, 222);
+    background-image: url(fundo.jpg);
+}
+
+h1{
+     padding: 20px;
+     width: 30vw;
+     margin: auto;
+     margin-top: 10px;
+     text-align: center;
+     color: rgb(150, 49, 49);
+     border: 10px solid black;
+     border-radius: 10px 0px ;
+}
+
+p{
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    width: 20vw;
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 20px;
+
+
+}
+
+
+
+
