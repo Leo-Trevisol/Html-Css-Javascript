@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Passion+One&display=swap');
+
+*{
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+}
+
+
+
 #oi{
     margin-top: 10px ;
 }
 
-.mrs{
+span{
     color: red;
 }
 
@@ -19,5 +28,10 @@
     display: block;
     color: crimson;
     
+}
+
+.ima{
+    width: 30vw;
+    height: 30vh;
 }
 
