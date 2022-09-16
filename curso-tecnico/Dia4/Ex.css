@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 10px;
+}
+
+body{
+    background-color: #00c3b6;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #eee;
+  
+}
+
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    color: #113A52;
+    text-indent: 25px;
+    line-height: 1.5;
+    
+}
+
+a{
+    color: #EEE;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #113A52;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #FFF;
+}
+
