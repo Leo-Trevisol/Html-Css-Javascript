@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Nabla&family=Passion+One&display=swap');
+
+
+@font-face{
+    font-family: 'font';
+    src: url(fontes/Fonte.ttf) format('truetype');
+}
+
+body{
+    background-color: rgba(20, 19, 19, 0.526);
+}
+
+h1{
+    margin: auto;
+    font-family: 'Nabla', cursive;
+    text-align: center;
+    font-size: large;
+    font-size: 3em;
+}
+
+h2{
+    margin: auto;
+    text-align: center;
+    font-family: 'font';
+    font-size: 2em;
+
+}

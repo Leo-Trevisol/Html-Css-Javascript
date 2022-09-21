@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    padding: 20px;
+}
+
+#paragrafoum{
+font: bold 12px 'Verdana';
+}
+
+#paragrafodois{
+    font: italic 14px 'Tahoma' ;
+    text-align: start;
+}
+
+#paragrafotres{
+    font: 14px 'Trebuchet MS';
+    color: #228b22;
+    text-align: justify;
+}
+
+#paragrafoquatro{
+    font: 12px 'Verdana';
+    color: #8b4513;
+    line-height: 2em;
+}
+#paragrafocinco{
+    font: 14px 'Trebuchet MS';
+    color: #B8860B;
+    text-indent: 20px;
+}
+
+#paragrafoseis{
+    font: 12px 'Arial';
+    color: #FF4500;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+}
+
