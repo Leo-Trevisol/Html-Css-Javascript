@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#imgCima{
+   width: 800px; 
+   margin: auto;
+    display: flex;
+}
+
+body{
+    background-image: url('imgs/bg.png');
+}
+
+#conteudo{
+    width: 750px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+}
+
+img{
+    margin: auto;
+    display: flex;
+}
+
+h1, h3, h4{
+    font-family: 'Tahoma';
+    color: #fdab1b;
+}
+
+h4{
+    color: #c3820f;
+}
+

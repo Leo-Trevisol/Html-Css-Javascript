@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('imgs/fundo.png');
+}
+
+#conteudo{
+    width: 750px;
+    margin: auto;
+    align-items: center;
+    background-color: #FFEDDA;
+    padding: 20px;
+}
+
+h1{
+    margin: auto;
+    text-align: center;
+}
+
+h1, h3{
+    font-family: 'Trebuchet MS';
+    color: #D17683;
+    padding: 10px;
+}
+
+#img{
+    margin: auto;
+    display: flex;
+    padding: 20px;
+}
+
+
+p{
+    font: 13px 'Tahoma';
+    text-indent: 20px;
+    padding: 20px;
+    line-height: 2;
+}
+
+.p1{
+    padding-bottom: 0px;
+}
+
+a{
+    font: 13px 'Tahoma';
+    text-decoration: none;
+    color: #D17683;
+}
+
+a:hover{
+    color:  #BA3F51;
+    text-decoration: overline;
+}
+
+a:visited{
+    color: #DF9FA9;
+    text-decoration: none;
+}
+

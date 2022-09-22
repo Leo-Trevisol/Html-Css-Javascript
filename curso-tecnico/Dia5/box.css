@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#tamanho1{
+    width: 400px;
+    background-color: #BF1F1F;
+    font: 12px 'Verdana';
+    color: #F29057;
+}
+    
+#tamanho2{
+width: 400px;
+padding: 20px;
+border: solid #F29057 2px;
+margin: 5px;
+background-color: #BF1F1F;
+font: 12px 'Verdana';
+color: #F29057;
+}
+
+#tamanho3{
+    width: 346px;
+    padding: 20px;
+    border: solid #F29057 2px;
+    margin: 5px;
+    background-color: #BF1F1F;
+    font: 12px 'Verdana';
+    color: #F29057;
+}
+
+
