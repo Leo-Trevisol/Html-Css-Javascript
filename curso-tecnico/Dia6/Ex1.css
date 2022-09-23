@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.um, .dois{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.one, .two, .three, .four{
+    height: 300px;
+}
+
+.one{
+    width: 500px;
+    background-color: blue;
+}
+
+.two{
+    width: 300px;
+    background-color: green;
+}
+
+.three{
+    width: 300px;
+    background-color: yellow;
+}
+.four{
+    width: 500px;
+    background-color: red;
+}
