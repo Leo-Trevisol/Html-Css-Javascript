@@ -28,9 +28,41 @@ img{
 h1, h3, h4{
     font-family: 'Tahoma';
     color: #fdab1b;
+    padding: 8px;
 }
 
 h4{
     color: #c3820f;
 }
 
+p{
+font: 12px 'Verdana';
+color: black;
+text-align: justify;
+padding: 10px;
+
+}
+
+.legenda{
+    font: 10px 'Verdana';
+    color: #c3820f;
+    margin: auto;
+    
+}
+
+a{
+    font: 12px 'Verdana';
+    color: #fdab1b;
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: #fdab1b;
+    text-decoration: underline;
+}
+
+a:visited{
+    color: #edc070;
+    text-decoration: none;
+}

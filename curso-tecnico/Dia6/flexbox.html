@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .flex-container {
+          display: flex;
+          background-color: DodgerBlue;
+          flex-direction: row;/*column column-reverse row row-reverse*/
+        }
+        
+        .flex-container > div {
+          background-color: #f1f1f1;
+          width: 100px;
+          margin: 10px;
+          text-align: center;
+          line-height: 75px;
+          font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Container</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>Um layout Flexivel deve ter um elemento pai com a propriedade <em>display</em>
+    setada para <em>flex</em>.</p>
+
+    </p>Os elementos filhos do container flexível automaticamente se tornam itens flexíveis.</p>
+
+</body>
+</html>
