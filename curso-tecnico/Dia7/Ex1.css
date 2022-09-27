@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navv{
+    background-image: url('imgs/fundo_menu.jpg');
+    padding: 15px;
+    text-align: center;
+    font: bold  16px 'Trebuchet MS' ;
+    color: #d9c49c ;
+    word-spacing: 20px;
+    letter-spacing: 3px;
+}
+
+body{
+    background-image: url('imgs/fundo\ \(1\).jpg');
+}
+
+nav >a{
+    color: white;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding: 0px 10px;
+}
+
+nav >a:hover{
+    color: rgba(255, 0, 0, 0.699);
+    text-decoration: overline;
+}
+
+nav > a:visited{
+    color: white;
+}
+
+#pt1{
+    display: flex ;
+
+}
+
+#conteudo{
+
+    width: 900px;
+    margin: auto;
+    background-color: rgba(255, 255, 0, 0.153);
+    min-width: 500px;
+
+}
+
+.imgCima{
+    background-image: url('imgs/pickup.jpg');
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 300px;
+}
+
+.loremCima{
+    width: 385px;
+    height: 300px;
+    text-indent: 20px;
+    background-color: #f2e8c9;
+    font-size: 16px;
+}
+
+.loremCima > p {
+    padding: 10px;
+}
+
+#pt1{
+    display: flex;
+    
+
+}
+
+#pt2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    background-color: rgba(255, 255, 0, 0.268);
+}
+
+p, h3{
+    font-size: 16px;
+    color: #8c281f;
+     padding: 10px;
+}
+
+
+li >a {
+    text-decoration: none;
+    padding: 10px;
+    color: #8c281f;
+
+    
+}
+
+li >a:hover{
+    color: #56130c;
+    text-decoration: overline;
+}
+
+
+li >a:visited{
+    color: #b14d44,;
+    text-decoration: none;
+}
+
+#big{
+    display: flex;
+    background-color: #f2e8c9;
+}
+
+#big > #pt3{
+    display: flex;
+    flex-direction: column;
+    width: 580px;
+  
+}
+
+
+#pt3>  .imgDireita{
+    width: 250px;
+    height: 200px;
+    background-image: url('imgs/pickup2.jpg');
+    background-repeat: no-repeat ;
+    margin-left: 10px;
+}
+
+
+
+footer{
+    display: flex;
+}
+
+ footer >.imgFoot{
+
+    background-image: url('imgs/logo.png');
+    background-repeat: no-repeat;
+    width: 200px;
+}
+
+.foot{
+    height: 30px;
+    font: 12px 'Trebuchet MS';
+    color: #c8b8a5;
+}
+
+
+
+
+

@@ -5,6 +5,7 @@
 
 #imgCima{
    width: 800px; 
+   height: 200px;
    margin: auto;
     display: flex;
 }
