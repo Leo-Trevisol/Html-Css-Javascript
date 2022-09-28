@@ -3,12 +3,13 @@
     margin: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Frijole&family=Luckiest+Guy&family=Nabla&family=Passion+One&display=swap');
 body{
-    background-color: #1c1a1a;
+    background-color: #181716;
 }
 
 header{
-    background-color: rgba(0, 0, 0, 0.842);
+    background-color:  #f6493ade;;
     padding: 20px;
     margin: auto;
     text-align: center;
@@ -26,27 +27,29 @@ nav > a {
 }
 
 nav > a:hover{
-    color: #F22D1B;
+    color: black;
     transition: 1s;
 }
 
 #imgCima{
     margin: auto;
-    width: 65vw;
+    width: 1000px;
     height: 200px;
-    background-image: url('imgs/im1.jpeg');
+    background-image: url('imgs/oned3.jpg');
     background-size: cover;
+    background-position: center;
+    
     
 }
 
 #container{
     width: 65vw;
-    height: 100vh;
+    height: 100%;
     margin: auto;
-    background-color: rgba(148, 33, 33, 0.818);
+    background-color: rgba(65, 61, 61, 0.836);
 }
 
-#pt1{
+#pt1, #pt2, #pt3, #pt4, #pt5, #pt6{
     display: flex;
     flex-direction: row;
     
@@ -54,44 +57,95 @@ nav > a:hover{
 
 .img1{
     margin: 20px;
-    background-image: url('imgs/im2.jpg');
+    background-image: url('imgs/onde7.jpg');
     width: 400px;
     height: 300px;
     background-size: cover;
+    background-position: center;
 
 }
 
-.p1{
+.p1, .p3, .p5{
     width: 34vw;
     margin: 20px;
     
 }
 
-.p1 > h1{
+.p1 > h1, .p2 >h1, .p3 >h1, .p4>h1, .p5>h1, .p6 >h1{
     text-align: center;
     margin: auto;
+    font-variant: small-caps;
+    font-family: 'Luckiest Guy', cursive;
+    color: #F22D1B;
     
 }
 
  p{
+    text-indent: 20px;
     padding: 10px;
     font-size: 18px;
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
 }
 
-#pt2{
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.p2{
+.p2, .p4, .p6{
     margin: 20px;
     width: 400px;
     height: 300px;
 }
 
 .img2{
-    background-image: url('imgs/im3.jpg');
+    background-image: url('imgs/oned8.jpg');
     background-size: cover;
+    background-position: center;
     width: 34vw;
+}
+
+ .img3{
+    margin: 20px;
+    background-image: url('imgs/oned10.jpg');
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+
+}
+
+.img4{
+    background-image: url('imgs/oned12.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 34vw;
+}
+
+.img4:hover{
+    background-image: url('imgs/oned13.gif');
+    transition: 2s;
+}
+
+.img5{
+    margin: 20px;
+    background-image: url('imgs/oned14.jpg');
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+
+}
+
+.img6{
+    background-image: url('imgs/oned15.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 34vw;
+}
+
+footer{
+    background-color:  #f6493ade;
+    width: 65vw;
+    padding: 10px 0px;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+   font-variant: small-caps;
+   font-size: 18px;
+    
 }
