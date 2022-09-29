@@ -9,12 +9,13 @@ body{
 }
 
 header{
-    background-color:  #f6493ade;;
+    background-color:  #f63ae0de;;
     padding: 20px;
     margin: auto;
     text-align: center;
     font-weight: bolder;
    font-variant: small-caps;
+   min-width: 150px;
    font-size: 18px;
 }
 
@@ -38,6 +39,7 @@ nav > a:hover{
     background-image: url('imgs/oned3.jpg');
     background-size: cover;
     background-position: center;
+    min-width: 800px;
     
     
 }
@@ -76,8 +78,17 @@ nav > a:hover{
     margin: auto;
     font-variant: small-caps;
     font-family: 'Luckiest Guy', cursive;
-    color: #F22D1B;
+    color: #f21bbc;
     
+}
+
+.p1 a{
+color: #be1bb0e2;
+text-decoration: none;
+}
+
+.p1 a:hover{
+    color: #f21be7;
 }
 
  p{
@@ -139,7 +150,7 @@ nav > a:hover{
 }
 
 footer{
-    background-color:  #f6493ade;
+    background-color:  #f63ae6de;
     width: 65vw;
     padding: 10px 0px;
     margin: auto;
