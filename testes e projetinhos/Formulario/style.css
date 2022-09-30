@@ -42,6 +42,11 @@ input, select, textarea, button {
     border-radius: 5px;
 }
 
+textarea{
+    resize: none;
+
+}
+
 .campo {
     margin-bottom: 1em;
 }

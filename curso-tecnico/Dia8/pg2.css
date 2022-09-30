@@ -15,13 +15,37 @@ header{
    font-size: 18px;
 }
 
-h1, p{
+h1, p, H2{
     text-align: center;
     margin: auto;
     font-variant: small-caps;
     font-family: 'Luckiest Guy', cursive;
     color: #f21bbc;
 }
+
+h2{
+    padding: 20px;
+}
+
+h2::before{
+    content: '↣';
+}
+
+h2::after{
+content: '↢';
+}
+
+h2 a{
+    color: #f21bbc;
+}
+
+
+h2 a:hover{
+    font-size: 48px;
+    color: #570c44;
+    transition: 2s;
+}
+
 
 nav > a {
     color: white;

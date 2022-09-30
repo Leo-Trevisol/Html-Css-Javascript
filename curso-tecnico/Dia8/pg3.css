@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: auto;
+    text-align: center;
+    font-variant: small-caps;
+    padding: 20px;
+    text-shadow: 1px 1px 1px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    gap: 50px;
+}
+
+header{
+    background-color:  #f63ae0de;;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+   font-variant: small-caps;
+   min-width: 150px;
+   font-size: 18px;
+}
+
+nav > a {
+    color: white;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding: 10px;
+    text-decoration: overline;
+}
+
+nav > a:hover{
+    color: black;
+    transition: 1s;
+}
+
+body{
+    background-color: rgba(219, 212, 212, 0.73);
+}
+
+.pt1{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+   transform: translate(-30%, 10%)
+}
+
+.p1 > h2, p{
+    margin: auto;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.img1{
+    background-image: url('imgs/oned20.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.img2{
+    background-image: url('imgs/oned21_.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.spotify::after{
+    content: url('imgs/spotify.png');
+}
+
+.youtube::after{
+    content: url('imgs/youtube.png');
+}
+
+.icloud::after{
+    content: url('imgs/icloud.png');
+}
+
+.amazon::after{
+    content: url('imgs/amazon.png');
+}
+
+p{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.p1{
+    display: flex;
+    flex-direction: column;
+}
+
+
