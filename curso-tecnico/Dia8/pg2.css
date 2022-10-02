@@ -1,19 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
 
-}
-
-header{
-    background-color:  #f63ae0de;;
-    padding: 20px;
-    margin: auto;
-    text-align: center;
-    font-weight: bolder;
-   font-variant: small-caps;
-   min-width: 150px;
-   font-size: 18px;
-}
 
 h1, p, H2{
     text-align: center;
@@ -47,27 +32,10 @@ h2 a:hover{
 }
 
 
-nav > a {
-    color: white;
-    text-decoration: none;
-    font-variant: small-caps;
-    padding: 10px;
-    text-decoration: overline;
-}
-
 p{
     font-style: italic;
     font-size: 14px;
     margin-top: 5px;
-}
-
-nav > a:hover{
-    color: black;
-    transition: 1s;
-}
-
-body{
-    background-color: #181716;
 }
 
 #videos1, #videos2, #videos3{

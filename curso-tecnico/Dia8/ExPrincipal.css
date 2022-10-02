@@ -41,7 +41,6 @@ nav > a:hover{
     background-position: center;
     min-width: 800px;
     
-    
 }
 
 #container{
@@ -150,14 +149,4 @@ text-decoration: none;
     width: 34vw;
 }
 
-footer{
-    background-color:  #f63ae6de;
-    width: 65vw;
-    padding: 10px 0px;
-    margin: auto;
-    text-align: center;
-    font-weight: bolder;
-   font-variant: small-caps;
-   font-size: 18px;
-    
-}
+

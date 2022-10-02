@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 h1{
@@ -10,14 +11,8 @@ h1{
     padding: 20px;
     text-shadow: 1px 1px 1px black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 
-}
-
-#container{
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
-    gap: 50px;
 }
 
 header{
@@ -30,6 +25,15 @@ header{
    min-width: 150px;
    font-size: 18px;
 }
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding: 50px;
+}
+
+
 
 nav > a {
     color: white;
@@ -45,14 +49,18 @@ nav > a:hover{
 }
 
 body{
-    background-color: rgba(219, 212, 212, 0.73);
+    background-color: #181716;
 }
 
 .pt1{
+    width: 700px;
     display: flex;
     justify-content: center;
     gap: 20px;
-   transform: translate(-30%, 10%)
+}
+
+.h{
+    width: 250px;
 }
 
 .p1 > h2, p{
@@ -76,6 +84,27 @@ body{
     height: 300px;
 }
 
+.img3{
+    background-image: url('imgs/oned22.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.img4{
+    background-image: url('imgs/oned23.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.img5{
+    background-image: url('imgs/oned24.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
 h2{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -89,7 +118,7 @@ h2{
 }
 
 .icloud::after{
-    content: url('imgs/icloud.png');
+    content: url('imgs/applemusic.png');
 }
 
 .amazon::after{
@@ -106,4 +135,38 @@ p{
     flex-direction: column;
 }
 
+footer{
+    background-color:  #f63ae0de;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+   font-variant: small-caps;
+   min-width: 150px;
+   font-size: 18px;
+    
+}
 
+.p1 a{
+    text-decoration: none;
+}
+
+.p1  .spotify:hover{
+    color:rgb(52, 203, 52) ;
+    transition: 1s;
+}
+
+.p1  .youtube:hover{
+    color:rgb(236, 47, 47) ;
+    transition: 1s;
+}
+
+.p1  .icloud:hover{
+    color: rgb(207, 46, 207);
+    transition: 1s;
+}
+
+.p1  .amazon:hover{
+    color:rgb(64, 64, 118);
+    transition: 1s;
+}

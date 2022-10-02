@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #181716;
+}
+
+header{
+    background-color:  #f63ae0de;;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+   font-variant: small-caps;
+   min-width: 150px;
+   font-size: 18px;
+}
+
+nav > a {
+    color: white;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding: 10px;
+    text-decoration: overline;
+}
+
+nav > a:hover{
+    color: black;
+    transition: 1s;
+}
+
+#imgCima{
+    margin: auto;
+    width: 1000px;
+    height: 200px;
+    background-image: url('imgs/oned3.jpg');
+    background-size: cover;
+    background-position: center;
+    min-width: 800px;
+    
+}
+
+#container{
+    width: 65vw;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(65, 61, 61, 0.836);
+    box-shadow: 2px 2px 8px white;
+}
+
+footer{
+    background-color:  #f63ae6de;
+    width: 65vw;
+    padding: 10px 0px;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+   font-variant: small-caps;
+   font-size: 18px;
+    
+}
+
