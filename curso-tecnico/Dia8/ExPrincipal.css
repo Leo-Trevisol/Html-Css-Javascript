@@ -121,19 +121,20 @@ text-decoration: none;
 
 }
 
-.img4{
+#img4{
     background-image: url('imgs/oned12.jpg');
     background-size: cover;
     background-position: center;
     width: 34vw;
 }
 
-.img4:hover{
+#img4:hover{
     background-image: url('imgs/oned13.gif');
     transition: 2s;
+    cursor: no-drop;
 }
 
-.img5{
+ .img5{
     margin: 20px;
     background-image: url('imgs/oned14.jpg');
     width: 400px;
@@ -142,11 +143,15 @@ text-decoration: none;
 
 }
 
-.img6{
+ #img6{
     background-image: url('imgs/oned15.jpg');
     background-size: cover;
     background-position: center;
     width: 34vw;
+}
+
+.img1, .img2, .img3, #img4, .img5, #img6{
+    border-radius: 20px;
 }
 
 
