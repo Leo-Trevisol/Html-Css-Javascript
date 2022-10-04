@@ -1,6 +1,4 @@
 var pp = document.getElementById('img4')
-pp.addEventListener('mouseenter', audio1)
-pp.addEventListener('mouseout', audio2)
 
 var har = document.getElementById('harry')
 har.addEventListener('mouseenter', harry)
@@ -34,17 +32,6 @@ sucesso1.addEventListener('mouseenter', sucesso)
 
 var fim1 = document.getElementById('fim')
 fim1.addEventListener('mouseenter', fim)
-
-
-function audio1(){
-    var a = document.getElementById('sad')
-        a.play()
-}
-
-function audio2(){
-    var a = document.getElementById('sad')
-    a.pause()
-   }
 
    function harry(){
     var a = document.getElementById('audioharry')

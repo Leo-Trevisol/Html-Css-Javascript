@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+body{
+}
+
 h1{
     margin: auto;
     text-align: center;
@@ -14,5 +17,11 @@ h1{
 }
 
 fieldset{
+    width: 200px;
     border: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    gap:10px
 }

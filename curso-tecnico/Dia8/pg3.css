@@ -170,3 +170,7 @@ footer{
     color:rgb(64, 64, 118);
     transition: 1s;
 }
+
+p{
+    text-shadow: 2px 2px 2px black;
+}

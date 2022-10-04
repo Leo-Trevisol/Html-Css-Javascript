@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: auto;
+    text-align: center;
+    font-variant: small-caps;
+    text-shadow: 1px 1px 1px black;
+}
+
+.cabeca{
+    font-size: 40px;
+    background-color: rgba(167, 15, 15, 0.69);
+    padding: 10px;
+}
+
+#container{
+   width: 200px;
+   margin: 5% 35%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#inname, #inidade, #incpf, #inemail, #incombo {
+    width: 500px;
+    padding: 5px;
+}
+
+.nome, .idade, .cpf, .email, .combo{
+    padding: 10px 0px;
+}
