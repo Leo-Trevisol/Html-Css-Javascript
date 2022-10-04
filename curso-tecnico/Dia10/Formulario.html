@@ -16,21 +16,22 @@
     <h1>Preencha este forms aqui meu chapa</h1>
 
     <div id="container">
+        <form>
         <div class="nome">
             <label for="inname">Nome:</label>
-            <input type="text" id="inname" name="name">
+            <input type="text" id="inname" name="name" pattern="[aA-zZ\s]+$" required> 
         </div>
         <div class="idade">
             <label for="inidade">Idade:</label>
-            <input type="number" id="inidade" name="idade">
+            <input type="number" id="inidade" name="idade" pattern="[0-9]+$ d{3}"  required>
         </div>
         <div class="cpf">
             <label for="incpf">Cpf:</label>
-            <input type="text" id="incpf" name="cpf">
+            <input type="text" id="incpf" name="cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required>
         </div>
         <div class="email">
             <label for="inemail">Email:</label>
-            <input type="text" id="inemail" name="email">
+            <input type="email" id="inemail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
         </div>
 
         <div class="combo">
@@ -43,13 +44,13 @@
             </select>
         </div>
 
-        <div class="visita">
+        <div class="visita" >
             <p>Nos visitaria novamente:</p>
-            <input type="radio" name="inradio" id="sim" value="sim">
+            <input type="radio" name="inradio" id="sim" value="sim" >
             <label for="sim">Sim</label>
             <input type="radio" name="inradio" id="nao" value="nao">
             <label for="nao">Não</label>
-            <input type="radio" name="inradio" id="talvez" value="talvez">
+            <input type="radio" name="inradio" id="talvez" value="talvez" checked>
             <label for="talvez">Talvez</label>
         </div>
 
@@ -66,6 +67,7 @@
         <div class="enviar">
             <input type="submit" name="enviar" id="enviar" value="Enviar Email">
         </div>
+        </form>
     </div>
     
 

@@ -40,4 +40,8 @@ h1{
     padding: 10px;
 }
 
+fieldset{
+    border: 0;
+}
+
 
