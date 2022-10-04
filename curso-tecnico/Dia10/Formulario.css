@@ -17,18 +17,27 @@ h1{
 }
 
 #container{
-   width: 200px;
+   width: 500px;
    margin: 5% 35%;
     display: flex;
     flex-direction: column;
     
 }
 
-#inname, #inidade, #incpf, #inemail, #incombo {
+#inname, #inidade, #incpf, #inemail, #incombo, #texto{
     width: 500px;
     padding: 5px;
 }
 
-.nome, .idade, .cpf, .email, .combo{
+.nome, .idade, .cpf, .email, .combo, .visita, .novidade, .enviar{
     padding: 10px 0px;
 }
+#texto{
+    resize: none;
+}
+
+#enviar{
+    padding: 10px;
+}
+
+
