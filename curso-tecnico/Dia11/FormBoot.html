@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Olá, mundo!</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Olá, Pessoal!</h1>
+        <form >
+            <div class="form-row">
+                    <div class="form-group col-md-6">
+                <label for="name">Nome</label>
+                <input type="text" name="name" class="form-control" pattern="[aA-zZ\s]+$" require>
+                 </div>
+                 <div class="form-group col-md-6">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome" class="form-control" pattern="[aA-zZ\s]+$" require>
+                </div>
+            </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" class="form-control" pattern="[0-9]+$ d{3}"  required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="disciplina">Disciplina</label>
+                <select name="disciplina" class="form-control">
+                    <option value="escolha">Escolha a disciplina</option>
+                    <option value="1">Ciencias</option>
+                    <option value="2">Biologia</option>
+                    <option value="3">Ciencia biologicas</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <input type="button" class="btn" value="Limpar">
+                <input type="button" value="Salvar" class="btn btn-danger">
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
