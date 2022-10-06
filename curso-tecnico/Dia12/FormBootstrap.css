@@ -1,0 +1,90 @@
+*{
+    font-variant: small-caps;
+}
+
+
+.display-1{
+    text-align: center;
+    margin: auto;
+    color: white;
+    
+}
+
+header{
+    width: 68vw;
+    height: 300px;
+    margin: auto;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+main{
+    width: 65vw;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+    
+}
+
+.emcima, .embaixo{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.p1{
+    width: 70%;
+    padding: 30px;
+    color: white;
+
+
+}
+
+ img{
+    padding: 30px;
+    width: 500px;
+    height: 300px;
+}
+
+.p2{
+    width: 500px;
+    height: 300px;
+    padding: 30px;
+    color: white;
+
+}
+
+.container{
+    width: 70%;
+    padding: 30px;
+}
+
+label{
+    color: white;
+}
+
+.radio1{
+    color: black;
+    padding: 0px 5px;
+}
+
+.radio2{
+    accent-color: blueviolet;
+}
+
+input{
+    border-color: black;
+}
+
+.slideshow-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+#tanos{
+    width: 68vw;
+    padding: 30px;
+}
