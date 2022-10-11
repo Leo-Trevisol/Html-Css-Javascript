@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="Notas.css">
+</head>
+<body>
+
+    
+
+    <div id="prova">
+
+        <h1>Prova</h1>
+
+        <div class="n1">
+            <label for="n1">Nota 1:</label>
+            <input type="number" id="n1" pattern="{2}">
+        </div>
+        <div class="n2">
+            <label for="n1">Nota 2:</label>
+            <input type="number" id="n2" pattern="{2}">
+        </div>
+        <div class="n3">
+            <label for="n1">Nota 3:</label>
+            <input type="number" id="n3" pattern="{2}">
+        </div>
+
+        <div id="soma"></div>
+
+        <div class="bt">
+            <input type="button" id="bt" onclick="somar()" value="Calcular">
+        </div>
+
+    </div>
+
+
+    <script src="Notas.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-variant: small-caps
+}
+
+h1{
+margin: auto;
+text-align: center;
+padding: 30px;
+}
+
+h2{
+    width: 500px;
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    padding: 20px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+main{
+    width: 500px;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+     margin: auto;
+}
+
+.regras{
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255, 255, 0, 0.555);
+}
+
+#horas{
+    width: 500px;
+    padding: 20px;
+    background-color: rgba(0, 0, 255, 0.623);
+    display: flex;
+    flex-direction: column;
+}
+
+#bt{
+    width: 100px;
+    margin: auto;
+    padding: 5px;
+   
+
+}
+
+.entrada, .saida{
+    padding: 10px;
+}
