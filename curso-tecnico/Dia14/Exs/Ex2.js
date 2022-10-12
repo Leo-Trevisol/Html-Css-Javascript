@@ -20,5 +20,9 @@ function somar(){
 
    // var extraHora = (extra1 
 
-    pagar.innerHTML = `Seu salario é ${salarioHora} por dia `
+   var extraHora = ((salarioHora + (salarioHora/100) * 20) * extra1) *-1
+
+   var salTotal = salario1 + extraHora
+
+   pagar.innerHTML = `Seu salario com suas ${extra1} horas extras: ${salTotal}`
 }

@@ -29,9 +29,8 @@ function somar(){
 
     var minTotal = min1 + min2;
 
-    if(minTotal > 60){
+    if(minTotal >= 60){
 
-        horasTotal = (horasTotal +1)
         minTotal =(minTotal -60)
     }
 

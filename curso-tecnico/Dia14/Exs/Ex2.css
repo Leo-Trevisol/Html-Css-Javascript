@@ -56,6 +56,6 @@ main{
 
 }
 
-.entrada, .saida, .extra{
+.entrada, .saida, .extra, #pagar{
     padding: 10px;
 }
