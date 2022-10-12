@@ -10,32 +10,39 @@ function somar(){
 
     var agora = new Date()
     var anoAtual = agora.getFullYear()
-    var mesAtual = agora.getMonth()
+    var mesAtual = agora.getMonth() + 1
     var diaAtual = agora.getDate()
 
     var dia1 = Number(dia.value)
     var mes1 = Number(mes.value)
     var ano1 = Number(ano.value)
 
-    var anoTotal = anoAtual - ano1
+    var anoTotal = 0
     var mesTotal = 0
-
-    if(mes1 < mesAtual){
-        mesTotal = mesAtual - mes1
-    }else{
-        mesTotal = 12 - mes1
-    }
-
     var diaTotal = 0
+
+    anoTotal = anoAtual - ano1
     
-    if(dia1 < diaAtual){
-        diaTotal = diaAtual - dia1
+ 
+
+    if(mes1>mesAtual){
+        anoTotal = anoTotal -1
+        mesTotal = 12-(mes1-mesAtual)
     }else{
-        diaTotal = 30 - dia1
+        mesTotal = mesAtual-mes1
     }
 
+  
+    if(dia1 > diaAtual){
+        diaTotal = 30 - (dia1 - diaAtual)
+        mesTotal = mesTotal-1
+    }else{
+        diaTotal = diaAtual - dia1
+        
+    }
+   
 
-    txt.innerHTML = `Voce tem: ${anoTotal} e ${mesTotal} e ${diaTotal}`
+    txt.innerHTML = `Voce tem aproximadamente: ${anoTotal} anos,  ${mesTotal} meses e ${diaTotal} dias`
     
 
 }
