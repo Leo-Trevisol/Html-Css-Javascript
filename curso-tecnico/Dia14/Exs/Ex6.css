@@ -21,6 +21,7 @@ h2{
     color: white;
     padding: 20px;
     border-radius: 20px 20px 0px 0px;
+
 }
 
 main{
@@ -31,7 +32,11 @@ main{
      margin: auto;
 }
 
-.info{
+.dia, .mes, .ano, #total{
+    padding: 20px;
+}
+
+.tudo{
     padding: 20px;
     width: 500px;
     display: flex;
@@ -39,48 +44,5 @@ main{
     text-align: center;
     background-color: rgba(255, 255, 0, 0.555);
     border-radius: 0px 0px 20px 20px;
-
-}
-
-.salario{
-    padding: 20px;
-}
-
-.hrComeco, .hrFim{
-    padding: 10px;
-
-}
-
-#comeco, #fim{
-    width: 500px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-
-}
-
-#bt{
-    
-    width: 100px;
-   margin-top: 5px;
-    padding: 5px;
-   
-
-}
-
-.entrada, .saida, .extra{
-    padding: 10px;
-}
-
-#total, #total1{
-    padding: 10px;
-}
-
-#comeco{
-    background-color: rgba(255, 255, 0, 0.555);
-}
-#fim{
-background-color: rgba(0, 0, 255, 0.623);
-border-radius: 0px 0px 20px 20px;
 
 }

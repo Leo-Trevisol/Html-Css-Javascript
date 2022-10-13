@@ -9,6 +9,9 @@ margin: auto;
 text-align: center;
 padding: 30px;
 }
+body{
+    background-color: rgba(0, 0, 0, 0.61);
+}
 
 h2{
     width: 500px;
@@ -46,6 +49,8 @@ main{
     background-color: rgba(0, 0, 255, 0.623);
     display: flex;
     flex-direction: column;
+    border-radius: 0px 0px 20px 20px;
+
 }
 
 #bt{
