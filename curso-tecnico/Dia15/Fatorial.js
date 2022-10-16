@@ -1,5 +1,6 @@
 var numero = document.getElementById('num')
 var valor = document.getElementById('valor')
+var valor1 = document.getElementById('valor1')
 
 
 function calcular(){
@@ -12,6 +13,8 @@ function calcular(){
     soma = i * soma
 
    }
+
+   valor1.innerHTML = `= ${soma}`
 
    
 }

@@ -56,10 +56,10 @@ main{
 
 }
 
-#valor{
+#valor, #valor1 {
     text-align: center;
     width: 500px;
-    padding: 20px;
+    padding: 0px 20px;
     background-color: green;
     color: white;
 }
