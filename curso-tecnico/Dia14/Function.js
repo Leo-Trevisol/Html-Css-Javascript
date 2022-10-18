@@ -18,7 +18,7 @@ escolha(3)
 function escolha(dia){
     switch(dia){
         case 1: 
-        alert("Dia 1: mamar")
+        alert("Dia 1: amar")
         break;
         case 2:
             alert("Dia 2: beijar")

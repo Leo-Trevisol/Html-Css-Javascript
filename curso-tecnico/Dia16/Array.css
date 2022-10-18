@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(44, 44, 131);
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+
+.vet{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    margin: 10px;
+    text-align: center;
+    color: white;
+
+}

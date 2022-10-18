@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="Ex1.css">
+
+    <title>Adicionar produto</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Adicionar produto</h1>
+        <form >
+            <div class="form-row">
+                    <div class="form-group col-md-6" >
+                <label for="name">Produto</label>
+                <input type="text" name="produto" id="produto" class="form-control" pattern="[aA-zZ\s]+$" required>
+                 </div>
+            </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="idade">Valor</label>
+                <input type="number" name="valor" id="valor" class="form-control" pattern="[0-9]+$ d{3}"  required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6" id="bts">
+                <input type="button" class="btn btn-success" value="Insere inicio" id="insereInicio" >
+                <input type="button" value="Insere meio" class="btn btn-success" id="insereMeio">
+                <input type="button" value="Insere fim" class="btn btn-success" id="insereFim">
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6" >
+                <input type="button" class="btn btn-danger" value="Exclui inicio" id="excluiInicio">
+                <input type="button" value="Exclui meio" class="btn btn-danger" id="excluiMeio">
+                <input type="button" value="Meio fim" class="btn btn-danger" id="excluiFim">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6" >
+                <input type="button" class="btn btn-primary" value="Ordena" id="ordena">
+                <input type="button" value="Ordena reverso" class="btn btn-warning" id="ordenaReverso">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6" >
+               <textarea name="area" id="area" cols="70" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6" >
+                <label for="name">Total</label>
+                <input type="text" name="total"  pattern="[aA-zZ\s]+$" require>
+            </div>
+        </div>
+        
+        </form>
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="Ex1.js"></script>
+  </body>
+</html>
