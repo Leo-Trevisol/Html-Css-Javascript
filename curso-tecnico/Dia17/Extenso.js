@@ -6,7 +6,7 @@ var numeroV
 
 
 
-var centenaValue = ""
+
 var milharValue = ""
 
 
@@ -18,14 +18,57 @@ function printar(){
 
     var x = valores()
 
+   
+
     if(f == 1){
      extenso1 = unidadeFc(valores()).toString()
     }
 
     if(f == 2){
-        extenso1 = dezenaFc(valores()).toString()
+        numero1 = numero.value
+        numeroV = numero1.split("")
+
+        var deze = dezenaFc(numeroV[0])
+        var uni = unidadeFc(numeroV[1])
+        if(numeroV[1] == 0 ){
+            extenso1 = `${deze}`
+        }else{
+        extenso1 = `${deze} e ${uni}`
+        }
     }
 
+
+        if(f == 3){
+        numero1 = numero.value
+        numeroV = numero1.split("")
+
+        var cent = centenaFc(numeroV[0])
+        var deze = dezenaFc(numeroV[1])
+        var uni = unidadeFc(numeroV[2])
+
+        if(numeroV[1] == 0 && numeroV[2] == 0 ){
+            extenso1 = `${cent}`
+        }
+
+        if(numeroV[1] == 0 && numeroV[2] != 0){
+            extenso1 = `${cent} e ${uni}`
+        }
+
+        if(numeroV[1] != 0 && numeroV[2] == 0){
+            extenso1 = `${cent} e ${deze}`
+        }
+
+        if(numero[1] == 1 ){
+            var juntos = `${deze} + ${uni}`
+            deze = dezenaFc(juntos)
+        }
+
+        alert(deze)
+
+        extenso1 = `${cent} e ${deze} e ${uni}`
+        }
+
+    
     alert(extenso1)
    
 }
@@ -146,33 +189,37 @@ function dezenaFc(dezena){
     
 }
 
-function centena(centena){
+function centenaFc(centena){
+    var centenaValue = ""
+
     if(centena == 1){
-        centena = "cem"
+        centenaValue = "cem"
     }
     if(centena == 2){
-        centena = "duzentos"
+        centenaValue = "duzentos"
     }
     if(centena == 3){
-        centena = "trezentos"
+        centenaValue = "trezentos"
     }
     if(centena == 4){
-        centena = "quatrocentos"
+        centenaValue = "quatrocentos"
     }
     if(centena == 5){
-        centena = "quinhentos"
+        centenaValue = "quinhentos"
     }
     if(centena == 6){
-        centena = "seicentos"
+        centenaValue = "seicentos"
     }
     if(centena == 7){
-        centena = "setecentos"
+        centenaValue = "setecentos"
     }
     if(centena == 8){
-        centena = "oitocentos"
+        centenaValue = "oitocentos"
     }
     if(centena == 9){
-        centena = "novecentos"
+        centenaValue = "novecentos"
     }
+
+    return centenaValue
    
 }
