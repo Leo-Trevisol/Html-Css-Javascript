@@ -31,35 +31,37 @@ let vet = new Array()
 var produto1
 var valor1
 
+function iniciaVar(){
+    produto1 = produto.value
+    valor1 = Number(valor.value)
+}
+
 
 function insereInicioFc(){
-produto1 = produto.value
-valor1 = Number(valor.value)
+    iniciaVar()
+    document.getElementById("area").innerHTML="A<br>\
+      B<br>\
+      C<br>\
+      D<br>";
 
-vet[vet.length] = `${produto1} : R$ ${valor1}`
-
-texto.innerHTML = `${vet[0]}`
 
 }
 
 function insereMeioFc(){
-
+    iniciaVar()
 }
 
 function insereFimFc(){
-
+    iniciaVar()
 }
 
 function excluiInicioFc(){
-
 }
 
 function excluiMeioFc(){
-
 }
 
 function excluiFimFc(){
-
 }
 
 function ordenaFc(){
@@ -69,3 +71,4 @@ function ordenaFc(){
 function ordenaReversoFc(){
 
 }
+

@@ -8,6 +8,8 @@ for(let i =0; i<5; i++){
 
 }
 
+
+
 vet.pop() //remove o ultimo
 
 vet.shift(); //remove o primeiro
