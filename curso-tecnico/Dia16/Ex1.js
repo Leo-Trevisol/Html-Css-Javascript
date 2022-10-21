@@ -30,6 +30,7 @@ let vet = new Array()
 
 var produto1
 var valor1
+var texto = document.getElementById("texto");
 
 function iniciaVar(){
     produto1 = produto.value
@@ -39,14 +40,15 @@ function iniciaVar(){
 
 function insereInicioFc(){
     iniciaVar()
-    document.getElementById("area").innerHTML="A<br>\
-      B<br>\
-      C<br>\
-      D<br>";
+    vet.push(produto1 + ": R$" +  valor1)
 
+    texto.innerHTML = ``
 
-}
-
+    for(let i = 0; i<vet.length; i++){
+        texto.innerHTML = `<br>\ ${vet}`
+    }
+    }
+   
 function insereMeioFc(){
     iniciaVar()
 }
