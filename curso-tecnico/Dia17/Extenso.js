@@ -46,26 +46,52 @@ function printar(){
         var deze = dezenaFc(numeroV[1])
         var uni = unidadeFc(numeroV[2])
 
+        if(numeroV[1] == 1){
+            var juntos = Number(numeroV[1] + "" + numeroV[2])
+            deze = dezenaFc(juntos)
+            uni = ""
+        }
+
+        if(numeroV[0] == 1){
+            cent = "cento"
+        }
+
         if(numeroV[1] == 0 && numeroV[2] == 0 ){
             extenso1 = `${cent}`
+        }else{
+            extenso1 = `${cent} e ${deze} ${uni}`
         }
 
         if(numeroV[1] == 0 && numeroV[2] != 0){
-            extenso1 = `${cent} e ${uni}`
+            extenso1 = `${cent} ${uni}`
         }
 
         if(numeroV[1] != 0 && numeroV[2] == 0){
-            extenso1 = `${cent} e ${deze}`
+            extenso1 = `${cent} ${deze}`
         }
 
-        if(numero[1] == 1 ){
-            var juntos = `${deze} + ${uni}`
-            deze = dezenaFc(juntos)
         }
 
-        alert(deze)
+        if(f == 4){
+            numero1 = numero.value
+            numeroV = numero1.split("")
+            
+            var mil = unidadeFc(numeroV[0])
+            var cent = centenaFc(numeroV[1])
+            var deze = dezenaFc(numeroV[2])
+            var uni = unidadeFc(numeroV[3])
 
-        extenso1 = `${cent} e ${deze} e ${uni}`
+            if(numeroV[1] == 1){
+                cent = "cento"
+            }
+
+            if(numeroV[2] == 1){
+                var juntos = Number(numeroV[2] +""+ numeroV[3])
+                deze = dezenaFc(juntos)
+                uni = ""
+            }
+
+            extenso1 = `${mil} mil ${cent} e ${deze} ${uni}`
         }
 
     
@@ -222,4 +248,10 @@ function centenaFc(centena){
 
     return centenaValue
    
+}
+
+function milhar(mil){
+
+
+
 }
