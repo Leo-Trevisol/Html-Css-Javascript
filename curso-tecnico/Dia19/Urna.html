@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna</title>
+    <link rel="stylesheet" href="Urna.css">
+</head>
+<body>
+
+    <head>
+        <h1>Eleições 2022</h1>
+    </head>
+
+    <main>
+        <form id="form1">
+            <div class="view">
+                <input type="text" id="view"  >
+            </div>
+            <div class="bts1-3">
+                    <input type="button" class="bt" id="bt1" value="1" onclick="print()">
+                    <input type="button" class="bt" id="bt2" value="2">
+                    <input type="button" class="bt" id="bt3" value="3">
+            </div>
+            <div class="bts4-6">
+                <input type="button" class="bt" id="bt4" value="4">
+                <input type="button" class="bt" id="bt5" value="5">
+                <input type="button" class="bt" id="bt6" value="6">
+        </div>
+        <div class="bts7-9">
+            <input type="button" class="bt" id="bt7" value="7">
+            <input type="button" class="bt" id="bt8" value="8">
+            <input type="button" class="bt" id="bt9" value="9">
+    </div>
+    <div class="bts0-conf">
+        <input type="button" class="bt" id="bt0" value="0">
+        <input type="button" class="bt-conf" id="btconfirm" value="Confirmar">
+       
+    </div>
+
+        </form>
+        <div class="imgcandidato">
+        <img src="imgs/therock.jpeg" alt="therock" id="img1">
+     </div>
+    </main>
+
+    <script src="Urna.js"></script>
+</body>
+</html>
