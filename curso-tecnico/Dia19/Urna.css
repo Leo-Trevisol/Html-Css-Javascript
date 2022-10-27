@@ -65,7 +65,7 @@ h1{
     height: 300px;
 }
 
-.imgcandidato{
+#imgcandidato{
     display: flex;
     align-items: center;
     display: none;
