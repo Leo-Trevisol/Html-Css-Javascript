@@ -3,7 +3,7 @@
     padding: 0;
     font-variant: small-caps;
 }
-main{
+main, #container2{
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
@@ -18,7 +18,7 @@ h1{
     font-size: 50px;
 }
 
-#form1{
+#form1, #form2{
     
     display: flex;
     justify-content: center;
@@ -92,6 +92,7 @@ h1{
 #candidato{
     display: flex;
     flex-direction: column;
+    display: none;
 }
 
 #nomecand{
@@ -103,3 +104,6 @@ h1{
    
 }
 
+#container2{
+    display: none;
+}

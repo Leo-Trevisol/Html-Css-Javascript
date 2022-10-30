@@ -5,19 +5,22 @@ var btdelete = document.getElementById('btdelete')
 const listbt = document.querySelectorAll(".bt");
 var candidato = document.getElementById('candidato')
 var container1 = document.getElementById('container1')
+var container2 = document.getElementById('container2')
 
 var candidato1 = '69'
 var candidato2 = '55'
 
 var canddigitado = ''
 
+var numero = ''
+var horario = ''
+
 var tamanho = new Array()
 var lstcandidatos = new Array()
 
 function print(num){
 
-    var numero = ''
-    var horario = ''
+  
 
 if(tamanho.length>1){
     alert('Apenas 2 digitos')
@@ -35,10 +38,6 @@ if(canddigitado == candidato1){
      nomecand.innerHTML = 'The rock baiano'
      numero = candidato1
      horario = 'manha'
-    const voto = new Voto(numero,horario)
-     alert(voto.nomecand)
-     lstcandidatos[0] = voto
-
 }
 
 if(canddigitado == candidato2){
@@ -48,6 +47,8 @@ if(canddigitado == candidato2){
     imagem1.style.display = 'block'
     candidato.style.display = 'block'
     nomecand.innerHTML = 'Van Desel'
+    numero = candidato2
+    horario = 'tarde'
 
 }
 
@@ -59,9 +60,8 @@ if(canddigitado.length > 1 && canddigitado != candidato1 && canddigitado != cand
     imagem1.style.display = 'block'
     candidato.style.display = 'block'
     nomecand.innerHTML = 'Voto em branco'
+    numero = 1
 }
-
-alert(lstcandidatos.length)
 
 
 }
@@ -73,8 +73,9 @@ function confirmAction() {
     }else{
     let confirmAction = confirm("Tem certeza do seu voto?");
     if (confirmAction) {
-      alert("Voto gravado com sucesso!");
-      deletar()
+        addVoto(numero, horario)
+        alert("Voto gravado com sucesso!");
+        deletar()
     } 
 }
   }
@@ -91,6 +92,15 @@ function conferir(){
     let confirmAction = confirm("Tem certeza que deseja conferir a votação?");
     if (confirmAction) {
     container1.style.display = 'none'
+    container2.style.display = 'block'
+    let contagem = 0
+    for(let i = 0; i< lstcandidatos.length; i++){
+        if(lstcandidatos[i].numerocand == 55){
+           contagem++
+        }
+    }
+    alert(contagem)
+
     }
 }
 
@@ -99,5 +109,12 @@ class Voto{
         this.numerocand = numerocand;
         this.horavoto = horavoto;
     }
+}
+
+function addVoto(numero, horario){
+
+    let myCand1 = new Voto(numero, horario);
+     lstcandidatos.push(myCand1)
+
 }
 
