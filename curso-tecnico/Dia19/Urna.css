@@ -1,74 +1,405 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-variant: small-caps;
-}
-main{
-    display: flex;
-    margin: 20px;
-    gap: 20px;
-}
-h1{
-    text-align: center;
-    background-image: linear-gradient(to right, green, yellow);
-    padding: 10px;
-    color: white;
-    text-shadow: 1px 1px 1px white;
-    font-size: 50px;
+
+body {
+	margin: 0px;
+	 padding: 0px;
+	  font-family:"Arial";
+	   overflow-x:hidden;
+	 }
+
+img { 
+	position: absolute;
+	 display: block;
+	  margin: 0px;
+	   border: none;
+	    padding: 0px;
+	 }
+
+div { 
+	position: absolute;
+ }
+
+#content-container { 
+	display: block;
+	 position: relative;
+	  width: 1366px;
+	   height: 768px;
+	    margin-left: auto;
+		 margin-right: auto;
+		  }
+
+
+#page_urna_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 1366px;
+	height: 768px;
 }
 
-#form1{
-    
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-#view{
-    width: 400px;
-    padding: 20px;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-.bt{
-    width: 100px;
-    padding: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
-.bt:hover, .bt-conf:hover{
-    background-color: gray;
-    color: black;
-    transition: 0.5s;
-}
-
-.bt-conf{
-    width: 200px;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid black;
-    background-color: rgb(47, 205, 47);
-    color: white;
+.eita:hover{
+	cursor: pointer;
+	
 
 }
 
-.bts1-3, .bts4-6, .bts7-9, .bts0-conf{
-    padding: 10px 20px;
-    display: flex;
-    gap: 20px;
+#_bg__urna_ek2 {
+	top: 0px;
+	left: 0px;
+	width: 1366px;
+	height: 768px;
+	background:rgba(255,255,255,1);
 }
 
-#img1{
-    width: 400px;
-    height: 300px;
+
+#foto {
+	top: 57px;
+	left: 848px;
+	width: 313px;
+	height: 313px;
+	background:rgba(217,217,217,1);
+	
 }
 
-#imgcandidato{
-    display: flex;
-    align-items: center;
-    display: none;
+
+#campo1 {
+	top: 57px !important;
+	position: absolute !important;
+	left: 84px;
+	width: 119px;
+	height: 99px;
+	background:rgba(155.13,155.13,155.13,1);
 }
+
+
+#but1 {
+	top: 198px;
+	left: 84px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#but4 {
+	top: 311px;
+	left: 84px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#but0 {
+	top: 539px;
+	left: 84px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#confirmar {
+	top: 539px;
+	left: 307px;
+	width: 187px;
+	height: 76px;
+	background:rgba(171.06,255,174.42,1);
+}
+
+
+#resultado {
+	top: 539px;
+	left: 848px;
+	width: 313px;
+	height: 76px;
+	background:rgba(235.07,255,112.62,1);
+}
+
+
+#but7 {
+	top: 425px;
+	left: 84px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#but8 {
+	top: 425px;
+	left: 307px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#but9 {
+	top: 425px;
+	left: 530px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#but5 {
+	top: 311px;
+	left: 307px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#but6 {
+	top: 311px;
+	left: 530px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#but2 {
+	top: 198px;
+	left: 307px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#but3 {
+	top: 198px;
+	left: 530px;
+	width: 187px;
+	height: 76px;
+	background:rgba(217,217,217,1);
+}
+
+
+#_3 {
+	top: 214px;
+	left: 604px;
+	width: 49px;
+	height: 71px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#_4 {
+	top: 327px;
+	left: 155px;
+	width: 48px;
+	height: 114px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#_5 {
+	top: 327px;
+	left: 382px;
+	width: 48px;
+	height: 114px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#_6 {
+	top: 327px;
+	left: 605px;
+	width: 48px;
+	height: 114px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#_9 {
+	top: 441px;
+	left: 605px;
+	width: 48px;
+	height: 114px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#n1 {
+	top: 80px;
+	left: 107px;
+	width: 86px;
+	height: 86px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 48px;
+	text-align: center;
+	letter-spacing: 15.36px;
+	color:#000000;
+}
+
+
+#campo2 {
+	top: 57px;
+	left: 224px;
+	width: 119px;
+	height: 99px;
+	background:rgba(155.13,155.13,155.13,1);
+}
+
+
+#n2 {
+	top: 80px;
+	left: 247px;
+	width: 85px;
+	height: 86px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 48px;
+	text-align: center;
+	letter-spacing: 15.36px;
+	color:#000000;
+}
+
+
+#_8 {
+	top: 441px;
+	left: 382px;
+	width: 48px;
+	height: 114px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#_7 {
+	top: 441px;
+	left: 157px;
+	width: 45px;
+	height: 114px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#_0 {
+	top: 555px;
+	left: 156px;
+	width: 47px;
+	height: 114px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#confirma {
+	top: 555px;
+	left: 321px;
+	width: 169px;
+	height: 60px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 32px;
+	text-align: center;
+	line-height: 34.727272033691px;
+	color:#000000;
+}
+
+
+#resultado_ek1 {
+	top: 556px;
+	left: 908px;
+	width: 205px;
+	height: 60px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 32px;
+	text-align: center;
+	line-height: 34.727272033691px;
+	letter-spacing: 1.6px;
+	color:#000000;
+}
+
+
+#_2 {
+	top: 214px;
+	left: 382px;
+	width: 48px;
+	height: 114px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+
+#_1 {
+	top: 214px;
+	left: 158px;
+	width: 42px;
+	height: 71px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 12.8px;
+	color:#000000;
+}
+
+#nomecand {
+	width: 276px;
+height: 35px;
+left: 867px;
+top: 406px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 108.52%;
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #000000;
+}
+
+
 
 

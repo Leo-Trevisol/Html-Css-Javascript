@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna</title>
+    <link rel="stylesheet" href="urna1.css">
+</head>
+<body>
+
+    <head>
+        <h1>Eleições 2022</h1>
+    </head>
+
+    <main id="container1">
+        <form id="form1">
+            <div class="view">
+                <input type="text" id="view" disabled >
+            </div>
+            <div class="bts1-3">
+                    <input type="button" class="bt" id="bt1" value="1" onclick="print(1)">
+                    <input type="button" class="bt" id="bt2" value="2" onclick="print(2)">
+                    <input type="button" class="bt" id="bt3" value="3" onclick="print(3)">
+            </div>
+            <div class="bts4-6">
+                <input type="button" class="bt" id="bt4" value="4" onclick="print(4)">
+                <input type="button" class="bt" id="bt5" value="5" onclick="print(5)">
+                <input type="button" class="bt" id="bt6" value="6" onclick="print(6)">
+        </div>
+        <div class="bts7-9">
+            <input type="button" class="bt" id="bt7" value="7" onclick="print(7)">
+            <input type="button" class="bt" id="bt8" value="8" onclick="print(8)">
+            <input type="button" class="bt" id="bt9" value="9" onclick="print(9)">
+    </div>
+    <div class="bts0-conf">
+        <input type="button" class="bt" id="bt0" value="0" onclick="print(0)">
+        <input type="button" class="bt-delete" id="btdelete" value="Limpar" onclick="deletar()">
+        <input type="button" class="bt-conf" id="btconfirm" value="Confirmar" onclick="confirmAction()">
+    </div>
+    <div class="conferir">
+        <input type="button" class="bt-conferir" id="conferirvotacao" value="Conferir votação" onclick="conferir()">
+    </div>
+
+        </form>
+        <div id="candidato">
+        <div id="imgcandidato"></div>
+        <div id="nomecand"></div>
+    
+     </div>
+    </main>
+
+    <script src="urna1.js"></script>
+</body>
+</html>

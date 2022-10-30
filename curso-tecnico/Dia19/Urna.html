@@ -1,50 +1,101 @@
+<!-- 
+/*
+ *	This content is generated from the PSD File Info.
+ *	(Alt+Shift+Ctrl+I).
+ *
+ *	@desc 		
+ *	@file 		urna
+ *	@date 		Wednesday 26th of October 2022 10:59:50 PM
+ *	@title 		Page 1
+ *	@author 	
+ *	@keywords 	
+ *	@generator 	Export Kit v1.3.figma
+ *
+*/
+ -->
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urna</title>
-    <link rel="stylesheet" href="Urna.css">
-</head>
-<body>
+<html  lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Urna</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="StyleSheet" href="urna.css" />
+		
 
-    <head>
-        <h1>Eleições 2022</h1>
-    </head>
+		<script src="script.js"></script>
 
-    <main>
-        <form id="form1">
-            <div class="view">
-                <input type="text" id="view" disabled >
-            </div>
-            <div class="bts1-3">
-                    <input type="button" class="bt" id="bt1" value="1" onclick="print()">
-                    <input type="button" class="bt" id="bt2" value="2" onclick="print()">
-                    <input type="button" class="bt" id="bt3" value="3" onclick="print()">
-            </div>
-            <div class="bts4-6">
-                <input type="button" class="bt" id="bt4" value="4" onclick="print()">
-                <input type="button" class="bt" id="bt5" value="5" onclick="print()">
-                <input type="button" class="bt" id="bt6" value="6" onclick="print()">
-        </div>
-        <div class="bts7-9">
-            <input type="button" class="bt" id="bt7" value="7" onclick="print()">
-            <input type="button" class="bt" id="bt8" value="8" onclick="print()">
-            <input type="button" class="bt" id="bt9" value="9" onclick="print()">
-    </div>
-    <div class="bts0-conf">
-        <input type="button" class="bt" id="bt0" value="0" onclick="print()">
-        <input type="button" class="bt-conf" id="btconfirm" value="Confirmar">
-       
-    </div>
 
-        </form>
-        <div id="imgcandidato">
-        <img src="imgs/therock.jpeg" alt="therock" id="img1">
-     </div>
-    </main>
 
-    <script src="Urna.js"></script>
-</body>
+	</head>
+	<body>
+		<div id="content-container" >
+			<div id="page_urna_ek1"  >
+				<div id="_bg__urna_ek2"  ></div>
+				<div id="foto"  ></div>
+				<div id="campo1"  ></div>
+				<div id="but1" class="eita" onclick="ColocarVoto(1)"></div>
+				<div id="but4" class="eita" onclick="ColocarVoto(4)"></div>
+				<div id="but0" class="eita" onclick="ColocarVoto(0)"></div>
+				<div id="confirmar" class="eita" onclick="Confirma()"></div>
+				<div id="resultado" class="eita" ></div>
+				<div id="but7" class="eita" onclick="ColocarVoto(7)"></div>
+				<div id="but8" class="eita" onclick="ColocarVoto(8)"></div>
+				<div id="but9" class="eita" onclick="ColocarVoto(9)"></div>
+				<div id="but5" class="eita" onclick="ColocarVoto(5)"></div>
+				<div id="but6" class="eita" onclick="ColocarVoto(6)"></div>
+				<div id="but2" class="eita" onclick="ColocarVoto(2)"></div>
+				<div id="but3"class="eita"  onclick="ColocarVoto(3)"></div>
+				<div id="_3" class="eita" onclick="ColocarVoto(3)">
+					3
+				</div>
+				<div id="_4" class="eita" onclick="ColocarVoto(4)">
+					4<br/>
+				</div>
+				<div id="_5" class="eita" onclick="ColocarVoto(5)">
+					5<br/>
+				</div>
+				<div id="_6" class="eita" onclick="ColocarVoto(6)">
+					6<br/>
+				</div>
+				<div id="_9" class="eita" onclick="ColocarVoto(9)">
+					9<br/>
+				</div>
+				<div id="n1">
+					
+				</div>
+				<div id="campo2" ></div>
+				<div id="n2">
+					
+				</div>
+				<div id="_8" class="eita" onclick="ColocarVoto(8)">
+					8<br/>
+				</div>
+				<div id="_7" class="eita" onclick="ColocarVoto(7)">
+					7<br/>
+				</div>
+				<div id="_0" class="eita" onclick="ColocarVoto(0)">
+					0<br/>
+				</div>
+				<div id="confirma" class="eita" onclick="Confirma()">
+					Confirma
+				</div>
+				<div id="resultado_ek1" class="eita">
+					Resultado
+				</div>
+				<div id="_2" class="eita" onclick="ColocarVoto(2)">
+					2<br/>
+				</div>
+				<div id="_1" class="eita" onclick="ColocarVoto(1)">
+					1
+				</div>
+
+				<div id="nomecand">
+					
+
+				</div>
+
+			</div>
+		</div>
+	</body>
 </html>
