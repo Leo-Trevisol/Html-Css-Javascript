@@ -18,9 +18,12 @@ var horario = ''
 var tamanho = new Array()
 var lstcandidatos = new Array()
 
+const teclaAudio = new Audio('clique.mp3');
+const confirmaAudio = new Audio('confirma.mp3')
+
 function print(num){
 
-  
+    teclaAudio.currentTime = 0
 
 if(tamanho.length>1){
     alert('Apenas 2 digitos')
@@ -28,7 +31,12 @@ if(tamanho.length>1){
     tamanho.push(1)
     text.value += num
     canddigitado += '' + num
+    teclaAudio.play();
+
+    
 }
+
+
 
 if(canddigitado == candidato1){
     imagem1.style.backgroundImage = 'url(imgs/therock.jpeg)'
@@ -64,6 +72,7 @@ if(canddigitado.length > 1 && canddigitado != candidato1 && canddigitado != cand
 }
 
 
+
 }
 
 function confirmAction() {
@@ -71,14 +80,12 @@ function confirmAction() {
         alert('Numero invalido!')
        
     }else{
-    let confirmAction = confirm("Tem certeza do seu voto?");
-    if (confirmAction) {
+        confirmaAudio.play();
         addVoto(numero, horario)
         alert("Voto gravado com sucesso!");
         deletar()
     } 
 }
-  }
 
 function deletar(){
     canddigitado = ''
