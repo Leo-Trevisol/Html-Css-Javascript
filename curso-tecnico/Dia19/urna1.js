@@ -283,6 +283,7 @@ function conferirsenha(){
     if(senhav.length>= 6 && senhav.length<=10){
         var numeroprimo = 0
         var conferemaiusculo = false
+        var confereprimo = false
         for(let i = 0; i< senhavt.length;i++){
             if(conferemaiusculo == false){
             if(senhav.charCodeAt(i)>= 65 && senhav.charCodeAt(i)<=90 && senhav.charCodeAt(i+1)>= 65 && senhav.charCodeAt(i+1)<=90){
@@ -292,11 +293,28 @@ function conferirsenha(){
 
         if(senhav.charCodeAt(i)>= 48 && senhav.charCodeAt(i)<=57){
                 var num = Number(senhav.charCodeAt(i))
+                for(let i=0; i< num; i++){
+                    if(num % i == 0){
+                        numeroprimo++
+                    }
+                }
         }
 
+
         }
-        container2.style.display = 'flex'
-        container3.style.display = 'none'
+
+        if(numeroprimo>2){
+            confereprimo == true
+        }
+
+        if(conferemaiusculo && confereprimo){
+
+            container2.style.display = 'flex'
+            container3.style.display = 'none'
+        }else{
+            alert('Senha invalida')
+        }
+       
     }else{
         alert('A senha deve ter no minimo 6 e no maximo 10 caracteres!')
     }
