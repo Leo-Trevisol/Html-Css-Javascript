@@ -281,9 +281,19 @@ function conferirsenha(){
     var senhavt = senhav.split("")
    
     if(senhav.length>= 6 && senhav.length<=10){
-        alert(senhavt)
+        var numeroprimo = 0
+        var conferemaiusculo = false
         for(let i = 0; i< senhavt.length;i++){
-            alert(senhav.charCodeAt(i));
+            if(conferemaiusculo == false){
+            if(senhav.charCodeAt(i)>= 65 && senhav.charCodeAt(i)<=90 && senhav.charCodeAt(i+1)>= 65 && senhav.charCodeAt(i+1)<=90){
+                conferemaiusculo = true
+            }
+        }
+
+        if(senhav.charCodeAt(i)>= 48 && senhav.charCodeAt(i)<=57){
+                var num = Number(senhav.charCodeAt(i))
+        }
+
         }
         container2.style.display = 'flex'
         container3.style.display = 'none'
