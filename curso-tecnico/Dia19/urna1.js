@@ -6,8 +6,11 @@ const listbt = document.querySelectorAll(".bt");
 var candidato = document.getElementById('candidato')
 var container1 = document.getElementById('container1')
 var container2 = document.getElementById('container2')
+var container3 = document.getElementById('container3')
 var totalvotos = document.getElementById('totalvotos')
 var desempate = document.getElementById('desempate')
+var btsenha = document.getElementById('btsenha')
+
 
 var candidato1 = '69'
 var candidato2 = '55'
@@ -33,7 +36,7 @@ if(tamanho.length>1){
     tamanho.push(1)
     text.value += num
     canddigitado += '' + num
-    teclaAudio.play();
+   // teclaAudio.play();
 }
 
 
@@ -81,7 +84,7 @@ function confirmAction() {
         alert('Numero invalido!')
        
     }else{
-        confirmaAudio.play();
+      //  confirmaAudio.play();
         addVoto(numero, horario)
         deletar()
     } 
@@ -101,7 +104,7 @@ function conferir(){
     let confirmAction = confirm("Tem certeza que deseja conferir a votação?");
     if (confirmAction) {
     container1.style.display = 'none'
-    container2.style.display = 'flex'
+    container3.style.display = 'flex'
     let contagem1 = 0
     let contagem2 = 0
     let contagem3 = 0
@@ -270,5 +273,10 @@ function definecand(cont1, cont2, cont3, ultimocandidato){
     }
 
 
+}
+
+function conferirsenha(){
+    container2.style.display = 'flex'
+    container3.style.display = 'none'
 }
 

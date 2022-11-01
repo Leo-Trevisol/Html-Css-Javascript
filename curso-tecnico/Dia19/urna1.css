@@ -23,7 +23,7 @@ h1{
 
 }
 
-#form1, #form2{
+#form1, #form2, #form3{
     
     display: flex;
     justify-content: center;
@@ -56,10 +56,11 @@ h1{
     color: white;
 }
 
-.bt:hover, .bt-conf:hover, .bt-delete:hover, .bt-conferir:hover{
+.bt:hover, .bt-conf:hover, .bt-delete:hover, .bt-conferir:hover, #btsenha:hover{
     background-color: gray;
     color: black;
     transition: 0.5s;
+    color: white;
 }
 
 .bt-conf{
@@ -125,10 +126,10 @@ h1{
     border-radius: 10px;
 }
 
-#container2{
+#container2, #container3{
     display: none;
     flex-direction: column;
- 
+    justify-content: center;
 }
 
 
@@ -180,4 +181,36 @@ h1{
     display: none;
 }
 
+#container3{
+    width: 500px;
+    height: 300px;
+    padding: 0;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px black;
+    background-color: gray;
+    color: white;
+}
 
+#form3{
+    display: flex;
+    gap: 30px;
+}
+
+.senha, #senha, #btsenha{
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+#btsenha{
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black;
+}
+
+#senha{
+    box-shadow: 2px 2px 2px black;
+}
