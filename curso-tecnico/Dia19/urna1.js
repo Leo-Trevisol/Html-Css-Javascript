@@ -6,6 +6,8 @@ const listbt = document.querySelectorAll(".bt");
 var candidato = document.getElementById('candidato')
 var container1 = document.getElementById('container1')
 var container2 = document.getElementById('container2')
+var totalvotos = document.getElementById('totalvotos')
+var desempate = document.getElementById('desempate')
 
 var candidato1 = '69'
 var candidato2 = '55'
@@ -32,8 +34,6 @@ if(tamanho.length>1){
     text.value += num
     canddigitado += '' + num
     teclaAudio.play();
-
-    
 }
 
 
@@ -94,7 +94,9 @@ function deletar(){
     candidato.style.display = 'none'
 }
 
-function conferir(){
+function conferir(){    
+    var tam = lstcandidatos.length-1
+    var ultimocand = lstcandidatos[tam].numerocand
 
     let confirmAction = confirm("Tem certeza que deseja conferir a votação?");
     if (confirmAction) {
@@ -116,13 +118,13 @@ function conferir(){
              }
         }
     }
-    contagem1 = ((contagem1 / lstcandidatos.length) * 100)
-    contagem2 = ((contagem2 / lstcandidatos.length) * 100)
-    contagem3 = ((contagem3 / lstcandidatos.length) * 100)
 
-    definecand(Math.round(contagem1), Math.round(contagem2), Math.round(contagem3))
+      contagem1 = ((contagem1 / lstcandidatos.length) * 100)
+      contagem2 = ((contagem2 / lstcandidatos.length) * 100)
+      contagem3 = ((contagem3 / lstcandidatos.length) * 100)
 
-   
+    definecand(contagem1.toFixed(1), contagem2.toFixed(1), contagem3.toFixed(1), ultimocand)
+    totalvotos.innerHTML = `Total de votos: ${lstcandidatos.length}`
 
     }
 
@@ -144,7 +146,7 @@ function addVoto(numero, horario){
 
 }
 
-function definecand(cont1, cont2, cont3){
+function definecand(cont1, cont2, cont3, ultimocandidato){
 
     var foto1 = document.getElementById('fotocand1')
     var nome1 = document.getElementById('nomecand1')
@@ -240,6 +242,33 @@ function definecand(cont1, cont2, cont3){
     }
 
     }
+
+    if(cont1 == cont2){
+        if(ultimocandidato == candidato2){
+            foto1.style.backgroundImage = 'url(imgs/vindiesel.jpeg)'
+            foto1.style.backgroundSize = 'cover'
+            nome1.innerHTML = 'Van Desel'
+            porcentagem1.innerHTML = `Novo presidente do brasil com ${cont2} % dos votos`
+            foto2.style.backgroundImage = 'url(imgs/therock.jpeg)'
+            foto2.style.backgroundSize = 'cover'
+            nome2.innerHTML = 'The rock baiano'
+            porcentagem2.innerHTML = `Em segundo lugar com ${cont1} % dos votos`
+        }
+        if(ultimocandidato == candidato1){
+            foto1.style.backgroundImage = 'url(imgs/therock.jpeg)'
+            foto1.style.backgroundSize = 'cover'
+            nome1.innerHTML = 'The rock baiano'
+            porcentagem1.innerHTML = `Novo presidente do brasil com ${cont1} % dos votos`
+            foto2.style.backgroundImage = 'url(imgs/vindiesel.jpeg)'
+            foto2.style.backgroundSize = 'cover'
+            nome2.innerHTML = 'Van Desel'
+            porcentagem2.innerHTML = `Em segundo lugar com ${cont2} % dos votos`
+        }
+
+        desempate.style.display = 'block'
+
+    }
+
 
 }
 

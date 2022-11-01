@@ -161,5 +161,23 @@ h1{
     text-align: center;
 }
 
+#totalvotos, #desempate{
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px white;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+#desempate{
+    width: 600px;
+    display: none;
+}
 
 
