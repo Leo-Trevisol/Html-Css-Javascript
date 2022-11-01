@@ -47,7 +47,7 @@ if(canddigitado == candidato1){
     imagem1.style.backgroundSize = 'cover'
      imagem1.style.display = 'block'
      candidato.style.display = 'block'
-     nomecand.innerHTML = 'The rock baiano'
+     nomecand.innerHTML = '69 - The rock baiano <br> Partido dos amantes'
      numero = candidato1
      horario = 'manha'
 }
@@ -58,7 +58,7 @@ if(canddigitado == candidato2){
     imagem1.style.backgroundSize = 'cover'
     imagem1.style.display = 'block'
     candidato.style.display = 'block'
-    nomecand.innerHTML = 'Van Desel'
+    nomecand.innerHTML = '55 - Van Desel <br> Partido da familia'
     numero = candidato2
     horario = 'tarde'
 
