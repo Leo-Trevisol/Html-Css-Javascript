@@ -10,6 +10,7 @@ var container3 = document.getElementById('container3')
 var totalvotos = document.getElementById('totalvotos')
 var desempate = document.getElementById('desempate')
 var btsenha = document.getElementById('btsenha')
+var senha = document.getElementById('senha')
 
 
 var candidato1 = '69'
@@ -276,7 +277,16 @@ function definecand(cont1, cont2, cont3, ultimocandidato){
 }
 
 function conferirsenha(){
-    container2.style.display = 'flex'
-    container3.style.display = 'none'
+    var senhav = senha.value
+    if(senhav.length>= 6 && senhav.length<=10){
+        for(let i = 0; senhav.length<i;i++){
+        }
+        container2.style.display = 'flex'
+        container3.style.display = 'none'
+    }else{
+        alert('A senha deve ter no minimo 6 e no maximo 10 caracteres!')
+    }
+
+    
 }
 
