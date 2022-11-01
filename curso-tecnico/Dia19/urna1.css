@@ -3,6 +3,10 @@
     padding: 0;
     font-variant: small-caps;
 }
+
+body{
+    background-color: rgba(0, 0, 0, 0.803);
+}
 main, #container2{
     display: flex;
     justify-content: space-evenly;
@@ -14,8 +18,9 @@ h1{
     background-image: linear-gradient(to right, green, yellow);
     padding: 10px;
     color: white;
-    text-shadow: 1px 1px 1px white;
+    text-shadow: 1px 1px 1px black;
     font-size: 50px;
+
 }
 
 #form1, #form2{
@@ -30,13 +35,16 @@ h1{
     padding: 20px;
     border: 2px solid black;
     border-radius: 5px;
-}
+    color: white;
+    font-size: 20px;
+ }
 
 .bt{
     width: 100px;
     padding: 20px;
     border: 2px solid black;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 .bt-conferir{
@@ -86,6 +94,8 @@ h1{
     width: 400px;
     height: 350px;
     display: none;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
 
 }
 
@@ -101,8 +111,18 @@ h1{
     font-weight: bold;
     background-image: linear-gradient(to right, green, yellow);
     color: white;
-    padding: 8px 0px;
+    padding: 8px 8px;
+    border-radius: 0px 0px 10px 10px ;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px black;
    
+}
+
+#porcentagem1, #porcentagem2, #porcentagem3{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #container2{
@@ -121,6 +141,10 @@ h1{
 
 #fotocand1, #fotocand2, #fotocand3{
     height: 300px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+
+
 }
 
 .todoscand{

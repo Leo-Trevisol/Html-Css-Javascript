@@ -41,6 +41,7 @@ if(tamanho.length>1){
 if(canddigitado == candidato1){
     imagem1.style.backgroundImage = 'url(imgs/therock.jpeg)'
     imagem1.style.backgroundRepeat = 'no-repeat'
+    imagem1.style.backgroundSize = 'cover'
      imagem1.style.display = 'block'
      candidato.style.display = 'block'
      nomecand.innerHTML = 'The rock baiano'
@@ -114,12 +115,19 @@ function conferir(){
                 contagem3++
              }
         }
+    }
+    contagem1 = ((contagem1 / lstcandidatos.length) * 100)
+    contagem2 = ((contagem2 / lstcandidatos.length) * 100)
+    contagem3 = ((contagem3 / lstcandidatos.length) * 100)
 
+    definecand(Math.round(contagem1), Math.round(contagem2), Math.round(contagem3))
+
+   
 
     }
-    definecand(contagem1, contagem2, contagem3)
 
-    }
+    
+
 }
 
 class Voto{
@@ -151,82 +159,81 @@ function definecand(cont1, cont2, cont3){
     var nome3 = document.getElementById('nomecand3')
     var porcentagem3 = document.getElementById('porcentagem3')
 
-
     if(cont1 >= cont2 && cont1 >= cont3){
         foto1.style.backgroundImage = 'url(imgs/therock.jpeg)'
         foto1.style.backgroundSize = 'cover'
         nome1.innerHTML = 'The rock baiano'
-        porcentagem1.innerHTML = `Em primeiro lugar com ${cont1} votos`
+        porcentagem1.innerHTML = `Novo presidente do brasil com ${cont1} % dos votos`
         if(cont2 >= cont3){
             foto2.style.backgroundImage = 'url(imgs/vindiesel.jpeg)'
             foto2.style.backgroundSize = 'cover'
             nome2.innerHTML = 'Van Desel'
-            porcentagem2.innerHTML = `Em segundo lugar com ${cont2} votos`
+            porcentagem2.innerHTML = `Em segundo lugar com ${cont2} % dos votos`
             foto3.style.backgroundImage = 'url(imgs/nulo.jpeg)'
             foto3.style.backgroundSize = 'cover'
             nome3.innerHTML = 'Voto Nulo'
-            porcentagem3.innerHTML = `${cont3} votos nulos`
+            porcentagem3.innerHTML = `${cont3} % de votos nulos`
 
         }else{
             foto2.style.backgroundImage = 'url(imgs/nulo.jpeg)'
             foto2.style.backgroundSize = 'cover'
             nome2.innerHTML = 'Voto nulo'
-            porcentagem2.innerHTML = `${cont3} votos nulos`
+            porcentagem2.innerHTML = `${cont3} % de votos nulos`
             foto3.style.backgroundImage = 'url(imgs/vindiesel.jpeg)'
             foto3.style.backgroundSize = 'cover'
             nome3.innerHTML = 'Van Desel'
-            porcentagem3.innerHTML = `Em segundo lugar com ${cont2} votos`
+            porcentagem3.innerHTML = `Em segundo lugar com ${cont2} % dos votos`
         }
     }else{
         if(cont2 >= cont1 && cont2 >= cont3){
             foto1.style.backgroundImage = 'url(imgs/vindiesel.jpeg)'
             foto1.style.backgroundSize = 'cover'
             nome1.innerHTML = 'Van Desel'
-            porcentagem1.innerHTML = `Em primeiro lugar com ${cont2} votos`
+            porcentagem1.innerHTML = `Novo presidente do brasil com ${cont2} % dos votos`
             if(cont1 >= cont3){
                 foto2.style.backgroundImage = 'url(imgs/therock.jpeg)'
                 foto2.style.backgroundSize = 'cover'
                 nome2.innerHTML = 'The rock baiano'
-                porcentagem2.innerHTML = `Em segundo lugar com ${cont1} votos`
+                porcentagem2.innerHTML = `Em segundo lugar com ${cont1} % dos votos`
                 foto3.style.backgroundImage = 'url(imgs/nulo.jpeg)'
                 foto3.style.backgroundSize = 'cover'
                 nome3.innerHTML = 'Voto Nulo'
-                porcentagem3.innerHTML = `${cont3} votos nulos`
+                porcentagem3.innerHTML = `${cont3} % de votos nulos`
             }else{
                 foto2.style.backgroundImage = 'url(imgs/nulo.jpeg)'
                 foto2.style.backgroundSize = 'cover'
                 nome2.innerHTML = 'Voto nulo'
-                porcentagem2.innerHTML = `${cont3} votos nulos`
+                porcentagem2.innerHTML = `${cont3} % de votos nulos`
                 foto3.style.backgroundImage = 'url(imgs/therock.jpeg)'
                 foto3.style.backgroundSize = 'cover'
                 nome3.innerHTML = 'The rock baiano'
-                porcentagem3.innerHTML = `Em segundo lugar com ${cont1} votos`
+                porcentagem3.innerHTML = `Em segundo lugar com ${cont1} % dos votos`
             }
         }else{
             if(cont3 >= cont1 && cont3 >= cont2){
                 foto1.style.backgroundImage = 'url(imgs/nulo.jpeg)'
                 foto1.style.backgroundSize = 'cover'
                 nome1.innerHTML = 'Voto nulo'
-                porcentagem1.innerHTML = `${cont3} votos nulos`
+                porcentagem1.innerHTML = `${cont3} % de votos nulos`
                 if(cont1 >= cont2){
                     foto2.style.backgroundImage = 'url(imgs/therock.jpeg)'
                     foto2.style.backgroundSize = 'cover'
                     nome2.innerHTML = 'The rock baiano'
-                    porcentagem2.innerHTML = `Em primeiro lugar com ${cont1} votos`
+                    porcentagem2.innerHTML = `Novo presidente do brasil com ${cont1} % dos votos`
                     foto3.style.backgroundImage = 'url(imgs/vindiesel.jpeg)'
                     foto3.style.backgroundSize = 'cover'
                     nome3.innerHTML = 'Van Desel'
-                    porcentagem3.innerHTML = `Em segundo lugar com ${cont2} votos`
+                    porcentagem3.innerHTML = `Em segundo lugar com ${cont2} % dos votos`
 
                 }else{
                     foto2.style.backgroundImage = 'url(imgs/vindiesel.jpeg)'
                     foto2.style.backgroundSize = 'cover'
                     nome2.innerHTML = 'Van Desel'
-                    porcentagem2.innerHTML = `Em primeiro lugar com ${cont2} votos`
+                    porcentagem2.innerHTML = `Novo presidente do brasil com ${cont2} % dos votos`
                     foto3.style.backgroundImage = 'url(imgs/therock.jpeg)'
                     foto3.style.backgroundSize = 'cover'
                     nome3.innerHTML = 'The rock baiano'
-                    porcentagem3.innerHTML = `Em segundo lugar com ${cont1} votos`
+                    porcentagem3.innerHTML = `Em segundo lugar com ${cont1} % dos votos`
 
                 }
         }
