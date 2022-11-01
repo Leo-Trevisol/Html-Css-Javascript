@@ -278,8 +278,12 @@ function definecand(cont1, cont2, cont3, ultimocandidato){
 
 function conferirsenha(){
     var senhav = senha.value
+    var senhavt = senhav.split("")
+   
     if(senhav.length>= 6 && senhav.length<=10){
-        for(let i = 0; senhav.length<i;i++){
+        alert(senhavt)
+        for(let i = 0; i< senhavt.length;i++){
+            alert(senhav.charCodeAt(i));
         }
         container2.style.display = 'flex'
         container3.style.display = 'none'
