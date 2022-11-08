@@ -10,10 +10,13 @@ body{
 
 #form1{
  display: flex;   
+ margin: auto;
  flex-direction: column;
  align-items: center;
- justify-items: center;
+ align-content: center;
+ justify-content: center;
  padding: 20px;
+ 
 }
 
 #bts{
