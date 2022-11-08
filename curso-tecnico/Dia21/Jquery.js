@@ -17,6 +17,7 @@ var confirm = false
 
 add()
 
+var body = document.getElementsByTagName('body')[0];
 
 $(document).ready(function(){
     $("#btAdd").click(function(){
@@ -67,13 +68,11 @@ $(document).ready(function(){
                 tabela.setAttribute("border", "2");
 
 
-
-
-
             }
         });
 
         $("#btConsulta").click(function(){
+            body.style.margin = '50px'
             form1.style.display = 'none'
             tabela.style.width = '70vw'
             tabela.style.margin = 'auto'
