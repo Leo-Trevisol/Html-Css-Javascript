@@ -4,6 +4,10 @@
     font-variant: small-caps;
 }
 
+body{
+    background-color: gray;
+}
+
 #form1{
  display: flex;   
  flex-direction: column;

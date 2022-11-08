@@ -2,6 +2,11 @@
 
 var lista = new Array()
 
+const tabela = document.createElement("table");
+
+tabela.style.visibility = "hidden"
+
+const form1 = document.getElementById('form1')
 
 
 var confirm = false
@@ -19,11 +24,7 @@ $(document).ready(function(){
                 var calc = Number(((potencia * horas)/1000)*valor)
                 let energia = new Energia(equipamento, potencia, horas, calc);
                 lista.push(energia)
-                alert(`O valor é ${calc}`)
 
-                
-
-                const tabela = document.createElement("table");
                  const tbody = document.createElement("tbody");
 
                 const row  = document.createElement('tr')
@@ -68,6 +69,16 @@ $(document).ready(function(){
 
 
             }
+        });
+
+        $("#btConsulta").click(function(){
+            form1.style.display = 'none'
+            tabela.style.width = '70vw'
+            tabela.style.margin = 'auto'
+            tabela.style.visibility = "visible"
+
+
+
         });
 
 
