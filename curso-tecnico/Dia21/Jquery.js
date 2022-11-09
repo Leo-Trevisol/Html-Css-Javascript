@@ -19,6 +19,8 @@ add()
 
 var body = document.getElementsByTagName('body')[0];
 
+var cont = 0
+
 $(document).ready(function(){
     $("#btAdd").click(function(){
             if($("#valor").val() == "" || $("#equipamento").val() == "" || $("#potencia").val() == "" || $("#horas").val() == "" ){
@@ -32,7 +34,7 @@ $(document).ready(function(){
                 let energia = new Energia(equipamento, potencia, horas, calc);
                 lista.push(energia)
 
-               
+                cont++
 
                 const cell1 = document.createElement("td");
                 const cell2 = document.createElement("td");
