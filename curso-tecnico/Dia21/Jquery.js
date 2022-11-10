@@ -2,12 +2,15 @@
 
 var lista = new Array()
 
-const tabela = document.createElement("table");
-tabela.style.visibility = "hidden";
-var form = document.getElementById('form1')
+
 
 var confirm = false
 
+add()
+
+var body = document.getElementsByTagName('body')[0];
+
+var cont = 0
 
 $(document).ready(function(){
     $("#btAdd").click(function(){
@@ -21,7 +24,11 @@ $(document).ready(function(){
                 var calc = Number(((potencia * horas)/1000)*valor)
                 let energia = new Energia(equipamento, potencia, horas, calc);
                 lista.push(energia)
+                alert(`O valor é ${calc}`)
 
+                
+
+                const tabela = document.createElement("table");
                  const tbody = document.createElement("tbody");
 
                 const row  = document.createElement('tr')
@@ -37,10 +44,7 @@ $(document).ready(function(){
                 const text3 = document.createTextNode(horas);
                 const text4 = document.createTextNode(calc);
 
-                if(confirm == false){
-                    add()
-                    confirm = true
-                }
+                const row  = document.createElement('tr')
 
 
                 cell1.appendChild(text1);
@@ -55,6 +59,8 @@ $(document).ready(function(){
                 cell4.appendChild(text4);
                 row.appendChild(cell4);
 
+                
+
                 tbody.appendChild(row);
                 tabela.appendChild(tbody);
                 document.body.appendChild(tabela);
@@ -62,15 +68,10 @@ $(document).ready(function(){
 
 
 
+                tabela.className = "table table-dark";
 
 
             }
-        });
-        
-        $("#btConsulta").click(function(){
-             form.style.display = "none"
-            tabela.style.visibility = "visible";
-            tabela.className = "table table-dark";
         });
 
 
@@ -108,5 +109,7 @@ function add(){
     rowcab.appendChild(cabecalho3);
     cabecalho4.appendChild(cab4);
     rowcab.appendChild(cabecalho4);
+
+    tbody.appendChild(rowcab);
 
 }
