@@ -95,8 +95,11 @@ header{
     box-shadow: 1px 1px 1px black;
 }
 
-#pesquisar{
+#pesquisar, #btcarrinho{
     height: 48px;
+    background-color: transparent;
+    border: 1px solid rgb(128, 0, 128);
+    padding: 0px 10px ;
 }
 
 
@@ -104,6 +107,9 @@ header{
     display: none;
 }
 
+#menorpmaior, #maiorpmenor{
+  color: rgb(128, 0, 128) ;
+}
 
 
 #imgs{
@@ -111,6 +117,7 @@ header{
     flex-wrap: wrap;
     padding: 20px;
 }
+
 
 
 .sidenav {
