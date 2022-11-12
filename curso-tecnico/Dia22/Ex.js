@@ -70,7 +70,7 @@
         
 function carregaProd(){
    
-        gerarProd()
+    gerarProdDefault()
 
        for(let i = 0; i<lstProdutos.length; i++){
 
@@ -94,17 +94,30 @@ function openNav() {
   }
 
 
-function gerarProd(){
-    for(let i = 1; i <7;i++){
+function gerarProdDefault(){
 
-        let produto = new Produto(i, 'Almofada '+i, parseFloat(500 + i), 'imgs/almofada'+i+ '.jpeg', 2, true)
-        let produto1 = new Produto(i, 'Almofada '+i, parseFloat(300 + i), 'imgs/almofada'+i+ '.jpeg', 2, true)
+        let produto = new Produto(1, "Almofada elfa +18", 500, 'imgs/almofada1.jpeg', 3, true, "+18")
+        let produto1 = new Produto(2, "Almofada garota +18", 500, 'imgs/almofada2.jpeg', 2, true, "+18")
+        let produto2 = new Produto(3, "Almofada empregadas", 300, 'imgs/almofada3.jpeg', 5, true, "normal")
+        let produto3 = new Produto(4, "Almofada garota demonio 1", 250, 'imgs/almofada4.jpeg', 4, true, "normal")
+        let produto4 = new Produto(5, "Almofada Hatsune Miku 1", 300, 'imgs/almofada5.jpeg', 4, true, "normal")
+        let produto5 = new Produto(6, "Almofada Hatsune Miku 2", 300, 'imgs/almofada6.jpeg', 2, true, "normal")
+        let produto6 = new Produto(7, "Almofada garota demonio 2", 300, 'imgs/almofada7.jpeg', 2, true, "normal")
+        let produto7 = new Produto(8, "Almofada deusa azul", 320, 'imgs/almofada8.jpeg', 2, true, "normal")
+        let produto8 = new Produto(8, "Almofada garota borboleta", 400, 'imgs/almofada9.jpeg', 3, true, "+18")
 
-        
+
         lstProdutos.push(produto)
         lstProdutos.push(produto1)
+        lstProdutos.push(produto2)
+        lstProdutos.push(produto3)
+        lstProdutos.push(produto4)
+        lstProdutos.push(produto5)
+        lstProdutos.push(produto6)
+        lstProdutos.push(produto7)
+        lstProdutos.push(produto8)
 
-    }
+
 }
 
 function adicionacarrinho(pro){
@@ -128,13 +141,14 @@ function adicionacarrinho(pro){
 }
 
 class Produto{
-    constructor(codigo, descricao, valor, imagem, estoque, vitrine){
+    constructor(codigo, descricao, valor, imagem, estoque, vitrine, tipo){
         this.codigo = codigo;
         this.descricao = descricao;
         this.valor = valor;
         this.imagem = imagem;
         this.estoque = estoque;
         this.vitrine = vitrine;
+        this.tipo = tipo;
     }
 
     
