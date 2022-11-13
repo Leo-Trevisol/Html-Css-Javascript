@@ -18,13 +18,11 @@
            
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#" id="entrar">Entrar</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <a href="#" id="btCadUser">Cadastrar usuarios</a>
+                <a href="#" id="btCadProd">cadastrar produtos</a>
               </div>
               <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-              <h4>Opcoes</h4>
+              <h4>Opcoes Adm</h4>
         </div>
         <div class="bigum">
             <div class="um">
@@ -51,48 +49,150 @@
           
         </div>
         <div class="dois">
-            <div class="lupa">
-                <input type="text" id="pesquisar" class="form-control" placeholder="Pesquisar produto...">
-                <img src="icons/lupa.png" alt="search" id="imglupa">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Pesquisar produto..." aria-label="Pesquisar produto..." aria-describedby="button-addon2" id="pesquisar">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" >
+                <img src="icons/lupa1.png" alt="Pesquisar" id="imglupa">
+              </button>
             </div>
+          </div>
            
-            <img src="icons/login.png" alt="usuario" id="imglogin" >
-
-            <button type="button" class="btn btn-primary position-relative" id="btcarrinho">
-              <img src="icons/carrinho.png" alt="car" id="imgcarrinho">
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                <span class="visually-hidden" id="valorcarrinho">0</span>
-              </span>
-            </button>
-           
-          
+            <div class="bigDois">
+              <div class="doisUm">
+                <abbr title="Entrar"><img src="icons/login.png" alt="usuario" id="btLogin" ></abbr>
+                <button type="button" class="btn btn-primary position-relative" id="btcarrinho">
+                  <abbr title="Carrinho"><img src="icons/carrinho.png" alt="car" id="imgcarrinho"></abbr>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <span class="visually-hidden" id="valorcarrinho">0</span>
+                  </span>
+                </button>
+              
+              </div>
+              <div class="doisDois">Não logado</div>
+            </div>
 
         </div>
     </header>
-
-
-        <div class="container">
-            <form id="cadastro">
-                <div class="form-row">
-                        <div class="form-group col-md-6" >
-                    <label for="usuario">Usuario:</label>
-                    <input type="text" name="usuario" id="cadusuario" class="form-control" >
-                     </div>
-                </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="senha">Senha:</label>
-                    <input type="text" name="senha" id="cadsenha" class="form-control" >
-                </div>
-            </div>
-            </form>
-        </div>
 
 
         <div id="imgs">
 
         </div>
 
+
+        <div id="pgLogin">
+
+          <form>
+            <h1 class="cabform"> <span class="badge badge-secondary">Log in</span></h1>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="txtUser">Usuario</label>
+                <input type="text" class="form-control" id="txtUser" placeholder="Usuario">
+              </div>
+            </div>
+
+            <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="txtSenha">Senha</label>
+              <input type="password" class="form-control" id="txtSenha" placeholder="Senha">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <button type="button" class="btn btn-success" id="btEntrar">Entrar</button>
+            </div>
+          </div>
+          <sub class="forgotpass">Forgot password?</sub>
+           
+          </form>
+
+        </div>
+
+
+        <div id="pgCadastroUsers">
+
+          <form>
+            <h1 class="cabform"> <span class="badge badge-secondary">Cadastro de usuarios</span></h1>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="txtCodUser">Codigo</label>
+                <input type="text" class="form-control" id="txtCodUser" placeholder="Codigo" disabled >
+              </div>
+            </div>
+
+            <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="txtNomeUser">Nome completo</label>
+              <input type="text" class="form-control" id="txtNomeUser" placeholder="Nome completo">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="txtNovoUsuario">Novo usuario</label>
+              <input type="text" class="form-control" id="txtNovoUsuario" placeholder="Novo user"  >
+            </div>
+            <div class="form-group col-md-6">
+              <label for="txtSenhaNova">Senha novo usuario</label>
+              <input type="text" class="form-control" id="txtSenhaNova" placeholder="Nova senha" >
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <button type="button" class="btn btn-success" id="btCadastrarUser">Cadastrar</button>
+            </div>
+          </div>
+          </form>
+        </div>
+
+          <div id="pgCadastroProdutos">
+
+            <form>
+              <h1 class="cabform"> <span class="badge badge-secondary">Cadastro de Produtos</span></h1>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="txtCodProd">Codigo</label>
+                  <input type="text" class="form-control" id="txtCodProd" placeholder="Codigo" disabled >
+                </div>
+              </div>
+  
+              <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="txtDescProd">Descricao</label>
+                <input type="text" class="form-control" id="txtDescProd" placeholder="Descricao do produto">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="txtValorProd">Valor do produto</label>
+                <input type="number" class="form-control" id="txtValorProd" placeholder="Valor produto"  >
+              </div>
+              <div class="form-group col-md-6">
+                <label for="txtQtdEstoq">Quantidade em estoque</label>
+                <input type="number" class="form-control" id="txtQtdEstoq" placeholder="Qtd estoque" >
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="txtImgProd">Imagem do produto</label>
+                <div class="input-group mb-12">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Escolher arquivo(recomendada imagem de no maximo 1000 x 1000)</label>
+                  
+                  </div>
+                </div>
+                <div id="testeimg"><img src="" alt="" id="imgg"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <button type="button" class="btn btn-success" id="btCadastrarProduto">Cadastrar</button>
+              </div>
+            </div>
+            </form>
+
+        </div>
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

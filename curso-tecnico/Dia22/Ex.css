@@ -5,6 +5,7 @@
 }
 
 body{
+    background-color: gray;
 }
 
 header{
@@ -32,10 +33,7 @@ header{
     text-shadow: 1px 1px 1px white;
 }
 
-#anime1{
-    width: 100px;
-    height: 80px;
-}
+
 .bigum{
     display: flex;
     justify-content: space-evenly;
@@ -50,8 +48,9 @@ header{
     margin: auto;
 }
 
-.dois{
+.dois, .doisUm{
     display: flex;
+    flex-direction: row;
     gap: 15px;
 }
 
@@ -69,8 +68,8 @@ header{
     margin: auto;
 }
 
-#imglogin:hover, #imgcarrinho:hover, #imglupa:hover{
-    cursor: grab;
+#btLogin:hover, #imgcarrinho:hover, #imglupa:hover{
+    cursor: pointer;
 }
 
 #cadastro{
@@ -95,7 +94,11 @@ header{
     box-shadow: 1px 1px 1px black;
 }
 
-#pesquisar, #btcarrinho{
+#pesquisar{
+    padding: 30px;
+}
+
+ #btcarrinho{
     height: 48px;
     background-color: transparent;
     border: 1px solid rgb(128, 0, 128);
@@ -103,9 +106,7 @@ header{
 }
 
 
-.container{
-    display: none;
-}
+
 
 #menorpmaior, #maiorpmenor{
   color: rgb(128, 0, 128) ;
@@ -113,9 +114,37 @@ header{
 
 
 #imgs{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     padding: 20px;
+}
+
+#pgLogin, #pgCadastroUsers, #pgCadastroProdutos{
+    display: none;
+    width: 40vw;
+   margin: auto;
+   margin-top: 20px;
+   padding: 10px;
+   border: 2px solid black;
+   box-shadow: 2px 2px 12px black;
+   border-radius: 5px;
+}
+
+.cabform{
+    text-align: center;
+}
+
+#btEntrar, #btCadastrarUser{
+    width: 200px;
+}
+
+.forgotpass:hover{
+    color: green;
+    cursor: pointer;
+}
+
+.doisDois{
+    color: white;
 }
 
 
