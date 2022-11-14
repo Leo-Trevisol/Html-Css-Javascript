@@ -76,9 +76,12 @@
         $('#btLogin').click(function(){
             $("#imgs").css("display", "none");
             $("#pgLogin").css("display", "block");
+            $("#pgCadastroProdutos").css('display', 'none')
+            $("#pgCadastroUsers").css('display', 'none')
 
         });
         $('#btEntrar').click(function(){
+           
             for(let i = 0; i < lstUsers.length; i++){
                 if(lstUsers[i].user == $('#txtUser').val() && lstUsers[i].senha == $('#txtSenha').val()){
                     $("#imgs").css("display", "flex");
@@ -99,6 +102,8 @@
         });
         $('#btCadUser').click(function(){
            $("#pgCadastroUsers").css('display', 'block')
+           $("#pgLogin").css("display", "none");
+           $("#pgCadastroProdutos").css('display', 'none')
            $('#txtCodUser').val(lstUsers.length + 1);
 
         });
@@ -123,6 +128,8 @@
         });
         $('#btCadProd').click(function(){
             $("#pgCadastroProdutos").css('display', 'block')
+            $("#pgCadastroUsers").css('display', 'none')
+            $("#pgLogin").css("display", "none");
  
          });
 
@@ -137,6 +144,15 @@
  
          });
 
+         $('#txtProdutos').click(function(){
+            $("#pgCadastroProdutos").css('display', 'none')
+            $("#pgCadastroUsers").css('display', 'none')
+            $("#pgLogin").css("display", "none");
+            $("#imgs").css("display", "flex");
+
+
+
+        });
         });
 
         
