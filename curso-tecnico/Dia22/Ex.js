@@ -88,9 +88,15 @@
                     $("#pgLogin").css("display", "none");
                     logado = true
                     $('.doisDois').html(`Ola, ${lstUsers[i].nome}`)
+                    valorCarrinho = 0
+                    carrinho.innerHTML = valorCarrinho
+
+
 
                     if(lstUsers[0].user == $('#txtUser').val() && lstUsers[0].senha == $('#txtSenha').val()){
                         $('.logo').css('display', 'flex')
+                    }else{
+                        $('.logo').css('display', 'none')
                     }
                   
                 }
@@ -104,6 +110,7 @@
            $("#pgCadastroUsers").css('display', 'block')
            $("#pgLogin").css("display", "none");
            $("#pgCadastroProdutos").css('display', 'none')
+           $("#imgs").css("display", "none");
            $('#txtCodUser').val(lstUsers.length + 1);
 
         });
@@ -130,6 +137,7 @@
             $("#pgCadastroProdutos").css('display', 'block')
             $("#pgCadastroUsers").css('display', 'none')
             $("#pgLogin").css("display", "none");
+            $("#imgs").css("display", "none");
  
          });
 
@@ -165,7 +173,7 @@ function carregaProd(){
         if(lstProdutos[i].vitrine){
 
             var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li> <li class="list-group-item">${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light" 
-             onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div>`
+             id="btt" onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div>`
 
             img.innerHTML += strprod
         }
@@ -232,6 +240,12 @@ function adicionacarrinho(pro){
     valorCarrinho++
 
     carrinho.innerHTML = valorCarrinho
+
+  // var idbt = document.getElementById('btt')
+   var idbtt = document.getElementsByClassName('btn-light')
+   for (let i = 0; i < idbtt.length; i++) {
+    idbtt[i].style.backgroundColor = "red";
+  }
 
     
 }

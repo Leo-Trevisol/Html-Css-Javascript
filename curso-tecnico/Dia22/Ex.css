@@ -55,7 +55,7 @@ header{
 }
 
 .logo{
-    display: flex;
+    display: none;
     gap: 10px;
     background-color: white;
     padding: 5px 10px;
@@ -114,7 +114,7 @@ header{
 
 
 #imgs{
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     padding: 20px;
 }
