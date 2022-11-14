@@ -161,6 +161,7 @@
 
 
         });
+       
         });
 
         
@@ -241,15 +242,12 @@ function adicionacarrinho(pro){
 
     carrinho.innerHTML = valorCarrinho
 
-  // var idbt = document.getElementById('btt')
    var idbtt = document.getElementsByClassName('btn-light')
    for (let i = 0; i < idbtt.length; i++) {
-    idbtt[i].style.backgroundColor = "red";
-  }
-
-    
+    idbtt[i].style.color
+   
 }
-
+}
 class Produto{
     constructor(codigo, descricao, valor, imagem, estoque, vitrine){
         this.codigo = codigo;
@@ -271,3 +269,5 @@ class Usuario{
         this.senha = senha;
     }
 }
+
+
