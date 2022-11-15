@@ -119,7 +119,7 @@ header{
     padding: 20px;
 }
 
-#pgLogin, #pgCadastroUsers, #pgCadastroProdutos{
+#pgLogin, #pgCadastroUsers, #pgCadastroProdutos, #carrinhoResumo{
     display: none;
     width: 40vw;
    margin: auto;
@@ -145,6 +145,14 @@ header{
 
 .doisDois{
     color: white;
+}
+
+#carrinhoResumo{
+    flex-direction: column;
+}
+
+ul{
+    list-style-type: none
 }
 
 

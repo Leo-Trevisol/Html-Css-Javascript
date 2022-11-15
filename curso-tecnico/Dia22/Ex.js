@@ -7,11 +7,16 @@
 
     var lstUsers = new Array()
 
+
     var carrinho = document.getElementById('valorcarrinho')
 
     let valorCarrinho = 0
 
+    let produtosCarrinho = 0
+
     var logado = false
+
+    var listaCompra = document.getElementsByTagName('ul')
 
 
         $(document).ready(function(){
@@ -67,10 +72,17 @@
                }
         });
         $('#btcarrinho').click(function(){
-           if(lstCarrinho.length == 0){
-            alert('Seu carrinho esta vazio!')
-           }else{
-           }
+            if(logado){
+                if(lstCarrinho.length == 0){
+                    alert('Seu carrinho esta vazio!')
+                   }else{
+                    $("#imgs").css("display", "none");
+                    $('#carrinhoResumo').css('display', 'flex')
+                    mostrarCarrinho()
+
+                   }
+            }
+           
         });
 
         $('#btLogin').click(function(){
@@ -176,9 +188,6 @@ function carregaProd(){
    
     gerarProdDefault()
 
-    img.innerHTML = ''
-
-
        for(let i = 0; i<lstProdutos.length; i++){
 
 
@@ -251,15 +260,13 @@ function gerarProdDefault(){
 
 function adicionacarrinho(pro){
 
-  //  lstProdutos = new Array()
-
     if(logado){
         
     achou=false;
     i=0;
     while(achou===false && i<lstProdutos.length){
         if(lstProdutos[i].codigo === pro){
-            lstProdutos[i].estoque += -1
+            lstProdutos[i].estoque = (lstProdutos[i].estoque - 1)
             lstCarrinho.push(lstProdutos[i]);
             achou=true;
         }
@@ -268,17 +275,10 @@ function adicionacarrinho(pro){
         }
     }
 
-   // img.innerHTML = ''
-
     valorCarrinho++
 
     carrinho.innerHTML = valorCarrinho
 
-    var ex = document.getElementsByClassName('estoq')
-    for (let i = 0; i < ex.length; i++) {
-        ex[i].innerHTML = (lstProdutos[i].estoque - 1)
-    }
-    
  }
 
    if(valorCarrinho > 0){
@@ -286,9 +286,34 @@ function adicionacarrinho(pro){
     idcarrinho.style.cursor = 'pointer'
    }
 
+  
+
     
   
 }
+
+function mostrarCarrinho(){
+
+    if(produtosCarrinho > o ){
+        for(let i = 0; i < produtosCarrinho;i++ ){
+            
+        }
+    }
+
+    for(let i = 0; i < lstCarrinho.length; i++){
+        var elemento = document.createElement('li')
+
+        var text1 = document.createTextNode(`1x ${lstCarrinho[i].descricao} - ${lstCarrinho[i].valor}`)
+
+        elemento.appendChild(text1)
+
+        produtosCarrinho++ 
+
+        listaCompra[listaCompra.length-1].appendChild(elemento)
+    }
+  
+
+   }
 class Produto{
     constructor(codigo, descricao, valor, imagem, estoque, vitrine){
         this.codigo = codigo;
