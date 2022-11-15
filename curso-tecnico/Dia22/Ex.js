@@ -87,11 +87,18 @@
                     $("#imgs").css("display", "flex");
                     $("#pgLogin").css("display", "none");
                     logado = true
+
+                    var idbtt = document.getElementsByClassName('btn-light')
+                    for (let i = 0; i < idbtt.length; i++) {
+                     idbtt[i].addEventListener('mouseenter', (e) => {
+                         idbtt[i].style.cursor = 'pointer'
+                     });
+                    
+                 }
+                    
                     $('.doisDois').html(`Ola, ${lstUsers[i].nome}`)
                     valorCarrinho = 0
                     carrinho.innerHTML = valorCarrinho
-
-
 
                     if(lstUsers[0].user == $('#txtUser').val() && lstUsers[0].senha == $('#txtSenha').val()){
                         $('.logo').css('display', 'flex')
@@ -169,11 +176,16 @@ function carregaProd(){
    
     gerarProdDefault()
 
+    img.innerHTML = ''
+
+
        for(let i = 0; i<lstProdutos.length; i++){
+
 
         if(lstProdutos[i].vitrine){
 
-            var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li> <li class="list-group-item">${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light" 
+
+            var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li> <li class="list-group-item estoq" >${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light" 
              id="btt" onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div>`
 
             img.innerHTML += strprod
@@ -183,6 +195,17 @@ function carregaProd(){
         let adm = new Usuario(0, "Administrador", "adm", "123")
 
         lstUsers.push(adm)
+
+        if(!logado){
+            var idbtt = document.getElementsByClassName('btn-light')
+            for (let i = 0; i < idbtt.length; i++) {
+             idbtt[i].addEventListener('mouseenter', (e) => {
+                 idbtt[i].style.cursor = 'not-allowed'
+             });
+            
+         }
+        }
+        
 
         
 }
@@ -225,6 +248,13 @@ function gerarProdDefault(){
 
 function adicionacarrinho(pro){
 
+  //  lstProdutos = new Array()
+
+    if(!logado){
+        alert('Voce precisa logar antes')
+       
+    }else{
+        
     achou=false;
     i=0;
     while(achou===false && i<lstProdutos.length){
@@ -238,15 +268,23 @@ function adicionacarrinho(pro){
         }
     }
 
+   // img.innerHTML = ''
+
     valorCarrinho++
 
     carrinho.innerHTML = valorCarrinho
 
-   var idbtt = document.getElementsByClassName('btn-light')
-   for (let i = 0; i < idbtt.length; i++) {
-    idbtt[i].style.color
-   
-}
+    var ex = document.getElementsByClassName('estoq')
+    for (let i = 0; i < ex.length; i++) {
+        ex[i].innerHTML = (lstProdutos[i].estoque - 1)
+    }
+    
+ }
+
+   // carregaProd()
+
+    
+  
 }
 class Produto{
     constructor(codigo, descricao, valor, imagem, estoque, vitrine){
