@@ -198,12 +198,15 @@ function carregaProd(){
 
         if(!logado){
             var idbtt = document.getElementsByClassName('btn-light')
+            var idcarrinho = document.getElementById('imgcarrinho')
             for (let i = 0; i < idbtt.length; i++) {
              idbtt[i].addEventListener('mouseenter', (e) => {
                  idbtt[i].style.cursor = 'not-allowed'
+                
              });
             
          }
+         idcarrinho.style.cursor = 'not-allowed'
         }
         
 
@@ -250,10 +253,7 @@ function adicionacarrinho(pro){
 
   //  lstProdutos = new Array()
 
-    if(!logado){
-        alert('Voce precisa logar antes')
-       
-    }else{
+    if(logado){
         
     achou=false;
     i=0;
@@ -281,7 +281,10 @@ function adicionacarrinho(pro){
     
  }
 
-   // carregaProd()
+   if(valorCarrinho > 0){
+    var idcarrinho = document.getElementById('imgcarrinho')
+    idcarrinho.style.cursor = 'pointer'
+   }
 
     
   
