@@ -151,8 +151,12 @@ header{
     flex-direction: column;
 }
 
-ul{
-    list-style-type: none
+#lsta{
+    list-style-type: none;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    
 }
 
 

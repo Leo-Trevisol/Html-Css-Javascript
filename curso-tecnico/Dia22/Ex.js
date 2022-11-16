@@ -18,6 +18,10 @@
 
     var listaCompra = document.getElementsByTagName('ul')
 
+    var cliente = ''
+
+    var entrada = false
+
 
         $(document).ready(function(){
 
@@ -109,6 +113,7 @@
                  }
                     
                     $('.doisDois').html(`Ola, ${lstUsers[i].nome}`)
+                    $('#cliente').html(`Carrinho do ${lstUsers[i].nome}`)
                     valorCarrinho = 0
                     carrinho.innerHTML = valorCarrinho
 
@@ -157,17 +162,31 @@
             $("#pgCadastroUsers").css('display', 'none')
             $("#pgLogin").css("display", "none");
             $("#imgs").css("display", "none");
+            $('#txtCodProd').val(lstProdutos.length + 1);
  
          });
 
          $('#btCadastrarProduto').click(function(){
-            var input = document.getElementById("inputGroupFile01");
-            var fReader = new FileReader();
-            fReader.readAsDataURL(input.files[0]);
-            fReader.onloadend = function(event){
-                var img = document.getElementById("imgg");
-                img.src = event.target.result;
+            if($('#txtDescProd').val() == "" || $('#txtValorProd').val() == "" || $('#txtQtdEstoq').val() == ""
+            || $('#txtImgProd').val() == "" ){
+                alert('Preencha os campos!')
+            }else{
+                var input = document.getElementById("inputGroupFile01");
+                var fReader = new FileReader();
+                fReader.readAsDataURL(input.files[0]);
+                fReader.onloadend = function(event){
+                    var img = document.getElementById("imgg");
+                    img.src = event.target.result;
+                    $('#txtCodProd').val(lstProdutos.length + 1);
+                    $('#txtDescProd').val("")
+                    $('#txtValorProd').val("")
+                    $('#txtQtdEstoq').val("")
+                    $('#txtImgProd').val("")
+                }
+
             }
+        
+        
  
          });
 
@@ -176,17 +195,26 @@
             $("#pgCadastroUsers").css('display', 'none')
             $("#pgLogin").css("display", "none");
             $("#imgs").css("display", "flex");
+            img.innerHTML = ''
+            carregaProd()
 
 
 
         });
+
+        
+
        
         });
 
         
 function carregaProd(){
+
+        if(!entrada){
+            gerarProdDefault()
+            entrada = true
+        }
    
-    gerarProdDefault()
 
        for(let i = 0; i<lstProdutos.length; i++){
 
@@ -260,15 +288,23 @@ function gerarProdDefault(){
 
 function adicionacarrinho(pro){
 
+
     if(logado){
         
     achou=false;
     i=0;
     while(achou===false && i<lstProdutos.length){
         if(lstProdutos[i].codigo === pro){
+            if(lstProdutos[i].estoque == 0  ){
+                alert('Produto indisponivel!')
+                
+            }else{
+
             lstProdutos[i].estoque = (lstProdutos[i].estoque - 1)
             lstCarrinho.push(lstProdutos[i]);
             achou=true;
+        }
+
         }
         else{
             i++;
@@ -278,6 +314,9 @@ function adicionacarrinho(pro){
     valorCarrinho++
 
     carrinho.innerHTML = valorCarrinho
+
+    img.innerHTML = ''
+    carregaProd()
 
  }
 
@@ -294,24 +333,37 @@ function adicionacarrinho(pro){
 
 function mostrarCarrinho(){
 
-    if(produtosCarrinho > o ){
-        for(let i = 0; i < produtosCarrinho;i++ ){
+
+    let total = 0
+
+
+    // if(produtosCarrinho > 0 ){
+    //     for(let i = 0; i < produtosCarrinho;i++ ){
             
-        }
-    }
+    //     }
+    // }
 
     for(let i = 0; i < lstCarrinho.length; i++){
         var elemento = document.createElement('li')
 
-        var text1 = document.createTextNode(`1x ${lstCarrinho[i].descricao} - ${lstCarrinho[i].valor}`)
+        var text1 = document.createTextNode(`1x - ${lstCarrinho[i].descricao} - R$ ${lstCarrinho[i].valor}`)
 
         elemento.appendChild(text1)
 
         produtosCarrinho++ 
 
         listaCompra[listaCompra.length-1].appendChild(elemento)
+
+        total += lstCarrinho[i].valor
     }
-  
+
+    var elemento1 = document.createElement('li')
+
+    var text2 = document.createTextNode(`Valor total = ${total}`)
+
+    elemento.appendChild(text2)
+
+    listaCompra[listaCompra.length-1].appendChild(elemento1)
 
    }
 class Produto{
