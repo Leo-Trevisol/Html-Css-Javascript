@@ -26,6 +26,7 @@
 
         $("#imglupa").click(function(){
             var text = $('#pesquisar').val()
+           
             var apaga = false
             for(var i = 0; i< lstProdutos.length; i++){
                 if(lstProdutos[i].descricao.toUpperCase().trim().includes(text.toUpperCase().trim()) && text != ""){    
@@ -58,6 +59,7 @@
             lstProdutos.sort((a,b) => a.valor - b.valor);
 
          carregaProd()
+         chamacar()
         });
         $("#maiorpmenor").click(function(){
             img.innerHTML = ''
@@ -65,6 +67,7 @@
            lstProdutos.sort((a,b) => b.valor - a.valor);
 
            carregaProd()
+           chamacar()
         });
 
         $('#imgcarrinho').click(function(){
@@ -77,6 +80,7 @@
                     $("#divcapa").css("display", "none");
 
                       mostrarCarrinho()
+                      chamacar()
                 }
 
         });
@@ -88,6 +92,7 @@
             $("#pgCadastroUsers").css('display', 'none')
             $('#carrinhoResumo').css("display", "none")
             $("#divcapa").css("display", "none");
+            chamacar()
 
         });
         $('#btEntrar').click(function(){
@@ -99,11 +104,10 @@
                     $("#imgs").css("display", "flex");
                     $("#pgLogin").css("display", "none");
                     $("#divcapa").css("display", "flex");
+                    
 
                     $('.doisDois').html(`Ola, ${lstUsers[i].nome}`)
                     $('#cliente').html(`Carrinho do ${lstUsers[i].nome}`)
-                    valorCarrinho = 0
-                    carrinho.innerHTML = valorCarrinho
 
                     if(lstUsers[0].user == $('#txtUser').val() && lstUsers[0].senha == $('#txtSenha').val()){
                         $('.logo').css('display', 'flex')
@@ -126,6 +130,7 @@
            $('#carrinhoResumo').css("display", "none")
            $("#divcapa").css("display", "none");
            $('#txtCodUser').val(lstUsers.length + 1);
+           chamacar()
 
         });
         
@@ -144,6 +149,7 @@
                  $('#txtNomeUser').val("")
                  $('#txtNovoUsuario').val("")
                  $('#txtSenhaNova').val("")
+                 
             }
         });
         $('#btCadProd').click(function(){
@@ -154,6 +160,7 @@
             $('#carrinhoResumo').css("display", "none")
             $("#divcapa").css("display", "none");
             $('#txtCodProd').val(lstProdutos.length + 1);
+            chamacar()
  
          });
 
@@ -171,6 +178,7 @@
                     $('#txtValorProd').val("")
                     $('#txtQtdEstoq').val("")
                     $('#txtImg').val("")
+                    chamacar()
                    
 
             }
@@ -186,6 +194,7 @@
             $("#divcapa").css("display", "flex");
             img.innerHTML = ''
             carregaProd()
+            chamacar()
 
         });
 
@@ -374,37 +383,41 @@ function mostrarCarrinho(){
     listaCompra[listaCompra.length-1].appendChild(elemento1)
 
     
+
+    
+    chamacar()
+    
+
+   }
+
+   function chamacar(){
+    imgcarin.innerHTML = ''
     for(let i = 0; i<lstCarrinho.length; i++){
 
 
         if(lstCarrinho[i].vitrine){
 
-            var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstCarrinho[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item descr">${lstCarrinho[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstCarrinho[i].valor}</li> <li class="list-group-item estoq" >${lstCarrinho[i].estoque} itens no estoque</li><li class="btn btn-light" 
-            id="btt" onclick="adicionacarrinho(${lstCarrinho[i].codigo})">Adicionar ao carrinho</li></ul></div> `
+            var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstCarrinho[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item descr">${lstCarrinho[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item vlr">R$ ${lstCarrinho[i].valor}</li></ul></div> `
         
             imgcarin.innerHTML += strprod
         
            var card1 = document.getElementsByClassName('card')
-           card1[i].style.height = '540px'
+           card1[i].style.height = '200px'
+           card1[i].style.width = '150px'
            card1[i].style.margin = '10px 10px'
         
         
            var imgcard = document.getElementsByClassName('card-img-top')
-           imgcard[i].style.height = '286px'
+           imgcard[i].style.height = '100px'
         
            var descr = document.getElementsByClassName('descr')
-           descr[i].style.height = '74px'
+           descr[i].style.height = '50px'
+           descr[i].style.fontSize = '10px'
            
-           if(lstProdutos[i].estoque == 0){
-            var bttt = document.getElementsByClassName('btn-light')
-            bttt[i].style.cursor = 'not-allowed'
-           }
 
         }
 
        }
-    
-
    }
 class Produto{
     constructor(codigo, descricao, valor, imagem, estoque, vitrine){
