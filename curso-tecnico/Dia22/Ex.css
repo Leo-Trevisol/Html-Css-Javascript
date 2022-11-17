@@ -83,6 +83,11 @@ header{
     width: 50vw;
 }
 
+#carouselExampleControls, .d-block{
+    width: 100%;
+    height: 300px;
+}
+
 #cadsenha, #cadusuario{
     width: 30vw;
 }
