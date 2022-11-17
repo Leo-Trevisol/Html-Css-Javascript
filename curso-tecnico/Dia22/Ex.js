@@ -7,14 +7,11 @@
 
     var lstUsers = new Array()
 
-
     var carrinho = document.getElementById('valorcarrinho')
 
     let valorCarrinho = 0
 
     let produtosCarrinho = 0
-
-    var logado = false
 
     var listaCompra = document.getElementsByTagName('ul')
 
@@ -34,14 +31,22 @@
                         img.innerHTML = ''
                         apaga = true
                     }
-                    var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li>   <li class="list-group-item">${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light" 
+                    var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item descr">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li>   <li class="list-group-item">${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light" 
                     onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div>`
-
-                    if(lstProdutos[i].estoque == 0){
-                        $(".btn").css("background-color", "yellow");
-                    }
+                 
 
                     img.innerHTML += strprod
+
+                    var card1 = document.getElementsByClassName('card')
+                    card1[i].style.height = '540px'
+                    card1[i].style.margin = '0px 10px'
+                 
+                 
+                    var imgcard = document.getElementsByClassName('card-img-top')
+                    imgcard[i].style.height = '286px'
+                 
+                    var descr = document.getElementsByClassName('descr')
+                    descr[i].style.height = '74px'
                 }
             }
         });
@@ -50,44 +55,23 @@
 
             lstProdutos.sort((a,b) => a.valor - b.valor);
 
-            for(let i = 0; i<lstProdutos.length; i++){
-
-                if(lstProdutos[i].vitrine){
-        
-                    var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li>   <li class="list-group-item">${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light"  onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div>`
-        
-                    img.innerHTML += strprod
-                }
-               }
+         carregaProd()
         });
         $("#maiorpmenor").click(function(){
             img.innerHTML = ''
 
            lstProdutos.sort((a,b) => b.valor - a.valor);
 
-            for(let i = 0; i<lstProdutos.length; i++){
-
-                if(lstProdutos[i].vitrine){
-        
-                    var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li>   <li class="list-group-item">${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light"  onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div>`
-        
-                    img.innerHTML += strprod
-                }
-               }
+           carregaProd()
         });
 
         $('#imgcarrinho').click(function(){
-            if(logado){
-                if(lstCarrinho.length == 0){
-                    alert('Seu carrinho esta vazio!')
-                   }else{
+                if(lstCarrinho.length > 0){
                     $("#imgs").css("display", "none");
                     $('#carrinhoResumo').css("display", "flex")
                       mostrarCarrinho()
+                }
 
-                   }
-            }
-           
         });
 
         $('#btLogin').click(function(){
@@ -98,20 +82,21 @@
 
         });
         $('#btEntrar').click(function(){
+
+             
            
             for(let i = 0; i < lstUsers.length; i++){
                 if(lstUsers[i].user == $('#txtUser').val() && lstUsers[i].senha == $('#txtSenha').val()){
                     $("#imgs").css("display", "flex");
                     $("#pgLogin").css("display", "none");
-                    logado = true
 
-                    var idbtt = document.getElementsByClassName('btn-light')
-                    for (let i = 0; i < idbtt.length; i++) {
-                     idbtt[i].addEventListener('mouseenter', (e) => {
-                         idbtt[i].style.cursor = 'pointer'
-                     });
-                    
-                 }
+                    // var idbtt = document.getElementsByClassName('btn-light')
+                    // for (let i = 0; i < idbtt.length; i++) {
+                    //  idbtt[i].addEventListener('mouseenter', (e) => {
+                    //      idbtt[i].style.cursor = 'pointer'
+                    //  });
+                    // 
+                //  }
                     
                     $('.doisDois').html(`Ola, ${lstUsers[i].nome}`)
                     $('#cliente').html(`Carrinho do ${lstUsers[i].nome}`)
@@ -196,16 +181,17 @@
 
         });
 
-       
-        });
+    });
 
-        
+       
 function carregaProd(){
 
     img.innerHTML = ''
 
         if(!entrada){
             gerarProdDefault()
+            let adm = new Usuario(0, "Administrador", "adm", "123")
+            lstUsers.push(adm)
             entrada = true
         }
    
@@ -214,45 +200,42 @@ function carregaProd(){
 
         if(lstProdutos[i].vitrine){
 
-
             var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item descr">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li> <li class="list-group-item estoq" >${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light" 
-             id="btt" onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div> `
-
-            img.innerHTML += strprod
-
-            var card1 = document.getElementsByClassName('card')
-            card1[i].style.height = '540px'
-            card1[i].style.margin = '10px 10px'
-
-
-            var imgcard = document.getElementsByClassName('card-img-top')
-            imgcard[i].style.height = '286px'
-
-            var descr = document.getElementsByClassName('descr')
-            descr[i].style.height = '74px'
+            id="btt" onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div> `
+        
+           img.innerHTML += strprod
+        
+           var card1 = document.getElementsByClassName('card')
+           card1[i].style.height = '540px'
+           card1[i].style.margin = '10px 10px'
+        
+        
+           var imgcard = document.getElementsByClassName('card-img-top')
+           imgcard[i].style.height = '286px'
+        
+           var descr = document.getElementsByClassName('descr')
+           descr[i].style.height = '74px'
+           
+           if(lstProdutos[i].estoque == 0){
+            var bttt = document.getElementsByClassName('btn-light')
+            bttt[i].style.cursor = 'not-allowed'
+           }
 
         }
+
+        
+
+       }
+       var carinho = document.getElementById('imgcarrinho')
+       if(valorCarrinho == 0){
+        
+        carinho.style.cursor = 'not-allowed'
+       }else{
+        carinho.style.cursor = 'pointer'
        }
 
-
-        let adm = new Usuario(0, "Administrador", "adm", "123")
-
-        lstUsers.push(adm)
-
-        if(!logado){
-            var idbtt = document.getElementsByClassName('btn-light')
-            var idcarrinho = document.getElementById('imgcarrinho')
-            for (let i = 0; i < idbtt.length; i++) {
-             idbtt[i].addEventListener('mouseenter', (e) => {
-                 idbtt[i].style.cursor = 'not-allowed'
-                
-             });
-            
-         }
-         idcarrinho.style.cursor = 'not-allowed'
-        }
+    }
         
-}
 
 
 function openNav() {
@@ -269,7 +252,7 @@ function gerarProdDefault(){
         let produto = new Produto(1, "Almofada elfa +18", 500, 'imgs/almofada1.jpeg', 3, true)
         let produto1 = new Produto(2, "Almofada garota +18", 500, 'imgs/almofada2.jpeg', 2, true)
         let produto2 = new Produto(3, "Almofada empregadas", 300, 'imgs/almofada3.jpeg', 5, true)
-        let produto3 = new Produto(4, "Almofada garota demonio 1", 250, 'imgs/almofada4.jpeg', 4, true)
+        let produto3 = new Produto(4, "Almofada garota demonio 1", 250, 'imgs/almofada4.jpeg', 3, true)
         let produto4 = new Produto(5, "Almofada Hatsune Miku 1", 300, 'imgs/almofada5.jpeg', 4, true)
         let produto5 = new Produto(6, "Almofada Hatsune Miku 2", 300, 'imgs/almofada6.jpeg', 2, true)
         let produto6 = new Produto(7, "Almofada garota demonio 2", 300, 'imgs/almofada7.jpeg', 2, true)
@@ -300,9 +283,6 @@ function gerarProdDefault(){
 
 function adicionacarrinho(pro){
 
-
-    if(logado){
-        
     for(let i = 0; i <lstProdutos.length; i++){
         if(pro == lstProdutos[i].codigo){
             if(lstProdutos[i].estoque > 0){
@@ -311,12 +291,19 @@ function adicionacarrinho(pro){
                 valorCarrinho++
                 carrinho.innerHTML = valorCarrinho
 
+            }else{
+                
+                    var idbtt = document.getElementsByClassName('btn-light')
+                    idbtt[0].addEventListener('mouseenter', (e) => {
+                        idbtt[0].style.cursor = 'not-allowed'
+                       
+                    });
             }
+
+                 }
 
             }
            
-        }
-    }
 
     img.innerHTML = ''
     carregaProd()
@@ -326,6 +313,10 @@ function adicionacarrinho(pro){
         idcarrinho.style.cursor = 'pointer'
        }
 
+    }
+
+ function escrever(){
+   
  }
 
 function mostrarCarrinho(){
@@ -379,5 +370,6 @@ class Usuario{
         this.senha = senha;
     }
 }
+
 
 
