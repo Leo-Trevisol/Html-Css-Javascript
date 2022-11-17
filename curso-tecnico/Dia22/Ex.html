@@ -20,10 +20,12 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#" id="btCadUser">Cadastrar usuarios</a>
                 <a href="#" id="btCadProd">cadastrar produtos</a>
+                <div id="cardscar"></div>
               </div>
               <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
               <h4>Opcoes Adm</h4>
         </div>
+
         
         <div class="bigum">
             <div class="um">
@@ -75,28 +77,39 @@
         
     </header>
 
-        
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="carrothanos.jpg" alt="Primeiro Slide">
+        <div id="divcapa">
+          <div class="capa">
+            <img src="capa.jpg" alt="capa">
+          </div>
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="aa.jpg" alt="Primeiro Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 imggg" src="kana.png" alt="Segundo Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="imgs/almofada5.jpeg" alt="Terceiro Slide">
+          </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+                </a>
+              </div>
+          
+              <div class="capa">
+                <img src="capa.jpg" alt="capa">
+              </div>
         </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="imgs/almofada12.jpeg" alt="Segundo Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="imgs/almofada5.jpeg" alt="Terceiro Slide">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Próximo</span>
-      </a>
-    </div>
+
+        <h3 class="cabform "> <span class="badge badge-secondary prod " >Produtos</span> </h3>
+
         <div id="imgs">
 
         </div>
@@ -216,6 +229,7 @@
           <ul id="lsta">
 
           </ul>
+          <h3 class="cabform" id="txtdesconto"> <span class="badge badge-secondary " >Promoção aplicada</span> </h3>
           <button type="button" class="btn btn-success" id="btComprar">comprar</button>
         </div>
 

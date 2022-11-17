@@ -1,5 +1,7 @@
 
     var img = document.getElementById('imgs')
+    var imgcarin = document.getElementById('cardscar')
+
 
     var lstProdutos = new Array()
 
@@ -72,6 +74,8 @@
                     $("#pgCadastroProdutos").css('display', 'none')
                     $("#pgCadastroUsers").css('display', 'none')
                     $("#pgLogin").css("display", "none");
+                    $("#divcapa").css("display", "none");
+
                       mostrarCarrinho()
                 }
 
@@ -83,6 +87,7 @@
             $("#pgCadastroProdutos").css('display', 'none')
             $("#pgCadastroUsers").css('display', 'none')
             $('#carrinhoResumo').css("display", "none")
+            $("#divcapa").css("display", "none");
 
         });
         $('#btEntrar').click(function(){
@@ -93,15 +98,8 @@
                 if(lstUsers[i].user == $('#txtUser').val() && lstUsers[i].senha == $('#txtSenha').val()){
                     $("#imgs").css("display", "flex");
                     $("#pgLogin").css("display", "none");
+                    $("#divcapa").css("display", "flex");
 
-                    // var idbtt = document.getElementsByClassName('btn-light')
-                    // for (let i = 0; i < idbtt.length; i++) {
-                    //  idbtt[i].addEventListener('mouseenter', (e) => {
-                    //      idbtt[i].style.cursor = 'pointer'
-                    //  });
-                    // 
-                //  }
-                    
                     $('.doisDois').html(`Ola, ${lstUsers[i].nome}`)
                     $('#cliente').html(`Carrinho do ${lstUsers[i].nome}`)
                     valorCarrinho = 0
@@ -126,6 +124,7 @@
            $("#pgCadastroProdutos").css('display', 'none')
            $("#imgs").css("display", "none");
            $('#carrinhoResumo').css("display", "none")
+           $("#divcapa").css("display", "none");
            $('#txtCodUser').val(lstUsers.length + 1);
 
         });
@@ -153,6 +152,7 @@
             $("#pgLogin").css("display", "none");
             $("#imgs").css("display", "none");
             $('#carrinhoResumo').css("display", "none")
+            $("#divcapa").css("display", "none");
             $('#txtCodProd').val(lstProdutos.length + 1);
  
          });
@@ -183,6 +183,7 @@
             $("#pgLogin").css("display", "none");
             $("#imgs").css("display", "flex");
             $('#carrinhoResumo').css("display", "none")
+            $("#divcapa").css("display", "flex");
             img.innerHTML = ''
             carregaProd()
 
@@ -230,8 +231,6 @@ function carregaProd(){
 
         }
 
-        
-
        }
        var carinho = document.getElementById('imgcarrinho')
        if(valorCarrinho == 0){
@@ -266,8 +265,8 @@ function gerarProdDefault(){
         let produto7 = new Produto(8, "Almofada deusa azul", 320, 'imgs/almofada8.jpeg', 2, true)
         let produto8 = new Produto(9, "Almofada garota borboleta", 400, 'imgs/almofada9.jpeg', 3, true)
         let produto9 = new Produto(10, "Almofada garota hair fire", 300, 'imgs/almofada10.jpeg', 2, true)
-        let produto10 = new Produto(11, "Almofada Nico Robin tits +18", 400, 'imgs/almofada11.jpeg', 10, true)
-        let produto11 = new Produto(12, "Almofada garota tits +18", 600, 'imgs/almofada12.jpeg', 1, true)
+        let produto10 = new Produto(11, "Almofada Nico Robin +18", 400, 'imgs/almofada11.jpeg', 10, true)
+        let produto11 = new Produto(12, "Almofada garota +18 +18", 600, 'imgs/almofada12.jpeg', 1, true)
 
 
 
@@ -359,14 +358,51 @@ function mostrarCarrinho(){
         total += lstCarrinho[i].valor
     }
 
+    if(lstCarrinho.length >= 5 ){
+        var desconto = ((total * 20) / 100)
+        total -=desconto
+        var desc = document.getElementById('txtdesconto')
+        desc.style.display = 'block'
+    }
+
     var elemento1 = document.createElement('li')
 
-    var text2 = document.createTextNode(`Valor total = ${total}`)
+    var text2 = document.createTextNode(`Valor total = ${total.toFixed(1)}`)
 
     elemento.appendChild(text2)
 
     listaCompra[listaCompra.length-1].appendChild(elemento1)
 
+    
+    for(let i = 0; i<lstCarrinho.length; i++){
+
+
+        if(lstCarrinho[i].vitrine){
+
+            var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstCarrinho[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item descr">${lstCarrinho[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstCarrinho[i].valor}</li> <li class="list-group-item estoq" >${lstCarrinho[i].estoque} itens no estoque</li><li class="btn btn-light" 
+            id="btt" onclick="adicionacarrinho(${lstCarrinho[i].codigo})">Adicionar ao carrinho</li></ul></div> `
+        
+            imgcarin.innerHTML += strprod
+        
+           var card1 = document.getElementsByClassName('card')
+           card1[i].style.height = '540px'
+           card1[i].style.margin = '10px 10px'
+        
+        
+           var imgcard = document.getElementsByClassName('card-img-top')
+           imgcard[i].style.height = '286px'
+        
+           var descr = document.getElementsByClassName('descr')
+           descr[i].style.height = '74px'
+           
+           if(lstProdutos[i].estoque == 0){
+            var bttt = document.getElementsByClassName('btn-light')
+            bttt[i].style.cursor = 'not-allowed'
+           }
+
+        }
+
+       }
     
 
    }
