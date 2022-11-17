@@ -69,6 +69,9 @@
                 if(lstCarrinho.length > 0){
                     $("#imgs").css("display", "none");
                     $('#carrinhoResumo').css("display", "flex")
+                    $("#pgCadastroProdutos").css('display', 'none')
+                    $("#pgCadastroUsers").css('display', 'none')
+                    $("#pgLogin").css("display", "none");
                       mostrarCarrinho()
                 }
 
@@ -79,6 +82,7 @@
             $("#pgLogin").css("display", "block");
             $("#pgCadastroProdutos").css('display', 'none')
             $("#pgCadastroUsers").css('display', 'none')
+            $('#carrinhoResumo').css("display", "none")
 
         });
         $('#btEntrar').click(function(){
@@ -121,6 +125,7 @@
            $("#pgLogin").css("display", "none");
            $("#pgCadastroProdutos").css('display', 'none')
            $("#imgs").css("display", "none");
+           $('#carrinhoResumo').css("display", "none")
            $('#txtCodUser').val(lstUsers.length + 1);
 
         });
@@ -147,6 +152,7 @@
             $("#pgCadastroUsers").css('display', 'none')
             $("#pgLogin").css("display", "none");
             $("#imgs").css("display", "none");
+            $('#carrinhoResumo').css("display", "none")
             $('#txtCodProd').val(lstProdutos.length + 1);
  
          });
@@ -176,6 +182,7 @@
             $("#pgCadastroUsers").css('display', 'none')
             $("#pgLogin").css("display", "none");
             $("#imgs").css("display", "flex");
+            $('#carrinhoResumo').css("display", "none")
             img.innerHTML = ''
             carregaProd()
 
@@ -320,6 +327,20 @@ function adicionacarrinho(pro){
  }
 
 function mostrarCarrinho(){
+
+    if(produtosCarrinho > 0){
+
+            var itemparaexcluir = document.getElementsByTagName('li')
+
+            for(let i = 0; i <itemparaexcluir.length; i++){
+                var lista1 = itemparaexcluir[pos].parentNode
+
+                lista1.removeChild(itemparaexcluir[pos])
+            }
+
+        }
+
+      
 
     let total = 0
 

@@ -185,6 +185,11 @@ header{
     display: block;
     transition: 0.3s;
   }
+
+  .ttt{
+    display: flex;
+    flex-direction: column;
+  }
   
   .sidenav a:hover {
     color: black;
