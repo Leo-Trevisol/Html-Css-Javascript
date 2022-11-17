@@ -68,8 +68,22 @@ header{
     margin: auto;
 }
 
+.rere{
+    margin-left: 30px;
+}
+
+#btFinalizar{
+    margin-bottom: 20px;
+}
+
 #btLogin:hover, #imgcarrinho:hover, #imglupa:hover{
     cursor: pointer;
+}
+
+
+
+.img1{
+    height: 400px;
 }
 
 #cadastro{
@@ -107,6 +121,7 @@ header{
 #cardscar{
     display: flex;
     flex-direction: column;
+    margin-left: 40px;
 }
 
 
@@ -133,7 +148,9 @@ header{
 }
 
 
-
+#btFinalizar{
+    margin-left: 70px;
+}
 
 #menorpmaior, #maiorpmenor{
   color: rgb(128, 0, 128) ;
@@ -174,6 +191,10 @@ header{
 
 .doisDois{
     color: white;
+}
+
+.logo1{
+    padding: 10px;
 }
 
 #carrinhoResumo{
@@ -234,4 +255,36 @@ header{
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+  .sidenav1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(128, 0, 128) ;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+
+  
+  
+  .sidenav1 .closebtn1 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav1 {padding-top: 15px;}
+    
   }

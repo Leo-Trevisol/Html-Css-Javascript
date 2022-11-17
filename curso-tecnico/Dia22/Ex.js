@@ -72,14 +72,8 @@
 
         $('#imgcarrinho').click(function(){
                 if(lstCarrinho.length > 0){
-                    $("#imgs").css("display", "none");
-                    $('#carrinhoResumo').css("display", "flex")
-                    $("#pgCadastroProdutos").css('display', 'none')
-                    $("#pgCadastroUsers").css('display', 'none')
-                    $("#pgLogin").css("display", "none");
-                    $("#divcapa").css("display", "none");
-
-                      mostrarCarrinho()
+                  
+                     openNav1()
                       chamacar()
                 }
 
@@ -132,6 +126,17 @@
            $('#txtCodUser').val(lstUsers.length + 1);
            chamacar()
 
+        });
+
+        $('#btFinalizar').click(function(){
+            $("#pgCadastroUsers").css('display', 'none')
+           $("#pgLogin").css("display", "none");
+           $("#pgCadastroProdutos").css('display', 'none')
+           $("#imgs").css("display", "none");
+           $('#carrinhoResumo').css("display", "block")
+           $("#divcapa").css("display", "none");
+           mostrarCarrinho()
+           closeNav1()
         });
         
         $('#btCadastrarUser').click(function(){
@@ -261,6 +266,14 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
 
+  function openNav1() {
+    document.getElementById("mySidenav1").style.width = "250px";
+  }
+  
+  function closeNav1() {
+    document.getElementById("mySidenav1").style.width = "0";
+  }
+
 
 function gerarProdDefault(){
 
@@ -374,15 +387,10 @@ function mostrarCarrinho(){
         desc.style.display = 'block'
     }
 
-    var elemento1 = document.createElement('li')
 
-    var text2 = document.createTextNode(`Valor total = ${total.toFixed(1)}`)
-
-    elemento.appendChild(text2)
-
-    listaCompra[listaCompra.length-1].appendChild(elemento1)
-
-    
+    var txtvlr = document.getElementById('txtvlrtotal')
+    txtvlr.innerHTML = ''
+    txtvlr.innerHTML = (`Valor total = ${total.toFixed(1)}`)
 
     
     chamacar()
@@ -411,8 +419,12 @@ function mostrarCarrinho(){
            imgcard[i].style.height = '100px'
         
            var descr = document.getElementsByClassName('descr')
-           descr[i].style.height = '50px'
+           descr[i].style.height = '30px'
            descr[i].style.fontSize = '10px'
+
+           var vlr = document.getElementsByClassName('vlr')
+           vlr[i].style.height = '30px'
+           vlr[i].style.fontSize = '10px'
            
 
         }
