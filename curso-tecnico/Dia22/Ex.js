@@ -75,14 +75,15 @@
                 }
                }
         });
-        $('#btcarrinho').click(function(){
+
+        $('#imgcarrinho').click(function(){
             if(logado){
                 if(lstCarrinho.length == 0){
                     alert('Seu carrinho esta vazio!')
                    }else{
                     $("#imgs").css("display", "none");
-                    $('#carrinhoResumo').css('display', 'flex')
-                    mostrarCarrinho()
+                    $('#carrinhoResumo').css("display", "flex")
+                      mostrarCarrinho()
 
                    }
             }
@@ -139,7 +140,6 @@
 
         });
         
-
         $('#btCadastrarUser').click(function(){
 
 
@@ -168,25 +168,21 @@
 
          $('#btCadastrarProduto').click(function(){
             if($('#txtDescProd').val() == "" || $('#txtValorProd').val() == "" || $('#txtQtdEstoq').val() == ""
-            || $('#txtImgProd').val() == "" ){
+            || $('#txtImg').val() == "" ){
                 alert('Preencha os campos!')
             }else{
-                var input = document.getElementById("inputGroupFile01");
-                var fReader = new FileReader();
-                fReader.readAsDataURL(input.files[0]);
-                fReader.onloadend = function(event){
-                    var img = document.getElementById("imgg");
-                    img.src = event.target.result;
+              
+                    let prod = new Produto(  $('#txtCodProd').val(), $('#txtDescProd').val(),$('#txtValorProd').val(),
+                    $('#txtImg').val(), $('#txtQtdEstoq').val(), true )
+                    lstProdutos.push(prod)
                     $('#txtCodProd').val(lstProdutos.length + 1);
                     $('#txtDescProd').val("")
                     $('#txtValorProd').val("")
                     $('#txtQtdEstoq').val("")
-                    $('#txtImgProd').val("")
-                }
+                    $('#txtImg').val("")
+                   
 
             }
-        
-        
  
          });
 
@@ -198,11 +194,7 @@
             img.innerHTML = ''
             carregaProd()
 
-
-
         });
-
-        
 
        
         });
@@ -210,24 +202,38 @@
         
 function carregaProd(){
 
+    img.innerHTML = ''
+
         if(!entrada){
             gerarProdDefault()
             entrada = true
         }
    
-
        for(let i = 0; i<lstProdutos.length; i++){
 
 
         if(lstProdutos[i].vitrine){
 
 
-            var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li> <li class="list-group-item estoq" >${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light" 
-             id="btt" onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div>`
+            var strprod = ` <div>  <div class="card" style="width: 18rem;">  <img class="card-img-top" src="${lstProdutos[i].imagem}" alt="Imagem de capa do card"> <div class="card-body"> <h5 class="list-group-item descr">${lstProdutos[i].descricao}</h5> <ul class="list-group list-group-flush"> <li class="list-group-item">R$ ${lstProdutos[i].valor}</li> <li class="list-group-item estoq" >${lstProdutos[i].estoque} itens no estoque</li><li class="btn btn-light" 
+             id="btt" onclick="adicionacarrinho(${lstProdutos[i].codigo})">Adicionar ao carrinho</li></ul></div> `
 
             img.innerHTML += strprod
+
+            var card1 = document.getElementsByClassName('card')
+            card1[i].style.height = '540px'
+            card1[i].style.margin = '10px 10px'
+
+
+            var imgcard = document.getElementsByClassName('card-img-top')
+            imgcard[i].style.height = '286px'
+
+            var descr = document.getElementsByClassName('descr')
+            descr[i].style.height = '74px'
+
         }
        }
+
 
         let adm = new Usuario(0, "Administrador", "adm", "123")
 
@@ -245,8 +251,6 @@ function carregaProd(){
          }
          idcarrinho.style.cursor = 'not-allowed'
         }
-        
-
         
 }
 
@@ -270,7 +274,11 @@ function gerarProdDefault(){
         let produto5 = new Produto(6, "Almofada Hatsune Miku 2", 300, 'imgs/almofada6.jpeg', 2, true)
         let produto6 = new Produto(7, "Almofada garota demonio 2", 300, 'imgs/almofada7.jpeg', 2, true)
         let produto7 = new Produto(8, "Almofada deusa azul", 320, 'imgs/almofada8.jpeg', 2, true)
-        let produto8 = new Produto(8, "Almofada garota borboleta", 400, 'imgs/almofada9.jpeg', 3, true)
+        let produto8 = new Produto(9, "Almofada garota borboleta", 400, 'imgs/almofada9.jpeg', 3, true)
+        let produto9 = new Produto(10, "Almofada garota hair fire", 300, 'imgs/almofada10.jpeg', 2, true)
+        let produto10 = new Produto(11, "Almofada Nico Robin tits +18", 400, 'imgs/almofada11.jpeg', 10, true)
+        let produto11 = new Produto(12, "Almofada garota tits +18", 600, 'imgs/almofada12.jpeg', 1, true)
+
 
 
         lstProdutos.push(produto)
@@ -282,6 +290,10 @@ function gerarProdDefault(){
         lstProdutos.push(produto6)
         lstProdutos.push(produto7)
         lstProdutos.push(produto8)
+        lstProdutos.push(produto9)
+        lstProdutos.push(produto10)
+        lstProdutos.push(produto11)
+
 
 
 }
@@ -291,68 +303,46 @@ function adicionacarrinho(pro){
 
     if(logado){
         
-    achou=false;
-    i=0;
-    while(achou===false && i<lstProdutos.length){
-        if(lstProdutos[i].codigo === pro){
-            if(lstProdutos[i].estoque == 0  ){
-                alert('Produto indisponivel!')
-                
-            }else{
+    for(let i = 0; i <lstProdutos.length; i++){
+        if(pro == lstProdutos[i].codigo){
+            if(lstProdutos[i].estoque > 0){
+                lstProdutos[i].estoque = (lstProdutos[i].estoque - 1)
+                lstCarrinho.push(lstProdutos[i]);
+                valorCarrinho++
+                carrinho.innerHTML = valorCarrinho
 
-            lstProdutos[i].estoque = (lstProdutos[i].estoque - 1)
-            lstCarrinho.push(lstProdutos[i]);
-            achou=true;
-        }
+            }
 
-        }
-        else{
-            i++;
+            }
+           
         }
     }
-
-    valorCarrinho++
-
-    carrinho.innerHTML = valorCarrinho
 
     img.innerHTML = ''
     carregaProd()
 
+    if(valorCarrinho > 0){
+        var idcarrinho = document.getElementById('imgcarrinho')
+        idcarrinho.style.cursor = 'pointer'
+       }
+
  }
-
-   if(valorCarrinho > 0){
-    var idcarrinho = document.getElementById('imgcarrinho')
-    idcarrinho.style.cursor = 'pointer'
-   }
-
-  
-
-    
-  
-}
 
 function mostrarCarrinho(){
 
-
     let total = 0
 
-
-    // if(produtosCarrinho > 0 ){
-    //     for(let i = 0; i < produtosCarrinho;i++ ){
-            
-    //     }
-    // }
-
     for(let i = 0; i < lstCarrinho.length; i++){
+
         var elemento = document.createElement('li')
 
         var text1 = document.createTextNode(`1x - ${lstCarrinho[i].descricao} - R$ ${lstCarrinho[i].valor}`)
 
         elemento.appendChild(text1)
 
-        produtosCarrinho++ 
-
         listaCompra[listaCompra.length-1].appendChild(elemento)
+
+        produtosCarrinho++
 
         total += lstCarrinho[i].valor
     }
@@ -364,6 +354,8 @@ function mostrarCarrinho(){
     elemento.appendChild(text2)
 
     listaCompra[listaCompra.length-1].appendChild(elemento1)
+
+    
 
    }
 class Produto{
