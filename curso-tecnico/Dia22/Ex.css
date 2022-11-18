@@ -68,9 +68,11 @@ header{
     margin: auto;
 }
 
-.rere{
-    margin-left: 30px;
+#btComprar{
+    width: 200px;
 }
+
+
 
 #btFinalizar{
     margin-bottom: 20px;
@@ -176,7 +178,11 @@ header{
    color: white;
 }
 
-.cabform{
+.cabform, #btComprar{
+    text-align: center;
+}
+
+.list-group-item{
     text-align: center;
 }
 
@@ -197,18 +203,29 @@ header{
     padding: 10px;
 }
 
-#carrinhoResumo{
-    
-    flex-direction: column;
-
-}
-
 #lsta{
     list-style-type: none;
     font-size: 20px;
     color: white;
     text-align: center;
     
+}
+
+#fim{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#fim h1, #fim h2{
+    text-align: center;
+    color:   rgb(128, 0, 128) ;
+    
+}
+
+#imgfim{
+    width: 600px;
+    height: 600px;
 }
 
 

@@ -203,6 +203,13 @@
 
         });
 
+        $('#btComprar').click(function(){
+            $('#carrinhoResumo').css("display", "none")
+            $('.prod').css("display", "none")
+            $('#fim').css("display", "flex")
+            $('#fim').css("flex-direction", "column")
+        });
+
     });
 
        
@@ -392,13 +399,12 @@ function mostrarCarrinho(){
     txtvlr.innerHTML = ''
     txtvlr.innerHTML = (`Valor total = ${total.toFixed(1)}`)
 
-    
     chamacar()
     
 
    }
 
-   function chamacar(){
+   function chamacar(){         
     imgcarin.innerHTML = ''
     for(let i = 0; i<lstCarrinho.length; i++){
 
@@ -410,7 +416,7 @@ function mostrarCarrinho(){
             imgcarin.innerHTML += strprod
         
            var card1 = document.getElementsByClassName('card')
-           card1[i].style.height = '200px'
+           card1[i].style.height = '225px'
            card1[i].style.width = '150px'
            card1[i].style.margin = '10px 10px'
         
@@ -419,12 +425,13 @@ function mostrarCarrinho(){
            imgcard[i].style.height = '100px'
         
            var descr = document.getElementsByClassName('descr')
-           descr[i].style.height = '30px'
+           descr[i].style.height = '50px'
            descr[i].style.fontSize = '10px'
 
            var vlr = document.getElementsByClassName('vlr')
            vlr[i].style.height = '30px'
-           vlr[i].style.fontSize = '10px'
+           vlr[i].style.fontSize = '15px'
+           vlr[i].style.padding = '10px'
            
 
         }
